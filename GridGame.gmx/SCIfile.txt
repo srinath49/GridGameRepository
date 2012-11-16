@@ -1,0 +1,8 @@
+
+svn add "O:\Projects\Grid Game\GridGame.gmx\objects\object25.object.gmx"
+svn add --non-recursive "O:\Projects\Grid Game\GridGame.gmx\objects"
+svn add "O:\Projects\Grid Game\GridGame.gmx\objects\object26.object.gmx"
+svn add --non-recursive "O:\Projects\Grid Game\GridGame.gmx\rooms"
+svn add "O:\Projects\Grid Game\GridGame.gmx\rooms\room3.room.gmx"
+svn add --non-recursive "O:\Projects\Grid Game\GridGame.gmx\scripts"
+svn add "O:\Projects\Grid Game\GridGame.gmx\scripts\script8.gml"
