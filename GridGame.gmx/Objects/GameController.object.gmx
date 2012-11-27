@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>globalvar SelectedUnit;
+globalvar InAction;
+InAction = false;
 </string>
           </argument>
         </arguments>

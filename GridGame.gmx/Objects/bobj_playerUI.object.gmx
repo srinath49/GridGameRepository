@@ -87,8 +87,11 @@ else
           <argument>
             <kind>1</kind>
             <string>//PlayerSpawner();
-ButtonClicked = true;
-ClickedNow = true;
+if(!InAction)
+{
+    ButtonClicked = true;
+    ClickedNow = true;
+}
 </string>
           </argument>
         </arguments>

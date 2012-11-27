@@ -1,3 +1,8 @@
+IsSelected = false;
+UnitState = "IdleState";
+MoveLocationX = -100;
+MoveLocationY = -100;
+MoveSpeed = 0;
 UnitHealth = argument0;
 UnitScore = argument1;
 UnitXP = argument2;

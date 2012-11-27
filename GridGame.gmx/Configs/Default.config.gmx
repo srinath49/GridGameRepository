@@ -162,9 +162,14 @@
   <option_textureGroup0_scaled>false</option_textureGroup0_scaled>
   <option_textureGroup_count>1</option_textureGroup_count>
   <option_textureGroups0>Default</option_textureGroups0>
+  <option_tizen_WebGL>0</option_tizen_WebGL>
   <option_tizen_app_id>http:\\yourdomain\GridGame</option_tizen_app_id>
   <option_tizen_build_version>0</option_tizen_build_version>
   <option_tizen_display_name>GridGame</option_tizen_display_name>
+  <option_tizen_flurry_enable>false</option_tizen_flurry_enable>
+  <option_tizen_flurry_id></option_tizen_flurry_id>
+  <option_tizen_google_analytics_enable>false</option_tizen_google_analytics_enable>
+  <option_tizen_google_tracking_id></option_tizen_google_tracking_id>
   <option_tizen_icon>Configs\Default\tizen\icon48.png</option_tizen_icon>
   <option_tizen_major_version>1</option_tizen_major_version>
   <option_tizen_minor_version>0</option_tizen_minor_version>

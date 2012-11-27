@@ -28,6 +28,7 @@
             <string>row = -1;
 coloumn = -1;
 ignoreBlock = false;
+IsOccupied = false;
 </string>
           </argument>
         </arguments>
@@ -52,22 +53,30 @@ ignoreBlock = false;
             <kind>1</kind>
             <string>if(visible)
 {
-    if(ignoreBlock)
+    if(!IsOccupied)
     {
+        if(!ignoreBlock)
+        {
+            CurrentObject = instance_position(SelectedUnit.x,SelectedUnit.y,pbobj_pathBlock);
+            MoveSelectedUnit(x,y,2);
+            //show_message(CurrentObject.IsOccupied);
+            CurrentObject.IsOccupied = false;
+            //show_message(CurrentObject.IsOccupied);
+            IsOccupied = true;
+        }
         pbobj_pathBlock.ignoreBlock = false;
-    }
-    else
-    {
-        MoveSelectedUnit(x,y,2);
-    }
-    
+    } 
     pbobj_pathBlock.visible = false;
 }
 else
 {
     if(bobj_playerUI.ButtonClicked)
     {
-        instance_create(x , y , uobj_meleeUnit);
+        if(!IsOccupied)
+        {
+            instance_create(x, y, uobj_meleeUnit);
+            IsOccupied = true;
+        }
         bobj_playerUI.ButtonClicked = false;
     }
 }
