@@ -1,3 +1,5 @@
+IsSelected = false;
+UnitState = "IdleState";
 UnitHealth = argument0;
 UnitScore = argument1;
 UnitXP = argument2;

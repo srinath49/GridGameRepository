@@ -54,6 +54,7 @@ ignoreBlock = false;
 {
     if(ignoreBlock)
     {
+        //MoveSelectedUnit(x,y,2);
         pbobj_pathBlock.ignoreBlock = false;
     }
     else

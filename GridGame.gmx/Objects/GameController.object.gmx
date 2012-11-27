@@ -26,6 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>globalvar SelectedUnit;
+globalvar MoveLocationX;
+globalvar MoveLocationY;
+globalvar MoveSpeed;
 </string>
           </argument>
         </arguments>
