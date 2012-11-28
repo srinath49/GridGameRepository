@@ -50,7 +50,15 @@
             <kind>1</kind>
             <string>if(UnitState == "MovingState")
 {
+<<<<<<< HEAD
     if(mp_linear_step(MoveLocationX, MoveLocationY, MoveSpeed, false))
+=======
+<<<<<<< HEAD
+    if(mp_linear_step(MoveLocationX, MoveLocationY, MoveSpeed, false))
+=======
+    if(mp_linear_step(global.MoveLocationX, global.MoveLocationY, global.MoveSpeed, false))
+>>>>>>> 4664dfa422737c6580595a8538d68c8238e7f17f
+>>>>>>> f77311d147c78e8d305ace3356346a3de5b0ec7e
     {
         UnitState = "IdleState";
     }
@@ -77,6 +85,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f77311d147c78e8d305ace3356346a3de5b0ec7e
             <string>if(!InAction)
 {
     if(UnitState == "IdleState")
@@ -85,6 +97,16 @@
         IsSelected = true;
         SelectedUnit = id;
     }
+<<<<<<< HEAD
+=======
+=======
+            <string>if(UnitState == "IdleState")
+{
+    HighlightMoveRange(x,y,MoveRangeFrontBack,MoveRangeUpDown,MoveRangeDiagonal);
+    IsSelected = true;
+    SelectedUnit = id;
+>>>>>>> 4664dfa422737c6580595a8538d68c8238e7f17f
+>>>>>>> f77311d147c78e8d305ace3356346a3de5b0ec7e
 }
 </string>
           </argument>
