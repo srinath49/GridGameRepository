@@ -26,8 +26,14 @@
           <argument>
             <kind>1</kind>
             <string>globalvar SelectedUnit;
+<<<<<<< HEAD
 globalvar InAction;
 InAction = false;
+=======
+globalvar MoveLocationX;
+globalvar MoveLocationY;
+globalvar MoveSpeed;
+>>>>>>> 4664dfa422737c6580595a8538d68c8238e7f17f
 </string>
           </argument>
         </arguments>
