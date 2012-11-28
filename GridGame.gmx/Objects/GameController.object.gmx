@@ -26,22 +26,11 @@
           <argument>
             <kind>1</kind>
             <string>globalvar SelectedUnit;
-<<<<<<< HEAD
 globalvar InAction;
 InAction = false;
 globalvar MoveLocationX;
 globalvar MoveLocationY;
 globalvar MoveSpeed;
-=======
-<<<<<<< HEAD
-globalvar InAction;
-InAction = false;
-=======
-globalvar MoveLocationX;
-globalvar MoveLocationY;
-globalvar MoveSpeed;
->>>>>>> 4664dfa422737c6580595a8538d68c8238e7f17f
->>>>>>> f77311d147c78e8d305ace3356346a3de5b0ec7e
 </string>
           </argument>
         </arguments>
