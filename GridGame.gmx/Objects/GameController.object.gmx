@@ -28,9 +28,6 @@
             <string>globalvar SelectedUnit;
 globalvar InAction;
 InAction = false;
-globalvar MoveLocationX;
-globalvar MoveLocationY;
-globalvar MoveSpeed;
 </string>
           </argument>
         </arguments>
