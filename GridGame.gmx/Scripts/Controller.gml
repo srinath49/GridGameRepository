@@ -1,6 +1,10 @@
+if keyboard_check(ord("Q"))
+{
+  game_end();
+}
+
 if keyboard_check(ord("S"))
 {
-  show_message("Save Successful");
   SaveGame();
 }
 
