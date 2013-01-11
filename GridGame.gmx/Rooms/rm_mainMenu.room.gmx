@@ -8,7 +8,7 @@
   <isometric>0</isometric>
   <speed>30</speed>
   <persistent>0</persistent>
-  <colour>12632256</colour>
+  <colour>0</colour>
   <showcolour>-1</showcolour>
   <code></code>
   <enableViews>0</enableViews>
@@ -50,11 +50,12 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="640" hview="480" xport="0" yport="0" wport="640" hport="480" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_menuScreen" x="0" y="0" name="inst_B0BE02E4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="bobj_enterButton" x="1040" y="232" name="inst_81528539" locked="0" code="" scaleX="1.63436996936798" scaleY="1.57813000679016" colour="4294967295" rotation="0"/>
     <instance objName="obj_toggleFullScreen" x="0" y="0" name="inst_FDB9B583" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="bobj_optionsButton" x="1040" y="432" name="inst_868E8B2F" locked="0" code="" scaleX="2.06561994552612" scaleY="1.47500002384186" colour="4294967295" rotation="0"/>
     <instance objName="bobj_tutorialButton" x="1044" y="632" name="inst_94FA7E30" locked="0" code="" scaleX="1.98749995231628" scaleY="1.54999995231628" colour="4294967295" rotation="0"/>
+    <instance objName="obj_gameOfThrones" x="536" y="424" name="inst_FCB1CD0C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_aDPresentation" x="900" y="676" name="inst_B9BDB41D" locked="0" code="" scaleX="0.106803216040134" scaleY="0.0470588244497776" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

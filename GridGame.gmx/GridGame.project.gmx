@@ -18,6 +18,15 @@
       <sprite>sprites\spr_optionsButton</sprite>
       <sprite>sprites\spr_quitButton</sprite>
       <sprite>sprites\spr_tutorialButton</sprite>
+      <sprite>sprites\spr_arrynShield</sprite>
+      <sprite>sprites\spr_baratheonShield</sprite>
+      <sprite>sprites\spr_greyjoyShield</sprite>
+      <sprite>sprites\spr_lannisterShield</sprite>
+      <sprite>sprites\spr_martellShield</sprite>
+      <sprite>sprites\spr_starkShield</sprite>
+      <sprite>sprites\spr_targaryanShield</sprite>
+      <sprite>sprites\spr_tullyShield</sprite>
+      <sprite>sprites\spr_match</sprite>
     </sprites>
     <sprites name="Path Blocks">
       <sprites name="A">
@@ -50,9 +59,11 @@
     <sprite>sprites\spr_level1</sprite>
     <sprite>sprites\spr_ground</sprite>
     <sprite>sprites\spr_logIn</sprite>
-    <sprite>sprites\spr_menuScreen</sprite>
     <sprite>sprites\spr_playerWalkRight</sprite>
     <sprite>sprites\spr_playerUI</sprite>
+    <sprite>sprites\spr_gameOfThrones</sprite>
+    <sprite>sprites\spr_aDPresentation</sprite>
+    <sprite>sprites\spr_choiceMenu</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -156,6 +167,15 @@
       <object>objects\bobj_playerUI</object>
       <object>objects\bobj_quitButton</object>
       <object>objects\bobj_tutorialButton</object>
+      <object>objects\bobj_arrynShield</object>
+      <object>objects\bobj_baratheonShield</object>
+      <object>objects\bobj_greyjoyShield</object>
+      <object>objects\bobj_lannisterShield</object>
+      <object>objects\bobj_martellShield</object>
+      <object>objects\bobj_starkShield</object>
+      <object>objects\bobj_targaryanShield</object>
+      <object>objects\bobj_tullyShield</object>
+      <object>objects\bobj_match</object>
     </objects>
     <objects name="Environment">
       <object>objects\eobj_background</object>
@@ -199,8 +219,10 @@
       <object>objects\GameController</object>
     </objects>
     <object>objects\obj_logIn</object>
-    <object>objects\obj_menuScreen</object>
     <object>objects\obj_toggleFullScreen</object>
+    <object>objects\obj_gameOfThrones</object>
+    <object>objects\obj_aDPresentation</object>
+    <object>objects\obj_choiceMenu</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_mainMenu</room>

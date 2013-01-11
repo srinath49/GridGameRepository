@@ -6,6 +6,10 @@
   <option_android_advertising_enable>0</option_android_advertising_enable>
   <option_android_advertising_key></option_android_advertising_key>
   <option_android_advertising_type>MoPub</option_android_advertising_type>
+  <option_android_amazon_game_circle>false</option_android_amazon_game_circle>
+  <option_android_amazon_gc_achievements>true</option_android_amazon_gc_achievements>
+  <option_android_amazon_gc_leaderboards>true</option_android_amazon_gc_leaderboards>
+  <option_android_amazon_gc_whispersync>false</option_android_amazon_gc_whispersync>
   <option_android_amazon_iap>false</option_android_amazon_iap>
   <option_android_arch_armv5>True</option_android_arch_armv5>
   <option_android_arch_armv7>True</option_android_arch_armv7>
@@ -20,6 +24,7 @@
   <option_android_flurry_id></option_android_flurry_id>
   <option_android_google_analytics_enable>0</option_android_google_analytics_enable>
   <option_android_google_tracking_id></option_android_google_tracking_id>
+  <option_android_iap_suppress_toast>false</option_android_iap_suppress_toast>
   <option_android_icon_170>Configs\Default\android\icons\icon170.png</option_android_icon_170>
   <option_android_icon_36>Configs\Default\android\icons\icon36.png</option_android_icon_36>
   <option_android_icon_48>Configs\Default\android\icons\icon48.png</option_android_icon_48>

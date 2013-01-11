@@ -3,8 +3,8 @@
   <caption></caption>
   <width>1366</width>
   <height>768</height>
-  <vsnap>32</vsnap>
-  <hsnap>32</hsnap>
+  <vsnap>2</vsnap>
+  <hsnap>2</hsnap>
   <isometric>0</isometric>
   <speed>30</speed>
   <persistent>0</persistent>
@@ -50,9 +50,18 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="640" hview="480" xport="0" yport="0" wport="640" hport="480" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
+    <instance objName="obj_choiceMenu" x="478" y="276" name="inst_7AC550BE" locked="0" code="" scaleX="1" scaleY="1.10000002384186" colour="4294967295" rotation="0"/>
     <instance objName="obj_toggleFullScreen" x="0" y="0" name="inst_89781FA0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="bobj_match1Button" x="608" y="256" name="inst_86F6FB1A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="bobj_backButton" x="608" y="576" name="inst_FC500478" locked="0" code="" scaleX="2.10526323318481" scaleY="1.45454549789429" colour="4294967295" rotation="0"/>
+    <instance objName="bobj_match1Button" x="1162" y="704" name="inst_86F6FB1A" locked="0" code="" scaleX="1.11000001430511" scaleY="1.04999995231628" colour="4294967295" rotation="0"/>
+    <instance objName="bobj_backButton" x="108" y="730" name="inst_FC500478" locked="0" code="" scaleX="0.800000011920929" scaleY="0.5" colour="4294967295" rotation="0"/>
+    <instance objName="bobj_match" x="296" y="148" name="inst_6484913B" locked="0" code="" scaleX="8.96875" scaleY="4" colour="4294967295" rotation="0"/>
+    <instance objName="bobj_match" x="298" y="294" name="inst_ABA78FE7" locked="0" code="" scaleX="8.96875" scaleY="4.03225803375244" colour="4294967295" rotation="0"/>
+    <instance objName="bobj_match" x="298" y="452" name="inst_5634BFA9" locked="0" code="" scaleX="9.125" scaleY="4.1875" colour="4294967295" rotation="0"/>
+    <instance objName="bobj_match" x="1068" y="162" name="inst_ADFE3FED" locked="0" code="" scaleX="8.75" scaleY="4.09375" colour="4294967295" rotation="0"/>
+    <instance objName="bobj_match" x="1066" y="296" name="inst_5957FC01" locked="0" code="" scaleX="8.875" scaleY="3.90322995185852" colour="4294967295" rotation="0"/>
+    <instance objName="bobj_match" x="1070" y="452" name="inst_8F94F6EF" locked="0" code="" scaleX="8.70967769622803" scaleY="4.03225803375244" colour="4294967295" rotation="0"/>
+    <instance objName="bobj_match" x="294" y="626" name="inst_C9B377D1" locked="0" code="" scaleX="9.03125" scaleY="3.9375" colour="4294967295" rotation="0"/>
+    <instance objName="bobj_match" x="1070" y="630" name="inst_D6954481" locked="0" code="" scaleX="8.8125" scaleY="4.125" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
