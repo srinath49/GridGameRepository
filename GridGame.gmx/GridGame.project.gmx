@@ -27,6 +27,14 @@
       <sprite>sprites\spr_targaryanShield</sprite>
       <sprite>sprites\spr_tullyShield</sprite>
       <sprite>sprites\spr_match</sprite>
+      <sprite>sprites\spr_lannisterBanner</sprite>
+      <sprite>sprites\spr_starkBanner</sprite>
+      <sprite>sprites\spr_baratheonBanner</sprite>
+      <sprite>sprites\spr_tullyBanner</sprite>
+      <sprite>sprites\spr_targaryanBanner</sprite>
+      <sprite>sprites\spr_grejoyBanner</sprite>
+      <sprite>sprites\spr_arrynBanner</sprite>
+      <sprite>sprites\spr_martellBanner</sprite>
     </sprites>
     <sprites name="Path Blocks">
       <sprites name="A">
@@ -64,6 +72,8 @@
     <sprite>sprites\spr_gameOfThrones</sprite>
     <sprite>sprites\spr_aDPresentation</sprite>
     <sprite>sprites\spr_choiceMenu</sprite>
+    <sprite>sprites\spr_banner</sprite>
+    <sprite>sprites\spr_tree</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -176,6 +186,14 @@
       <object>objects\bobj_targaryanShield</object>
       <object>objects\bobj_tullyShield</object>
       <object>objects\bobj_match</object>
+      <object>objects\bobj_lannisterBanner</object>
+      <object>objects\bobj_starkBanner</object>
+      <object>objects\bobj_baratheonBanner</object>
+      <object>objects\bobj_tullyBanner</object>
+      <object>objects\bobj_targaryanBanner</object>
+      <object>objects\bobj_grejoyBanner</object>
+      <object>objects\bobj_arrynBanner</object>
+      <object>objects\bobj_martellBanner</object>
     </objects>
     <objects name="Environment">
       <object>objects\eobj_background</object>
@@ -223,6 +241,8 @@
     <object>objects\obj_gameOfThrones</object>
     <object>objects\obj_aDPresentation</object>
     <object>objects\obj_choiceMenu</object>
+    <object>objects\obj_banner</object>
+    <object>objects\obj_tree</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_mainMenu</room>
