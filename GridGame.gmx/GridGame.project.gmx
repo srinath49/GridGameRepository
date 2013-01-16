@@ -170,6 +170,8 @@
     <script>scripts\PlayerSpawner.gml</script>
   </scripts>
   <objects name="objects">
+    <object>objects\obj_logIn</object>
+    <object>objects\obj_toggleFullScreen</object>
     <objects name="Buttons">
       <object>objects\bobj_backButton</object>
       <object>objects\bobj_enterButton</object>
@@ -179,28 +181,41 @@
       <object>objects\bobj_playerUI</object>
       <object>objects\bobj_quitButton</object>
       <object>objects\bobj_tutorialButton</object>
-      <object>objects\bobj_arrynShield</object>
-      <object>objects\bobj_baratheonShield</object>
-      <object>objects\bobj_greyjoyShield</object>
-      <object>objects\bobj_lannisterShield</object>
-      <object>objects\bobj_martellShield</object>
-      <object>objects\bobj_starkShield</object>
-      <object>objects\bobj_targaryanShield</object>
-      <object>objects\bobj_tullyShield</object>
       <object>objects\bobj_match</object>
-      <object>objects\bobj_lannisterBanner</object>
-      <object>objects\bobj_starkBanner</object>
-      <object>objects\bobj_baratheonBanner</object>
-      <object>objects\bobj_tullyBanner</object>
-      <object>objects\bobj_targaryanBanner</object>
-      <object>objects\bobj_grejoyBanner</object>
-      <object>objects\bobj_arrynBanner</object>
-      <object>objects\bobj_martellBanner</object>
       <object>objects\bobj_confirmButton</object>
+    </objects>
+    <objects name="Choice Menu">
+      <object>objects\cmobj_chooseYourBanner</object>
+      <object>objects\cmobj_choiceMenu</object>
+      <object>objects\cmobj_martellBanner</object>
+      <object>objects\cmobj_arrynBanner</object>
+      <object>objects\cmobj_grejoyBanner</object>
+      <object>objects\cmobj_targaryanBanner</object>
+      <object>objects\cmobj_tullyBanner</object>
+      <object>objects\cmobj_baratheonBanner</object>
+      <object>objects\cmobj_starkBanner</object>
+      <object>objects\cmobj_lannisterBanner</object>
+      <object>objects\cmobj_tullyShield</object>
+      <object>objects\cmobj_targaryanShield</object>
+      <object>objects\cmobj_starkShield</object>
+      <object>objects\cmobj_martellShield</object>
+      <object>objects\cmobj_lannisterShield</object>
+      <object>objects\cmobj_greyjoyShield</object>
+      <object>objects\cmobj_baratheonShield</object>
+      <object>objects\cmobj_arrynShield</object>
+      <object>objects\cmobj_gameOfThronesBanner</object>
+      <object>objects\obj_tree</object>
+    </objects>
+    <objects name="Controllers">
+      <object>objects\GameController</object>
     </objects>
     <objects name="Environment">
       <object>objects\eobj_background</object>
       <object>objects\eobj_ground</object>
+    </objects>
+    <objects name="Main Menu">
+      <object>objects\mmobj_aDPresentation</object>
+      <object>objects\mmobj_gameOfThrones</object>
     </objects>
     <objects name="Path Blocks">
       <objects name="A">
@@ -236,17 +251,6 @@
       <object>objects\uobj_rangedUnit</object>
       <object>objects\uobj_unit</object>
     </objects>
-    <objects name="Controllers">
-      <object>objects\GameController</object>
-    </objects>
-    <object>objects\obj_logIn</object>
-    <object>objects\obj_toggleFullScreen</object>
-    <object>objects\obj_gameOfThrones</object>
-    <object>objects\obj_aDPresentation</object>
-    <object>objects\obj_choiceMenu</object>
-    <object>objects\obj_banner</object>
-    <object>objects\obj_tree</object>
-    <object>objects\obj_gameOfThronesBanner</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_mainMenu</room>
