@@ -63,7 +63,7 @@
     <instance objName="pbaobj_pathBlockA09" x="941" y="657" name="inst_59E8E54B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pbaobj_pathBlockA10" x="1029" y="657" name="inst_294B19B2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pbaobj_pathBlockA11" x="1117" y="655" name="inst_816270CA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="GameController" x="30" y="3" name="inst_0B00A666" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_GameController" x="30" y="3" name="inst_0B00A666" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pbfobj_pathBlockF01" x="262" y="219" name="inst_2AF2041E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pbfobj_pathBlockF02" x="344" y="221" name="inst_7CBDAB89" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pbfobj_pathBlockF04" x="507" y="222" name="inst_DEEB4C78" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
