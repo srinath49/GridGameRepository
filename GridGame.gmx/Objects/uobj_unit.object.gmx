@@ -50,10 +50,16 @@
             <kind>1</kind>
             <string>if(UnitState == "MovingState")
 {
+    global.InAction = true;
     if(mp_linear_step(MoveLocationX, MoveLocationY, MoveSpeed, false))
     {
-        UnitState = "IdleState";
+        UnitState = "ActionOver"
     }
+}
+else if (UnitState == "ActionOver")
+{
+    UnitState = "IdleState"
+    global.InAction = false;
 }
 </string>
           </argument>
@@ -77,7 +83,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(!InAction)
+            <string>if(global.InAction == false)
 {
     if(UnitState == "IdleState")
     {
