@@ -7,7 +7,62 @@
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
-  <events/>
+  <events>
+    <event eventtype="6" enumb="7">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>inst_D120F90F.visible = true //Stark Shield Left
+inst_6302B437.visible = true //Stark Shield Right
+
+inst_C30058C6.visible = false //Lannister Shield Left
+inst_E7BE5988.visible = false //Baratheon Shield Left
+inst_C64AF34E.visible = false //Tully Shield Left
+inst_2368D151.visible = false //Targaryan Shield Left
+inst_8B772482.visible = false //Greyjoy Shield Left
+inst_270D12D7.visible = false //Arryn Shield Left
+inst_C23A9A25.visible = false //Martell Shield Left
+
+inst_C9067D50.visible = false //Lannister Shield Right
+inst_ED268531.visible = false //Baratheon Shield Right
+inst_A633C78B.visible = false //Tully Shield Right
+inst_296A1B94.visible = false //Targaryan Shield Right
+inst_45DE218E.visible = false //Greyjoy Shield Right
+inst_2CC1DAB6.visible = false //Arryn Shield Right
+inst_C22A69BD.visible = false //Martell Shield Right
+
+cmobj_starkTitle.visible = true
+
+bobj_confirmButton.visible = true
+cmobj_gameOfThronesBanner.visible = false
+cmobj_chooseYourBanner.visible = false
+
+cmobj_lannisterTitle.visible = false
+cmobj_baratheonTitle.visible = false
+cmobj_tullyTitle.visible = false
+cmobj_targaryanTitle.visible = false
+cmobj_greyjoyTitle.visible = false
+cmobj_arrynTitle.visible = false
+cmobj_martellTitle.visible = false
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>0</PhysicsObjectShape>
