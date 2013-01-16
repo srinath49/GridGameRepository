@@ -8,6 +8,7 @@
   </NewExtensions>
   <sounds name="sound">
     <sound>sound\snd_letter</sound>
+    <sound>sound\snd_mainMenuButton</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Buttons">
@@ -282,7 +283,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_mainMenu</room>
-    <room>rooms\rm_matchSelection</room>
+    <room>rooms\rm_bannerSelection</room>
     <room>rooms\rm_level1</room>
   </rooms>
   <help>
