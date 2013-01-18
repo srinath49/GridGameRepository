@@ -54,6 +54,7 @@
     <instance objName="obj_toggleFullScreen" x="0" y="0" name="inst_FDB9B583" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="mmobj_chains" x="1028" y="392" name="inst_A30D0555" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="mmobj_aegonsFieldTitle" x="456" y="368" name="inst_104FAF25" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="mmobj_fireball" x="444" y="368" name="inst_4CE5FBB6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="bobj_enterButton" x="1028" y="192" name="inst_6BD411E2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="bobj_optionsButton" x="1024" y="384" name="inst_A98B8546" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="bobj_tutorialButton" x="1028" y="592" name="inst_158ABCF1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

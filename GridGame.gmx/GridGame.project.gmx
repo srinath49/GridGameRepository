@@ -57,6 +57,7 @@
       <sprite>sprites\spr_mainMenuBackground</sprite>
       <sprite>sprites\spr_chains</sprite>
       <sprite>sprites\spr_aegonsFieldTitle</sprite>
+      <sprite>sprites\spr_fireball</sprite>
     </sprites>
     <sprites name="Path Blocks">
       <sprites name="A">
@@ -251,6 +252,7 @@
       <object>objects\mmobj_mainMenuBackground</object>
       <object>objects\mmobj_chains</object>
       <object>objects\mmobj_aegonsFieldTitle</object>
+      <object>objects\mmobj_fireball</object>
     </objects>
     <objects name="Path Blocks">
       <objects name="A">
