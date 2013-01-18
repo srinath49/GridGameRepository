@@ -92,6 +92,7 @@
     <sprite>sprites\spr_playerWalkRight</sprite>
     <sprite>sprites\spr_playerUI</sprite>
     <sprite>sprites\spr_gameOfThronesBanner</sprite>
+    <sprite>sprites\spr_attackRight</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -287,6 +288,7 @@
     </objects>
     <object>objects\obj_logIn</object>
     <object>objects\obj_toggleFullScreen</object>
+    <object>objects\obj_attackRight</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_mainMenu</room>
