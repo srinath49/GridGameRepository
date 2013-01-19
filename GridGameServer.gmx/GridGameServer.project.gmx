@@ -45,7 +45,7 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
-    <scripts name="Networking">
+    <scripts name="39DLL Scripts">
       <script>scripts\iniKeyDelete.gml</script>
       <script>scripts\clearbuffer.gml</script>
       <script>scripts\bufferdecrypt.gml</script>
@@ -62,10 +62,8 @@
       <script>scripts\dllfree.gml</script>
       <script>scripts\getmacaddress.gml</script>
       <script>scripts\iniClearFile.gml</script>
-      <script>scripts\die.gml</script>
       <script>scripts\createbuffer.gml</script>
       <script>scripts\FileDLL_CreateDirectory.gml</script>
-      <script>scripts\disconnect.gml</script>
       <script>scripts\fileclose.gml</script>
       <script>scripts\FileDLL_DeleteFile.gml</script>
       <script>scripts\FileDLL_DeleteDirectory.gml</script>
@@ -138,7 +136,6 @@
       <script>scripts\iptouint.gml</script>
       <script>scripts\iniWriteString.gml</script>
       <script>scripts\iniWriteReal.gml</script>
-      <script>scripts\initiate.gml</script>
       <script>scripts\iniStart.gml</script>
       <script>scripts\iniSettings.gml</script>
       <script>scripts\iniSectionExists.gml</script>
@@ -147,7 +144,16 @@
       <script>scripts\iniReadString.gml</script>
       <script>scripts\iniKeyExists.gml</script>
     </scripts>
+    <scripts name="Connection Scripts">
+      <script>scripts\initiate.gml</script>
+      <script>scripts\die.gml</script>
+      <script>scripts\disconnect.gml</script>
+    </scripts>
   </scripts>
+  <objects name="objects">
+    <object>objects\obj_controller</object>
+    <object>objects\obj_guest</object>
+  </objects>
   <help>
     <rtf>help.rtf</rtf>
   </help>

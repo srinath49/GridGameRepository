@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -25,9 +25,21 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>globalvar SelectedUnit;
-globalvar InAction;
-InAction = false;
+            <string>a = 0;
+b = initiate();
+a = 1
+if (b){
+    instance_change(obj_MenuController,1);
+    room=rm_mainMenu;
+}else{
+    if (show_question("We coudn't connect to the server, want to retry?")==true){
+        die();
+        game_restart();
+    }else{
+        die();
+        game_end();
+    }
+}
 </string>
           </argument>
         </arguments>

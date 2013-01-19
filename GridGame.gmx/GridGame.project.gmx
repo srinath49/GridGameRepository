@@ -3,6 +3,42 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
+  <datafiles number="2" name="datafiles">
+    <datafile>
+      <name>online.dll</name>
+      <exists>-1</exists>
+      <size>43008</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>32842</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>online.dll</filename>
+    </datafile>
+    <datafile>
+      <name>myINI.dll</name>
+      <exists>-1</exists>
+      <size>177152</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>32842</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>myINI.dll</filename>
+    </datafile>
+  </datafiles>
   <NewExtensions>
     <extension index="0">extensions\GM Motion Planning</extension>
   </NewExtensions>
@@ -186,6 +222,7 @@
     <scripts name="Login Scripts">
       <script>scripts\LogIn.gml</script>
       <script>scripts\GetUsernamePassword.gml</script>
+      <script>scripts\ConnectToServer.gml</script>
     </scripts>
     <scripts name="Game Persistence Scripts">
       <script>scripts\QuitGame.gml</script>
@@ -241,6 +278,8 @@
     <objects name="Controllers">
       <object>objects\obj_GameController</object>
       <object>objects\obj_SessionController</object>
+      <object>objects\obj_ConnectionController</object>
+      <object>objects\obj_MenuController</object>
     </objects>
     <objects name="Environment">
       <object>objects\eobj_background</object>
@@ -296,6 +335,7 @@
     <room>rooms\rm_mainMenu</room>
     <room>rooms\rm_bannerSelection</room>
     <room>rooms\rm_level1</room>
+    <room>rooms\rm_serverConnectRoom</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
