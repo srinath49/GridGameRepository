@@ -270,6 +270,7 @@
       <object>objects\cmobj_tullyBanner</object>
       <object>objects\cmobj_tullyShield</object>
       <object>objects\cmobj_tullyTitle</object>
+      <object>objects\cmobj_bannerParent</object>
       <object>objects\cmobj_gameOfThronesBanner</object>
       <object>objects\cmobj_choiceMenuBackground</object>
       <object>objects\cmobj_chooseYourBanner</object>

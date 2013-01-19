@@ -70,8 +70,8 @@
     <instance objName="cmobj_martellBanner" x="960" y="592" name="inst_3446BC13" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
     <instance objName="cmobj_martellShield" x="1072" y="592" name="inst_C7314685" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
     <instance objName="obj_tree" x="664" y="432" name="inst_C8444A0F" locked="0" code="" scaleX="0.699999988079071" scaleY="0.699999988079071" colour="4294967295" rotation="0"/>
-    <instance objName="bobj_backButton" x="80" y="704" name="inst_24677CEB" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
-    <instance objName="bobj_confirmButton" x="1280" y="704" name="inst_C2E5E731" locked="0" code="visible = false" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="bobj_backButton" x="80" y="736" name="inst_24677CEB" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
+    <instance objName="bobj_confirmButton" x="1280" y="736" name="inst_C2E5E731" locked="0" code="visible = false" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
     <instance objName="cmobj_lannisterShield" x="336" y="184" name="inst_C30058C6" locked="0" code="visible = false" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
     <instance objName="cmobj_lannisterShield" x="1000" y="184" name="inst_C9067D50" locked="0" code="visible = false" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
     <instance objName="cmobj_starkShield" x="336" y="184" name="inst_D120F90F" locked="0" code="visible = false" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
