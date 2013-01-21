@@ -154,6 +154,9 @@
     <object>objects\obj_controller</object>
     <object>objects\obj_guest</object>
   </objects>
+  <rooms name="rooms">
+    <room>rooms\rm_server</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
