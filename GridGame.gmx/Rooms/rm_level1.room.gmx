@@ -3,8 +3,8 @@
   <caption></caption>
   <width>1366</width>
   <height>768</height>
-  <vsnap>1</vsnap>
-  <hsnap>1</hsnap>
+  <vsnap>4</vsnap>
+  <hsnap>4</hsnap>
   <isometric>0</isometric>
   <speed>30</speed>
   <persistent>0</persistent>
@@ -50,33 +50,45 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="640" hview="480" xport="0" yport="0" wport="640" hport="480" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="eobj_background" x="682" y="384" name="inst_C12C5999" locked="-1" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="gaobj_background" x="682" y="384" name="inst_C12C5999" locked="-1" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_toggleFullScreen" x="0" y="0" name="inst_2F1BB5CB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_GameController" x="30" y="3" name="inst_0B00A666" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="pbaobj_pathBlockA01" x="226" y="657" name="inst_A0CB7D53" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="pbaobj_pathBlockA02" x="316" y="657" name="inst_563BCE7A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="pbaobj_pathBlockA03" x="409" y="657" name="inst_7B82A439" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="pbaobj_pathBlockA04" x="498" y="655" name="inst_2B65874E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="pbaobj_pathBlockA05" x="586" y="657" name="inst_3BB53405" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="pbaobj_pathBlockA06" x="673" y="655" name="inst_4EEF7C23" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="pbaobj_pathBlockA07" x="763" y="657" name="inst_E0D577BC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="pbaobj_pathBlockA08" x="853" y="657" name="inst_798C7C20" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="pbaobj_pathBlockA09" x="941" y="657" name="inst_59E8E54B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="pbaobj_pathBlockA10" x="1029" y="657" name="inst_294B19B2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="pbaobj_pathBlockA11" x="1117" y="655" name="inst_816270CA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="pbfobj_pathBlockF01" x="262" y="219" name="inst_2AF2041E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="pbfobj_pathBlockF02" x="344" y="221" name="inst_7CBDAB89" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="pbfobj_pathBlockF04" x="507" y="222" name="inst_DEEB4C78" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="pbfobj_pathBlockF05" x="590" y="221" name="inst_F1202A46" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="pbfobj_pathBlockF06" x="673" y="221" name="inst_1A0E27B2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="pbfobj_pathBlockF07" x="754" y="221" name="inst_A67AD68C" locked="0" code="" scaleX="0.966292023658752" scaleY="1.02499997615814" colour="4294967295" rotation="0"/>
-    <instance objName="pbfobj_pathBlockF08" x="835" y="222" name="inst_7A3E0317" locked="0" code="" scaleX="1.01124000549316" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="pbfobj_pathBlockF03" x="427" y="222" name="inst_C65183CE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="pbfobj_pathBlockF09" x="917" y="222" name="inst_3E712C1F" locked="0" code="" scaleX="0.988763988018036" scaleY="1.01250004768372" colour="4294967295" rotation="0"/>
-    <instance objName="pbfobj_pathBlockF10" x="999" y="222" name="inst_794EB9D0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="pbfobj_pathBlockF11" x="1081" y="221" name="inst_FB0C7FDA" locked="0" code="" scaleX="1.01124000549316" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_attackRight" x="218" y="653" name="inst_180489E5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="bobj_playerUI" x="221" y="743" name="inst_082AF125" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_GameController" x="19" y="0" name="inst_0B00A666" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="gaobj_mainBoard" x="680" y="400" name="inst_74D9F76D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="gaobj_spears" x="1360" y="416" name="inst_381C78CD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pbaobj_pathBlockA01" x="208" y="584" name="inst_A0CB7D53" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pbaobj_pathBlockA02" x="304" y="584" name="inst_563BCE7A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pbaobj_pathBlockA03" x="404" y="584" name="inst_7B82A439" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pbaobj_pathBlockA04" x="500" y="580" name="inst_2B65874E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pbaobj_pathBlockA05" x="592" y="584" name="inst_3BB53405" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pbaobj_pathBlockA06" x="688" y="580" name="inst_4EEF7C23" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pbaobj_pathBlockA07" x="784" y="584" name="inst_E0D577BC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pbaobj_pathBlockA08" x="876" y="580" name="inst_798C7C20" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pbaobj_pathBlockA09" x="976" y="584" name="inst_59E8E54B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pbaobj_pathBlockA10" x="1064" y="588" name="inst_294B19B2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pbaobj_pathBlockA11" x="1156" y="584" name="inst_816270CA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pbfobj_pathBlockF01" x="260" y="200" name="inst_2AF2041E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pbfobj_pathBlockF02" x="348" y="200" name="inst_7CBDAB89" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pbfobj_pathBlockF04" x="520" y="204" name="inst_DEEB4C78" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pbfobj_pathBlockF05" x="596" y="200" name="inst_F1202A46" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pbfobj_pathBlockF06" x="680" y="200" name="inst_1A0E27B2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pbfobj_pathBlockF07" x="768" y="204" name="inst_A67AD68C" locked="0" code="" scaleX="0.966292023658752" scaleY="1.02499997615814" colour="4294967295" rotation="0"/>
+    <instance objName="pbfobj_pathBlockF08" x="852" y="204" name="inst_7A3E0317" locked="0" code="" scaleX="1.01124000549316" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pbfobj_pathBlockF03" x="432" y="200" name="inst_C65183CE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pbfobj_pathBlockF09" x="936" y="208" name="inst_3E712C1F" locked="0" code="" scaleX="0.988763988018036" scaleY="1.01250004768372" colour="4294967295" rotation="0"/>
+    <instance objName="pbfobj_pathBlockF10" x="1020" y="204" name="inst_794EB9D0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pbfobj_pathBlockF11" x="1104" y="200" name="inst_FB0C7FDA" locked="0" code="" scaleX="1.01124000549316" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="gaobj_aegonsField" x="692" y="68" name="inst_22DA1176" locked="0" code="" scaleX="1.29999995231628" scaleY="1.29999995231628" colour="4294967295" rotation="0"/>
+    <instance objName="gaobj_redPlayerMeter" x="212" y="68" name="inst_8E76C8B8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="gaobj_bluePlayerMeter" x="1152" y="72" name="inst_6B2B6015" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="gaobj_scroll01" x="68" y="168" name="inst_C8E2B42D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="gaobj_scroll02" x="68" y="288" name="inst_0D3641A6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="gaobj_scroll03" x="68" y="416" name="inst_57C7F48C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="gaobj_scroll04" x="68" y="544" name="inst_42102125" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="gaobj_scroll05" x="68" y="672" name="inst_D156383C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="gaobj_leftSlots" x="296" y="704" name="inst_AF34A311" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="gaobj_rightSlots" x="1068" y="704" name="inst_E67E53B2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="gaobj_magicSigil" x="496" y="704" name="inst_4442A898" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="gaobj_helmetSigil" x="880" y="704" name="inst_288E6B2F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
