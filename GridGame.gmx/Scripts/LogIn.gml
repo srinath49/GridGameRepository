@@ -1,4 +1,15 @@
-username = get_string("Username" , "");
-password = get_string("Password" , "");
+// Login
+global.username = get_string("Username" , "");
+global.password = get_string("Password" , "");
 
-room_goto(rm_mainMenu);
+setnagle(global.socket, false);
+
+//Send Login Details
+clearbuffer();
+writebyte(1);
+writestring(global.username,true);
+writestring(global.password,true);
+//send_msg(); Implement this later
+sendmessage(global.socket);
+
+//room_goto(rm_mainMenu);

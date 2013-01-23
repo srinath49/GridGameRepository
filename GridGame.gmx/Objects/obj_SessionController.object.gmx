@@ -25,12 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>globalvar username
-globalvar password
-
-GetUsernamePassword()
-
-
+            <string>
 </string>
           </argument>
         </arguments>
