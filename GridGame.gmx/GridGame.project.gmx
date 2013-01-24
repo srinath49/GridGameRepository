@@ -60,6 +60,7 @@
     </sprites>
     <sprites name="Choice Menu">
       <sprite>sprites\spr_arrynBanner</sprite>
+      <sprite>sprites\spr_arrynBannerUnavailable</sprite>
       <sprite>sprites\spr_arrynShield</sprite>
       <sprite>sprites\spr_arrynTitle</sprite>
       <sprite>sprites\spr_baratheonBanner</sprite>
