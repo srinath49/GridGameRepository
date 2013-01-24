@@ -1,5 +1,5 @@
 IsSelected = false;
-UnitState = "IdleState";
+UnitState = UNIT_STATE_CREATED;
 MoveLocationX = -100;
 MoveLocationY = -100;
 MoveSpeed = 0;

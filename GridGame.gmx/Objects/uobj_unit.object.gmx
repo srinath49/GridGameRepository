@@ -48,18 +48,31 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(UnitState == "MovingState")
+            <string>switch(UnitState)
 {
-    global.InAction = true;
-    if(mp_linear_step(MoveLocationX, MoveLocationY, MoveSpeed, false))
-    {
-        UnitState = "ActionOver"
-    }
-}
-else if (UnitState == "ActionOver")
-{
-    UnitState = "IdleState"
-    global.InAction = false;
+    case UNIT_STATE_CREATED: 
+        // Just After Creation
+        UnitState = UNIT_STATE_ACTIONOVER;
+        break;
+    case UNIT_STATE_ACTIONOVER: 
+        // Action Over. Unit just finished performing an action.
+        UnitState = UNIT_STATE_IDLE;
+        global.InAction = false;
+        break;
+    case UNIT_STATE_IDLE: 
+        // Idle Code If required
+        break;
+    case UNIT_STATE_MOVING: 
+        // Movement Code
+        global.InAction = true;
+        if(mp_linear_step(MoveLocationX, MoveLocationY, MoveSpeed, false))
+        {
+            UnitState = UNIT_STATE_ACTIONOVER;
+        }
+        break;
+    case UNIT_STATE_ATTACKING: 
+        // Attack Code
+        break;
 }
 </string>
           </argument>
@@ -85,7 +98,7 @@ else if (UnitState == "ActionOver")
             <kind>1</kind>
             <string>if(global.InAction == false)
 {
-    if(UnitState == "IdleState")
+    if(UnitState == UNIT_STATE_IDLE)
     {
         HighlightMoveRange(x,y,MoveRangeFrontBack,MoveRangeUpDown,MoveRangeDiagonal);
         IsSelected = true;

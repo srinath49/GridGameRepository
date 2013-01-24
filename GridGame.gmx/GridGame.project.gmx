@@ -297,7 +297,7 @@
       <object>objects\obj_login</object>
       <object>objects\obj_GameController</object>
       <object>objects\obj_ConnectionController</object>
-      <object>objects\obj_MenuController</object>
+      <object>objects\obj_toggleFullScreen</object>
     </objects>
     <objects name="Game Area">
       <object>objects\gaobj_aegonsField</object>
@@ -355,12 +355,16 @@
       <object>objects\pbobj_pathBlock</object>
     </objects>
     <objects name="Unit Objects">
-      <object>objects\uobj_meleeUnit</object>
-      <object>objects\uobj_rangedUnit</object>
-      <object>objects\uobj_unit</object>
+      <objects name="Root Units">
+        <object>objects\uobj_unit</object>
+        <object>objects\uobj_rangedUnit</object>
+        <object>objects\uobj_meleeUnit</object>
+      </objects>
+      <objects name="Starks">
+        <object>objects\uobj_Stark_Swordsman</object>
+      </objects>
+      <object>objects\obj_attackRight</object>
     </objects>
-    <object>objects\obj_toggleFullScreen</object>
-    <object>objects\obj_attackRight</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_serverConnectRoom</room>
@@ -369,6 +373,13 @@
     <room>rooms\rm_level1</room>
     <room>rooms\rm_bannerSelection</room>
   </rooms>
+  <constants number="5">
+    <constant name="UNIT_STATE_CREATED">0</constant>
+    <constant name="UNIT_STATE_ACTIONOVER">1</constant>
+    <constant name="UNIT_STATE_IDLE">2</constant>
+    <constant name="UNIT_STATE_MOVING">3</constant>
+    <constant name="UNIT_STATE_ATTACKING">4</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>

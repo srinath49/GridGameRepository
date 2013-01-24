@@ -89,6 +89,7 @@
     <instance objName="gaobj_rightSlots" x="1068" y="704" name="inst_E67E53B2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="gaobj_magicSigil" x="496" y="704" name="inst_4442A898" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="gaobj_helmetSigil" x="880" y="704" name="inst_288E6B2F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="bobj_playerUI" x="200" y="720" name="inst_D0C0E5A2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
