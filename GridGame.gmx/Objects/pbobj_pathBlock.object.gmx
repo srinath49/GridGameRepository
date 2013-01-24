@@ -70,14 +70,17 @@ IsOccupied = false;
 }
 else
 {
-    if(bobj_playerUI.ButtonClicked = true)
+    if(instance_number(bobj_playerUI) &gt; 0)
     {
-        if(!IsOccupied)
+        if(bobj_playerUI.ButtonClicked = true)
         {
-            instance_create(x, y, uobj_meleeUnit);
-            IsOccupied = true;
+            if(!IsOccupied)
+            {
+                instance_create(x, y, uobj_meleeUnit);
+                IsOccupied = true;
+            }
+            bobj_playerUI.ButtonClicked = false;
         }
-        bobj_playerUI.ButtonClicked = false;
     }
 }
 </string>
