@@ -26,7 +26,78 @@
           <argument>
             <kind>1</kind>
             <string>Login();
-instance_change(obj_SessionController, 1);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Check if we have a new message and if the client is still connected
+var size;
+//Retrieve the amount of bytes that the buffer currently has
+size=receivemessage(global.socket);
+//If the amount of bytes is less than 0 exit, meaning that we don't have a new message
+if (size&lt;0)
+{
+    exit;
+}
+//If the amount of bytes is higher than 0 go and process the package, meaning that we have a new message
+if (size&gt;0)
+{
+    event_user(0);
+}
+if (size=0)
+{
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="10">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>messageID = readbyte();
+if(messageID = 0)
+{
+    show_message("Logain Failed");
+    room_restart();
+}
+else if(messageID = 1)
+{
+    show_message("Logain Successful! Welcome "+global.username);
+    room_goto(rm_mainMenu);
+}
 </string>
           </argument>
         </arguments>

@@ -6,7 +6,7 @@ setnagle(global.socket, false);
 
 //Send Login Details
 clearbuffer();
-writebyte(1);
+writebyte(1); // 1 = Login
 writestring(global.username,true);
 writestring(global.password,true);
 //send_msg(); Implement this later

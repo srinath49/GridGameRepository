@@ -149,6 +149,9 @@
       <script>scripts\die.gml</script>
       <script>scripts\disconnect.gml</script>
     </scripts>
+    <scripts name="Account Scripts">
+      <script>scripts\CheckLoginDetails.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\obj_controller</object>
