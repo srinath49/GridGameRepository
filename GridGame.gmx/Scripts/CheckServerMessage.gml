@@ -20,12 +20,12 @@ if (size>0)
             global.MyTurn = true;
             global.ActionsLeft = 4;
             break;
-        case MATCH_MSG_ENEMYACTION;
+        case MATCH_MSG_ENEMYACTION:
             MatchState = MATCH_STATE_ENEMYACTION;
             break;
-        case MATCH_MSG_WON;
+        case MATCH_MSG_WON:
             break;
-        case MATCH_MSG_LOST;
+        case MATCH_MSG_LOST:
             break;
     }
 }

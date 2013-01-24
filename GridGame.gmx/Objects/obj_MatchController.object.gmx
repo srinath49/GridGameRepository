@@ -57,7 +57,7 @@ MatchState = readbyte();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>switch(MacthState)
+            <string>switch(MatchState)
 {
     case MATCH_STATE_WAITINGTURN:
         // Waiting for Server
@@ -66,7 +66,7 @@ MatchState = readbyte();
     case MATCH_STATE_MYTURN:
         break;
     case MATCH_STATE_ENEMYACTION:
-        PerformEnemyAction();
+        //PerformEnemyAction();
         MatchState = MATCH_STATE_INENEMYACTION;
         break;
     case MATCH_STATE_INENEMYACTION:

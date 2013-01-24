@@ -105,20 +105,20 @@ messageID = readbyte();
 //show_message(messageString);
 if(messageID = 2)
 {
-    show_message("Logain Successful! Welcome "+global.username);
-    globalvar starks        = readbyte();
-    globalvar lannisters    = readbyte();
-    globalvar targaryans    = readbyte();
-    globalvar greyjoys      = readbyte();
-    globalvar baratheons    = readbyte();
-    globalvar arryns        = readbyte();
-    globalvar tyrells       = readbyte();
-    globalvar martells      = readbyte();
+    show_message("Login Successful! Welcome "+global.username);
+    global.starks        = readbyte();
+    global.lannisters    = readbyte();
+    global.targaryans    = readbyte();
+    global.greyjoys      = readbyte();
+    global.baratheons    = readbyte();
+    global.arryns        = readbyte();
+    global.tyrells       = readbyte();
+    global.martells      = readbyte();
     room_goto(rm_mainMenu);
 }
 else if(messageID = 3)
 {
-    show_message("Logain Failed!");
+    show_message("Login Failed!");
     room_restart();
 }
 </string>
