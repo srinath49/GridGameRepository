@@ -106,6 +106,14 @@ messageID = readbyte();
 if(messageID = 2)
 {
     show_message("Logain Successful! Welcome "+global.username);
+    globalvar starks        = readbyte();
+    globalvar lannisters    = readbyte();
+    globalvar targaryans    = readbyte();
+    globalvar greyjoys      = readbyte();
+    globalvar baratheons    = readbyte();
+    globalvar arryns        = readbyte();
+    globalvar tyrells       = readbyte();
+    globalvar martells      = readbyte();
     room_goto(rm_mainMenu);
 }
 else if(messageID = 3)

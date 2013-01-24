@@ -52,7 +52,7 @@
   <instances>
     <instance objName="gaobj_background" x="682" y="384" name="inst_C12C5999" locked="-1" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_toggleFullScreen" x="0" y="0" name="inst_2F1BB5CB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_GameController" x="19" y="0" name="inst_0B00A666" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_MatchController" x="19" y="0" name="inst_0B00A666" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="gaobj_mainBoard" x="680" y="400" name="inst_74D9F76D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="gaobj_spears" x="1360" y="416" name="inst_381C78CD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pbaobj_pathBlockA01" x="208" y="584" name="inst_A0CB7D53" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

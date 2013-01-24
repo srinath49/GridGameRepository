@@ -246,6 +246,10 @@
       <script>scripts\LoadGame.gml</script>
       <script>scripts\SaveGame.gml</script>
     </scripts>
+    <scripts name="Match Scripts">
+      <script>scripts\CheckServerMessage.gml</script>
+      <script>scripts\RequestMatch.gml</script>
+    </scripts>
     <script>scripts\PlayerSpawner.gml</script>
   </scripts>
   <objects name="objects">
@@ -264,7 +268,10 @@
     </objects>
     <objects name="Choice Menu">
       <object>objects\cmobj_arrynBanner</object>
+      <object>objects\cmobj_arrynBannerUnavailable</object>
       <object>objects\cmobj_arrynShield</object>
+      <object>objects\cmobj_arrynShieldTitle</object>
+      <object>objects\cmobj_arrynShieldUnavailable</object>
       <object>objects\cmobj_arrynTitle</object>
       <object>objects\cmobj_baratheonBanner</object>
       <object>objects\cmobj_baratheonShield</object>
@@ -295,9 +302,10 @@
     </objects>
     <objects name="Controllers">
       <object>objects\obj_login</object>
-      <object>objects\obj_GameController</object>
+      <object>objects\obj_MatchController</object>
       <object>objects\obj_ConnectionController</object>
       <object>objects\obj_toggleFullScreen</object>
+      <object>objects\obj_GameController</object>
     </objects>
     <objects name="Game Area">
       <object>objects\gaobj_aegonsField</object>
@@ -367,18 +375,48 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_serverConnectRoom</room>
-    <room>rooms\rm_login</room>
-    <room>rooms\rm_mainMenu</room>
-    <room>rooms\rm_level1</room>
-    <room>rooms\rm_bannerSelection</room>
+    <rooms name="Network Rooms">
+      <room>rooms\rm_serverConnectRoom</room>
+      <room>rooms\rm_login</room>
+    </rooms>
+    <rooms name="Menu Rooms">
+      <room>rooms\rm_mainMenu</room>
+      <room>rooms\rm_bannerSelection</room>
+    </rooms>
+    <rooms name="Level Rooms">
+      <room>rooms\rm_level1</room>
+    </rooms>
   </rooms>
-  <constants number="5">
+  <constants number="29">
     <constant name="UNIT_STATE_CREATED">0</constant>
     <constant name="UNIT_STATE_ACTIONOVER">1</constant>
     <constant name="UNIT_STATE_IDLE">2</constant>
     <constant name="UNIT_STATE_MOVING">3</constant>
     <constant name="UNIT_STATE_ATTACKING">4</constant>
+    <constant name="MATCH_STATE_WAITINGTURN">0</constant>
+    <constant name="MATCH_STATE_MYTURN">1</constant>
+    <constant name="MATCH_STATE_ENEMYACTION">2</constant>
+    <constant name="MATCH_STATE_INENEMYACTION">3</constant>
+    <constant name="MATCH_STATE_ACTIONOVER">4</constant>
+    <constant name="MATCH_MSG_MYTURN">0</constant>
+    <constant name="MATCH_MSG_ENEMYACTION">1</constant>
+    <constant name="MATCH_MSG_WON">2</constant>
+    <constant name="MATCH_MSG_LOST">3</constant>
+    <constant name="GAME_STATE_MAINMENU">0</constant>
+    <constant name="GAME_STATE_MATCHMENU">1</constant>
+    <constant name="GAME_STATE_TEAMSELECT">2</constant>
+    <constant name="GAME_STATE_REQUESTMATCH">3</constant>
+    <constant name="GAME_STATE_WAITMATCH">4</constant>
+    <constant name="GAME_STATE_STARTMATCH">5</constant>
+    <constant name="GAME_STATE_INMATCH">6</constant>
+    <constant name="GAME_TEAM_STARKS">1</constant>
+    <constant name="GAME_TEAM_LANNISTER">2</constant>
+    <constant name="GAME_TEAM_TARGARYEN">3</constant>
+    <constant name="GAME_TEAM_GREYJOY">4</constant>
+    <constant name="GAME_TEAM_BARATHEON">5</constant>
+    <constant name="GAME_TEAM_ARRYN">6</constant>
+    <constant name="GAME_TEAM_TYRELL">7</constant>
+    <constant name="GAME_TEAM_MARTELL">8</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
