@@ -26,7 +26,6 @@
           <argument>
             <kind>1</kind>
             <string>Login();
-instance_change(obj_SessionController, 1);
 </string>
           </argument>
         </arguments>
