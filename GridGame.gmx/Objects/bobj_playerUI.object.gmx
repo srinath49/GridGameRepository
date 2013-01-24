@@ -55,13 +55,15 @@ ButtonClicked = false;
 }
 else
 {
-    if(instance_place(mouse_x,mouse_y,pbobj_pathBlock) == 0 and ButtonClicked and not ClickedNow)
+    if(instance_place(mouse_x,mouse_y,pbobj_pathBlock) = 0)
     {
-        ButtonClicked = false;
-    }
-    else
-    {
-
+        if(ButtonClicked)
+        {
+            if(!ClickedNow)
+            {
+                ButtonClicked = false;
+            }
+        }
     }
 }
 </string>

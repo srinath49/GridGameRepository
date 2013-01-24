@@ -70,7 +70,7 @@ IsOccupied = false;
 }
 else
 {
-    if(bobj_playerUI.ButtonClicked)
+    if(bobj_playerUI.ButtonClicked = true)
     {
         if(!IsOccupied)
         {

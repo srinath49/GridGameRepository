@@ -54,15 +54,20 @@ var size;
 //Retrieve the amount of bytes that the buffer currently has
 size=receivemessage(socket);
 //If the amount of bytes is less than 0 exit, meaning that we don't have a new message
-if (size&lt;0){
+if (size&lt;0)
+{
     exit;
 }
 //If the amount of bytes is higher than 0 go and process the package, meaning that we have a new message
-if (size&gt;0){
+else if (size&gt;0)
+{
+    //messageString = "Server : size = " + string(size);
+    //show_message(messageString);
     event_user(0);
 }
 //If the amount of bytes equals 0 the client disconnected
-if (size=0){
+else if (size=0)
+{
     disconnect();
 }
 </string>
@@ -92,19 +97,23 @@ messageID = readbyte();
 switch (messageID){
     case 1:
          username = readstring();
+         //uname = "Server : username = " + string(username);
+         //show_message(uname);
          password = readstring();
+         //pass = "Server : password = " + string(password);
+         //show_message(pass);
          loggedIn = CheckLoginDetails(username, password);
          setnagle(socket, false);
          if(loggedIn)
          {
             clearbuffer();
-            writebyte(1); // 1 = Login Successful
+            writebyte(2); // 2 = Login Successful
             sendmessage(socket);
          }
          else
          {
             clearbuffer();
-            writebyte(0); // 0 = Login Failed
+            writebyte(3); // 3 = Login Failed
             sendmessage(socket);
          }
     break;

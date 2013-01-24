@@ -141,7 +141,6 @@
         <sprite>sprites\spr_pathBlockF11</sprite>
       </sprites>
     </sprites>
-    <sprite>sprites\spr_logIn</sprite>
     <sprite>sprites\spr_playerWalkRight</sprite>
     <sprite>sprites\spr_playerUI</sprite>
     <sprite>sprites\spr_gameOfThronesBanner</sprite>
@@ -297,7 +296,6 @@
     <objects name="Controllers">
       <object>objects\obj_login</object>
       <object>objects\obj_GameController</object>
-      <object>objects\obj_SessionController</object>
       <object>objects\obj_ConnectionController</object>
       <object>objects\obj_MenuController</object>
     </objects>
