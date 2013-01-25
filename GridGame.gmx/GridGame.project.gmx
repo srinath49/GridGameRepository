@@ -104,6 +104,73 @@
       <sprite>sprites\spr_tree</sprite>
     </sprites>
     <sprites name="Game Area">
+      <sprites name="Path Blocks">
+        <sprites name="A">
+          <sprite>sprites\spr_pathBlockA01</sprite>
+          <sprite>sprites\spr_pathBlockA02</sprite>
+          <sprite>sprites\spr_pathBlockA03</sprite>
+          <sprite>sprites\spr_pathBlockA04</sprite>
+          <sprite>sprites\spr_pathBlockA05</sprite>
+          <sprite>sprites\spr_pathBlockA06</sprite>
+          <sprite>sprites\spr_pathBlockA07</sprite>
+          <sprite>sprites\spr_pathBlockA08</sprite>
+          <sprite>sprites\spr_pathBlockA09</sprite>
+          <sprite>sprites\spr_pathBlockA10</sprite>
+          <sprite>sprites\spr_pathBlockA11</sprite>
+        </sprites>
+        <sprites name="B">
+          <sprite>sprites\spr_pathBlockB01</sprite>
+          <sprite>sprites\spr_pathBlockB02</sprite>
+          <sprite>sprites\spr_pathBlockB03</sprite>
+          <sprite>sprites\spr_pathBlockB04</sprite>
+          <sprite>sprites\spr_pathBlockB05</sprite>
+          <sprite>sprites\spr_pathBlockB06</sprite>
+          <sprite>sprites\spr_pathBlockB07</sprite>
+          <sprite>sprites\spr_pathBlockB08</sprite>
+          <sprite>sprites\spr_pathBlockB09</sprite>
+          <sprite>sprites\spr_pathBlockB10</sprite>
+          <sprite>sprites\spr_pathBlockB11</sprite>
+        </sprites>
+        <sprites name="C">
+          <sprite>sprites\spr_pathBlockC01</sprite>
+          <sprite>sprites\spr_pathBlockC02</sprite>
+          <sprite>sprites\spr_pathBlockC03</sprite>
+          <sprite>sprites\spr_pathBlockC04</sprite>
+          <sprite>sprites\spr_pathBlockC05</sprite>
+          <sprite>sprites\spr_pathBlockC06</sprite>
+          <sprite>sprites\spr_pathBlockC07</sprite>
+          <sprite>sprites\spr_pathBlockC08</sprite>
+          <sprite>sprites\spr_pathBlockC09</sprite>
+          <sprite>sprites\spr_pathBlockC10</sprite>
+          <sprite>sprites\spr_pathBlockC11</sprite>
+        </sprites>
+        <sprites name="D">
+          <sprite>sprites\spr_pathBlockD01</sprite>
+          <sprite>sprites\spr_pathBlockD02</sprite>
+          <sprite>sprites\spr_pathBlockD03</sprite>
+          <sprite>sprites\spr_pathBlockD04</sprite>
+          <sprite>sprites\spr_pathBlockD05</sprite>
+          <sprite>sprites\spr_pathBlockD06</sprite>
+          <sprite>sprites\spr_pathBlockD07</sprite>
+          <sprite>sprites\spr_pathBlockD08</sprite>
+          <sprite>sprites\spr_pathBlockD09</sprite>
+          <sprite>sprites\spr_pathBlockD10</sprite>
+          <sprite>sprites\spr_pathBlockD11</sprite>
+        </sprites>
+        <sprites name="E">
+          <sprite>sprites\spr_pathBlockE01</sprite>
+          <sprite>sprites\spr_pathBlockE02</sprite>
+          <sprite>sprites\spr_pathBlockE03</sprite>
+          <sprite>sprites\spr_pathBlockE04</sprite>
+          <sprite>sprites\spr_pathBlockE05</sprite>
+          <sprite>sprites\spr_pathBlockE06</sprite>
+          <sprite>sprites\spr_pathBlockE07</sprite>
+          <sprite>sprites\spr_pathBlockE08</sprite>
+          <sprite>sprites\spr_pathBlockE09</sprite>
+          <sprite>sprites\spr_pathBlockE10</sprite>
+          <sprite>sprites\spr_pathBlockE11</sprite>
+        </sprites>
+      </sprites>
       <sprite>sprites\spr_aegonsField</sprite>
       <sprite>sprites\spr_background</sprite>
       <sprite>sprites\spr_bluePlayerMeter</sprite>
@@ -128,34 +195,6 @@
       <sprite>sprites\spr_chains</sprite>
       <sprite>sprites\spr_aegonsFieldTitle</sprite>
       <sprite>sprites\spr_fireball</sprite>
-    </sprites>
-    <sprites name="Path Blocks">
-      <sprites name="A">
-        <sprite>sprites\spr_pathBlockA01</sprite>
-        <sprite>sprites\spr_pathBlockA02</sprite>
-        <sprite>sprites\spr_pathBlockA03</sprite>
-        <sprite>sprites\spr_pathBlockA04</sprite>
-        <sprite>sprites\spr_pathBlockA05</sprite>
-        <sprite>sprites\spr_pathBlockA06</sprite>
-        <sprite>sprites\spr_pathBlockA07</sprite>
-        <sprite>sprites\spr_pathBlockA08</sprite>
-        <sprite>sprites\spr_pathBlockA09</sprite>
-        <sprite>sprites\spr_pathBlockA10</sprite>
-        <sprite>sprites\spr_pathBlockA11</sprite>
-      </sprites>
-      <sprites name="F">
-        <sprite>sprites\spr_pathBlockF01</sprite>
-        <sprite>sprites\spr_pathBlockF02</sprite>
-        <sprite>sprites\spr_pathBlockF03</sprite>
-        <sprite>sprites\spr_pathBlockF04</sprite>
-        <sprite>sprites\spr_pathBlockF05</sprite>
-        <sprite>sprites\spr_pathBlockF06</sprite>
-        <sprite>sprites\spr_pathBlockF07</sprite>
-        <sprite>sprites\spr_pathBlockF08</sprite>
-        <sprite>sprites\spr_pathBlockF09</sprite>
-        <sprite>sprites\spr_pathBlockF10</sprite>
-        <sprite>sprites\spr_pathBlockF11</sprite>
-      </sprites>
     </sprites>
     <sprite>sprites\spr_playerWalkRight</sprite>
     <sprite>sprites\spr_playerUI</sprite>
@@ -359,18 +398,57 @@
           <object>objects\pbaobj_pathBlockA10</object>
           <object>objects\pbaobj_pathBlockA11</object>
         </objects>
-        <objects name="F">
-          <object>objects\pbfobj_pathBlockF01</object>
-          <object>objects\pbfobj_pathBlockF02</object>
-          <object>objects\pbfobj_pathBlockF03</object>
-          <object>objects\pbfobj_pathBlockF04</object>
-          <object>objects\pbfobj_pathBlockF05</object>
-          <object>objects\pbfobj_pathBlockF06</object>
-          <object>objects\pbfobj_pathBlockF07</object>
-          <object>objects\pbfobj_pathBlockF08</object>
-          <object>objects\pbfobj_pathBlockF09</object>
-          <object>objects\pbfobj_pathBlockF10</object>
-          <object>objects\pbfobj_pathBlockF11</object>
+        <objects name="B">
+          <object>objects\pbobj_pathBlockB01</object>
+          <object>objects\pbobj_pathBlockB02</object>
+          <object>objects\pbobj_pathBlockB03</object>
+          <object>objects\pbobj_pathBlockB04</object>
+          <object>objects\pbobj_pathBlockB05</object>
+          <object>objects\pbobj_pathBlockB06</object>
+          <object>objects\pbobj_pathBlockB07</object>
+          <object>objects\pbobj_pathBlockB08</object>
+          <object>objects\pbobj_pathBlockB09</object>
+          <object>objects\pbobj_pathBlockB10</object>
+          <object>objects\pbobj_pathBlockB11</object>
+        </objects>
+        <objects name="C">
+          <object>objects\pbobj_pathBlockC01</object>
+          <object>objects\pbobj_pathBlockC02</object>
+          <object>objects\pbobj_pathBlockC03</object>
+          <object>objects\pbobj_pathBlockC04</object>
+          <object>objects\pbobj_pathBlockC05</object>
+          <object>objects\pbobj_pathBlockC06</object>
+          <object>objects\pbobj_pathBlockC07</object>
+          <object>objects\pbobj_pathBlockC08</object>
+          <object>objects\pbobj_pathBlockC09</object>
+          <object>objects\pbobj_pathBlockC10</object>
+          <object>objects\pbobj_pathBlockC11</object>
+        </objects>
+        <objects name="D">
+          <object>objects\pbobj_pathBlockD01</object>
+          <object>objects\pbobj_pathBlockD02</object>
+          <object>objects\pbobj_pathBlockD03</object>
+          <object>objects\pbobj_pathBlockD04</object>
+          <object>objects\pbobj_pathBlockD05</object>
+          <object>objects\pbobj_pathBlockD06</object>
+          <object>objects\pbobj_pathBlockD07</object>
+          <object>objects\pbobj_pathBlockD08</object>
+          <object>objects\pbobj_pathBlockD09</object>
+          <object>objects\pbobj_pathBlockD10</object>
+          <object>objects\pbobj_pathBlockD11</object>
+        </objects>
+        <objects name="E">
+          <object>objects\pbobj_pathBlockE01</object>
+          <object>objects\pbobj_pathBlockE02</object>
+          <object>objects\pbobj_pathBlockE03</object>
+          <object>objects\pbobj_pathBlockE04</object>
+          <object>objects\pbobj_pathBlockE05</object>
+          <object>objects\pbobj_pathBlockE06</object>
+          <object>objects\pbobj_pathBlockE07</object>
+          <object>objects\pbobj_pathBlockE08</object>
+          <object>objects\pbobj_pathBlockE09</object>
+          <object>objects\pbobj_pathBlockE10</object>
+          <object>objects\pbobj_pathBlockE11</object>
         </objects>
         <object>objects\pbobj_pathBlock</object>
       </objects>
