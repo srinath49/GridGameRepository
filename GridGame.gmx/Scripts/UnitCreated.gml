@@ -17,3 +17,5 @@ UnitCreatureArmour = argument10;
 MoveRangeFrontBack = argument11;
 MoveRangeUpDown = argument12;
 MoveRangeDiagonal = argument13;
+CreationDelay = 0;
+ActionDelay = 0;

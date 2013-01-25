@@ -26,8 +26,6 @@
           <argument>
             <kind>1</kind>
             <string>UnitCreated(0,0,0,0,0,0,0,0,0,0,0,2,2,1);
-CreationDelay = 0;
-ActionDelay = 0;
 </string>
           </argument>
         </arguments>
@@ -54,7 +52,7 @@ ActionDelay = 0;
 {
     case UNIT_STATE_CREATED: 
         // Just After Creation
-        CreationDelay += 1;
+        CreationDelay = CreationDelay + 1;
         if(CreationDelay &gt;= 15)
         {
             UnitState = UNIT_STATE_ACTIONOVER;
@@ -62,7 +60,7 @@ ActionDelay = 0;
         break;
     case UNIT_STATE_ACTIONOVER: 
         // Action Over. Unit just finished performing an action.
-        ActionDelay += 1;
+        ActionDelay = ActionDelay + 1;
         if(ActionDelay &gt;= 5)
         {
             UnitState = UNIT_STATE_IDLE;
