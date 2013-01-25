@@ -500,6 +500,8 @@
     </rooms>
     <rooms name="Level Rooms">
       <room>rooms\rm_level1</room>
+      <room>rooms\rml_level2</room>
+      <room>rooms\rm_level3</room>
     </rooms>
   </rooms>
   <constants number="29">
