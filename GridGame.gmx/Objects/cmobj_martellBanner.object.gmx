@@ -80,6 +80,7 @@ else
   cmobj_gameOfThronesBanner.visible = false
   cmobj_chooseYourBanner.visible = false
 
+  global.NewMatchTeam = GAME_TEAM_MARTELL;
 }
 </string>
           </argument>

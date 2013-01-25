@@ -80,7 +80,8 @@ if (new_socket&gt;0){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(5,5,"Guests Online: "+string(instance_number(obj_guest)));
+            <string>draw_text(5,5,"Guests Online  : "+string(instance_number(obj_guest)));
+draw_text(5,35, "Players Online : "+string(instance_number(obj_player)));
 </string>
           </argument>
         </arguments>

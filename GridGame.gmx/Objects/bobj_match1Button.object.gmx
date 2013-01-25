@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room_goto(rm_level1);
+            <string>room_goto(lrm_level1);
 </string>
           </argument>
         </arguments>

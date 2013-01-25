@@ -28,7 +28,48 @@
             <string>globalvar GameState;
 globalvar NewMatchTeam;
 
-GameState = GAME_STATE_MAINMENU;
+global.GameState = GAME_STATE_MAINMENU;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Check if we have a new message and if the client is still connected
+var size;
+//Retrieve the amount of bytes that the buffer currently has
+size=receivemessage(global.socket);
+//If the amount of bytes is less than 0 exit, meaning that we don't have a new message
+if (size&lt;0)
+{
+    exit;
+}
+//If the amount of bytes is higher than 0 go and process the package, meaning that we have a new message
+if (size&gt;0)
+{
+    //messageString = "Client : size = " + string(size); 
+    //show_message(messageString);
+    event_user(0);
+}
+if (size=0)
+{
+}
 </string>
           </argument>
         </arguments>
@@ -51,7 +92,7 @@ GameState = GAME_STATE_MAINMENU;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>switch(GameState)
+            <string>switch(global.GameState)
 {
     case GAME_STATE_MAINMENU:
         break;
@@ -61,7 +102,7 @@ GameState = GAME_STATE_MAINMENU;
         break;
     case GAME_STATE_REQUESTMATCH:
         RequestMatch();
-        GameState = GAME_STATE_WAITMATCH;
+        global.GameState = GAME_STATE_WAITMATCH;
         break;
     case GAME_STATE_WAITMATCH:
         break;
@@ -70,6 +111,29 @@ GameState = GAME_STATE_MAINMENU;
     case GAME_STATE_INMATCH:
         break;
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="10">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//
 </string>
           </argument>
         </arguments>

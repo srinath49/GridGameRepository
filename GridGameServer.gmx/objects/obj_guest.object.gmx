@@ -25,7 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>messageID = -1;
+            <string>var socket;
+var username;
+var password;
+var messageID;
+var loggedIn;
+
+messageID = -1;
 loggedIn = false;
 </string>
           </argument>
@@ -108,7 +114,7 @@ switch (messageID){
          {
             clearbuffer();
             
-            writebyte(2); // 2 = Login Successful
+            writebyte(ACCOUNT_LOGIN_SUCCESS); // 2 = Login Successful
             
             writebyte(true); // Lannisters Availability
             writebyte(true); // Starks Availability
@@ -120,14 +126,24 @@ switch (messageID){
             writebyte(false); // Martells Availability
          
             sendmessage(socket);
+            // Create Player Object
+            {
+                newPlayer = instance_create(x,y,obj_player);
+                newPlayer.socket = socket;
+                newPlayer.username = username;
+                newPlayer.password = password;
+                newPlayer.loggedIn = true;
+            }
+            
+            instance_destroy();
          }
          else
          {
             clearbuffer();
-            writebyte(3); // 3 = Login Failed
+            writebyte(ACCOUNT_LOGIN_FAIL); // 3 = Login Failed
             sendmessage(socket);
          }
-    break;
+        break;
 }
 </string>
           </argument>

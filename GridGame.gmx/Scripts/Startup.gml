@@ -20,7 +20,7 @@ if keyboard_check_released(ord("V"))
 
 if keyboard_check(vk_escape)
 {
-  room_goto(rm_mainMenu);
+  room_goto(mrm_mainMenu);
 }
 
 if keyboard_check_pressed(vk_f11)

@@ -103,7 +103,7 @@ if (size=0)
 messageID = readbyte();
 //messageString = "Client : messageID = " + string(messageID);
 //show_message(messageString);
-if(messageID = 2)
+if(messageID == ACCOUNT_LOGIN_SUCCESS)
 {
     show_message("Login Successful! Welcome "+global.username);
     global.lannisters    = readbyte();
@@ -114,9 +114,9 @@ if(messageID = 2)
     global.arryns        = readbyte();
     global.tyrells       = readbyte();
     global.martells      = readbyte();
-    room_goto(rm_mainMenu);
+    room_goto(mrm_mainMenu);
 }
-else if(messageID = 3)
+else if(messageID == ACCOUNT_LOGIN_FAIL)
 {
     show_message("Login Failed!");
     room_restart();

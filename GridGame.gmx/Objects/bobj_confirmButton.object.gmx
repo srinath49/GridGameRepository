@@ -27,7 +27,8 @@
             <kind>1</kind>
             <string>if(visible)
 {
-    room_goto(rm_level1);
+    global.GameState = GAME_STATE_REQUESTMATCH;
+    room_goto(wrm_waitForMatch);
 }
 </string>
           </argument>
