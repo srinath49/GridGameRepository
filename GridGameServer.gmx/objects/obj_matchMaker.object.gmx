@@ -8,6 +8,33 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>globalvar matchIdList;
+globalvar matchesList;
+
+matchIdList = ds_list_create();
+matchesList = ds_list_create();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -25,7 +52,23 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//
+            <string>pos = 0;
+len = ds_list_size(global.matchRequestList);
+if(len &gt; 1)
+{
+    request1 = ds_list_find_value(global.matchRequestList, pos);
+    while(pos &lt; len)
+    {
+        request2 = ds_list_find_value(global.matchRequestList, ++pos);
+        if(request1.username != request2.username)
+        {
+            ds_list_delete(global.matchRequestList, 0);
+            ds_list_delete(global.matchRequestList, pos);
+            newMatch = CreateMatch(request1, request2);
+            ClientCreateMatch(newMatch);
+        } 
+    }
+}
 </string>
           </argument>
         </arguments>

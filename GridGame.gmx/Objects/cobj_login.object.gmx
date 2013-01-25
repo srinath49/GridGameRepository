@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>-1</persistent>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -25,18 +25,23 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>globalvar GameState;
-globalvar NewMatchTeam;
+            <string>Login();
 
-global.GameState = GAME_STATE_MAINMENU;
+setnagle(global.socket, false);
 
-//show_message("Client::Object::obj_GameController:: Object Created!");
+//Send Login Details
+clearbuffer();
+writebyte(1); // 1 = Login
+writestring(global.username);
+writestring(global.password);
+//send_msg(); Implement this later
+sendmessage(global.socket);
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="1">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -77,45 +82,6 @@ if (size=0)
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>switch(global.GameState)
-{
-    case GAME_STATE_NONE:
-    case GAME_STATE_MAINMENU:
-    case GAME_STATE_HUBMENU:
-    case GAME_STATE_TEAMSELECT:
-    case GAME_STATE_WAITMATCH:
-    case GAME_STATE_STARTMATCH:
-    case GAME_STATE_INMATCH:
-        exit;
-        break;
-    case GAME_STATE_REQUESTMATCH:
-        //show_message("Client::Object::obj_GameController::RequestMatch");
-        RequestMatch();
-        global.GameState = GAME_STATE_WAITMATCH;
-        break;
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="7" enumb="10">
       <action>
         <libid>1</libid>
@@ -133,11 +99,29 @@ if (size=0)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>messageID = readbyte();
-switch(messageID)
+            <string>//show_message(messageID);
+messageID = readbyte();
+//messageString = "Client : messageID = " + string(messageID);
+//show_message(messageString);
+if(messageID == ACCOUNT_LOGIN_SUCCESS)
 {
-    case GAME_MATCH_START:
-        StartNewMatch();
+    show_message("Login Successful! Welcome "+global.username);
+    global.lannisters    = readbyte();
+    global.starks        = readbyte();
+    global.targaryans    = readbyte();
+    global.greyjoys      = readbyte();
+    global.baratheons    = readbyte();
+    global.arryns        = readbyte();
+    global.tyrells       = readbyte();
+    global.martells      = readbyte();
+    
+    global.GameState = GAME_STATE_MAINMENU;
+    room_goto(mrm_mainMenu);
+}
+else if(messageID == ACCOUNT_LOGIN_FAIL)
+{
+    show_message("Login Failed!");
+    room_restart();
 }
 </string>
           </argument>
@@ -156,5 +140,8 @@ switch(messageID)
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
-  <PhysicsShapePoints/>
+  <PhysicsShapePoints>
+    <point>0,0</point>
+    <point>16,16</point>
+  </PhysicsShapePoints>
 </object>

@@ -25,11 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>globalvar SelectedUnit;
-globalvar InAction;
-globalvar ActionsLeft;
-globalvar MyTurn;
-globalvar MatchState;
+            <string>var SelectedUnit;
+var InAction;
+var ActionsLeft;
+var MyTurn;
+var MatchState;
+var MatchID;
 
 InAction = false;
 MyTurn = false;

@@ -57,7 +57,7 @@ IsOccupied = false;
     {
         if(!ignoreBlock)
         {
-            CurrentObject = instance_position(SelectedUnit.x,SelectedUnit.y,pbobj_pathBlock);
+            CurrentObject = instance_position(global.SelectedUnit.x,global.SelectedUnit.y,pbobj_pathBlock);
             MoveSelectedUnit(x,y,2);
             //show_message(CurrentObject.IsOccupied);
             CurrentObject.IsOccupied = false;

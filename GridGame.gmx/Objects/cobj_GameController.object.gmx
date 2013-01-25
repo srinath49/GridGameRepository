@@ -27,7 +27,9 @@
             <kind>1</kind>
             <string>globalvar GameState;
 globalvar NewMatchTeam;
+globalvar NewMatchList;
 
+global.NewMatchList = ds_list_create();
 global.GameState = GAME_STATE_MAINMENU;
 
 //show_message("Client::Object::obj_GameController:: Object Created!");
@@ -137,7 +139,9 @@ if (size=0)
 switch(messageID)
 {
     case GAME_MATCH_START:
-        StartNewMatch();
+        mid = CreateNewMatch();
+        StartNewMatch(mid);
+        break;
 }
 </string>
           </argument>

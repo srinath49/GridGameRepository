@@ -13,15 +13,16 @@ if (size>0)
     //messageString = "Client : size = " + string(size); 
     //show_message(messageString);
     matchMessage = readbyte();
+    matchController = argument0;
     switch(matchMessage)
     {
         case MATCH_MSG_MYTURN:
-            MatchState = MATCH_STATE_MYTURN;
-            global.MyTurn = true;
-            global.ActionsLeft = 4;
+            matchController.MatchState = MATCH_STATE_MYTURN;
+            matchController.MyTurn = true;
+            matchController.ActionsLeft = MATCH_ACTIONS_PER_TURN;
             break;
         case MATCH_MSG_ENEMYACTION:
-            MatchState = MATCH_STATE_ENEMYACTION;
+            matchController.MatchState = MATCH_STATE_ENEMYACTION;
             break;
         case MATCH_MSG_WON:
             break;

@@ -1,4 +1,4 @@
-with(SelectedUnit)
+with(global.SelectedUnit)
 {
     MoveLocationX = argument0;
     MoveLocationY = argument1;

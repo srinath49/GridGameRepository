@@ -102,10 +102,10 @@ show_message(mstr);
 switch (messageID)
 {
     case GAME_MATCH_REQUEST:
-        newMatch = instance_create(x,y,obj_matchRequest);
-        newMatch.username = username;
-        newMatch.Team = readbyte();
-        ds_queue_enqueue(global.matchRequestList, newMatch);
+        newMatchRequest = instance_create(x,y,obj_matchRequest);
+        newMatchRequest.player = self;
+        newMatchRequest.Team = readbyte();
+        ds_list_add(global.matchRequestList, newMatchRequest);
         //show_message("Match Request Created for user : "+username);
         break;
 }

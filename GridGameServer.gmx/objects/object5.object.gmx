@@ -25,8 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var player;
-var team;
+            <string>var matchID;
+
+var player1;
+var player1Team;
+var player1UnitList;
+var player2;
+var player2Team;
+var player2UnitList;
 </string>
           </argument>
         </arguments>

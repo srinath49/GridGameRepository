@@ -111,7 +111,7 @@
     {
         HighlightMoveRange(x,y,MoveRangeFrontBack,MoveRangeUpDown,MoveRangeDiagonal);
         IsSelected = true;
-        SelectedUnit = id;
+        global.SelectedUnit = id;
     }
 }
 </string>
