@@ -25,7 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>audio_play_sound(snd_mainMenuButton, 10, false);
+            <string>if(visible)
+{
+    audio_play_sound(snd_mainMenuButton, 10, false);
+}
 </string>
           </argument>
         </arguments>

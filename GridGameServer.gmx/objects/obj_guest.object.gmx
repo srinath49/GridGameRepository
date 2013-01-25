@@ -107,7 +107,18 @@ switch (messageID){
          if(loggedIn)
          {
             clearbuffer();
+            
             writebyte(2); // 2 = Login Successful
+            
+            writebyte(true); // Lannisters Availability
+            writebyte(true); // Starks Availability
+            writebyte(false); // Targaryans Availability  
+            writebyte(false); // Greyjoys Availability
+            writebyte(false); // Baratheons Availability
+            writebyte(false); // Arryns Availability
+            writebyte(false); // Tyrells Availability
+            writebyte(false); // Martells Availability
+         
             sendmessage(socket);
          }
          else

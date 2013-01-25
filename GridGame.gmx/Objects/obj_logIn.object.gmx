@@ -106,8 +106,8 @@ messageID = readbyte();
 if(messageID = 2)
 {
     show_message("Login Successful! Welcome "+global.username);
-    global.starks        = readbyte();
     global.lannisters    = readbyte();
+    global.starks        = readbyte();
     global.targaryans    = readbyte();
     global.greyjoys      = readbyte();
     global.baratheons    = readbyte();
