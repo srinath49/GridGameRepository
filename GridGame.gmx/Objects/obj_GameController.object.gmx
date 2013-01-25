@@ -29,6 +29,8 @@
 globalvar NewMatchTeam;
 
 global.GameState = GAME_STATE_MAINMENU;
+
+//show_message("Client::Object::obj_GameController:: Object Created!");
 </string>
           </argument>
         </arguments>
@@ -94,21 +96,19 @@ if (size=0)
             <kind>1</kind>
             <string>switch(global.GameState)
 {
+    case GAME_STATE_NONE:
     case GAME_STATE_MAINMENU:
-        break;
-    case GAME_STATE_MATCHMENU:
-        break;
+    case GAME_STATE_HUBMENU:
     case GAME_STATE_TEAMSELECT:
+    case GAME_STATE_WAITMATCH:
+    case GAME_STATE_STARTMATCH:
+    case GAME_STATE_INMATCH:
+        exit;
         break;
     case GAME_STATE_REQUESTMATCH:
+        //show_message("Client::Object::obj_GameController::RequestMatch");
         RequestMatch();
         global.GameState = GAME_STATE_WAITMATCH;
-        break;
-    case GAME_STATE_WAITMATCH:
-        break;
-    case GAME_STATE_STARTMATCH:
-        break;
-    case GAME_STATE_INMATCH:
         break;
 }
 </string>

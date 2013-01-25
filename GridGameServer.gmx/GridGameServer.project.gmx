@@ -154,14 +154,22 @@
     </scripts>
   </scripts>
   <objects name="objects">
-    <object>objects\obj_controller</object>
-    <object>objects\obj_guest</object>
-    <object>objects\obj_player</object>
+    <objects name="Controllers">
+      <object>objects\obj_server</object>
+      <object>objects\obj_matchMaker</object>
+    </objects>
+    <objects name="Client Objects">
+      <object>objects\obj_guest</object>
+      <object>objects\obj_player</object>
+    </objects>
+    <objects name="Match Objects">
+      <object>objects\obj_matchRequest</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_server</room>
   </rooms>
-  <constants number="32">
+  <constants number="33">
     <constant name="UNIT_STATE_CREATED">1</constant>
     <constant name="UNIT_STATE_ACTIONOVER">2</constant>
     <constant name="UNIT_STATE_IDLE">3</constant>
@@ -176,24 +184,25 @@
     <constant name="MATCH_MSG_ENEMYACTION">12</constant>
     <constant name="MATCH_MSG_WON">13</constant>
     <constant name="MATCH_MSG_LOST">14</constant>
-    <constant name="GAME_STATE_MAINMENU">15</constant>
-    <constant name="GAME_STATE_MATCHMENU">16</constant>
-    <constant name="GAME_STATE_TEAMSELECT">17</constant>
-    <constant name="GAME_STATE_REQUESTMATCH">18</constant>
-    <constant name="GAME_STATE_WAITMATCH">19</constant>
-    <constant name="GAME_STATE_STARTMATCH">20</constant>
-    <constant name="GAME_STATE_INMATCH">21</constant>
-    <constant name="GAME_TEAM_STARKS">22</constant>
-    <constant name="GAME_TEAM_LANNISTER">23</constant>
-    <constant name="GAME_TEAM_TARGARYEN">24</constant>
-    <constant name="GAME_TEAM_GREYJOY">25</constant>
-    <constant name="GAME_TEAM_BARATHEON">26</constant>
-    <constant name="GAME_TEAM_ARRYN">27</constant>
-    <constant name="GAME_TEAM_TYRELL">28</constant>
-    <constant name="GAME_TEAM_MARTELL">29</constant>
-    <constant name="GAME_MATCH_REQUEST">30</constant>
-    <constant name="ACCOUNT_LOGIN_FAIL">31</constant>
-    <constant name="ACCOUNT_LOGIN_SUCCESS">32</constant>
+    <constant name="GAME_STATE_NONE">15</constant>
+    <constant name="GAME_STATE_MAINMENU">16</constant>
+    <constant name="GAME_STATE_HUBMENU">17</constant>
+    <constant name="GAME_STATE_TEAMSELECT">18</constant>
+    <constant name="GAME_STATE_REQUESTMATCH">19</constant>
+    <constant name="GAME_STATE_WAITMATCH">20</constant>
+    <constant name="GAME_STATE_STARTMATCH">21</constant>
+    <constant name="GAME_STATE_INMATCH">22</constant>
+    <constant name="GAME_TEAM_STARKS">23</constant>
+    <constant name="GAME_TEAM_LANNISTER">24</constant>
+    <constant name="GAME_TEAM_TARGARYEN">25</constant>
+    <constant name="GAME_TEAM_GREYJOY">26</constant>
+    <constant name="GAME_TEAM_BARATHEON">27</constant>
+    <constant name="GAME_TEAM_ARRYN">28</constant>
+    <constant name="GAME_TEAM_TYRELL">29</constant>
+    <constant name="GAME_TEAM_MARTELL">30</constant>
+    <constant name="GAME_MATCH_REQUEST">31</constant>
+    <constant name="ACCOUNT_LOGIN_FAIL">32</constant>
+    <constant name="ACCOUNT_LOGIN_SUCCESS">33</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

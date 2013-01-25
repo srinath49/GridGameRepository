@@ -25,14 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var socket;
-var username;
-var password;
-var messageID;
-var loggedIn;
-
-messageID = -1;
-loggedIn = false;
+            <string>///Initialize the server
+initiate();
+instance_create(x,y,obj_matchMaker);
+globalvar matchRequestList;
+matchRequestList = ds_queue_create();
 </string>
           </argument>
         </arguments>
@@ -55,33 +52,21 @@ loggedIn = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Check if we have a new message and if the client is still connected
-var size;
-//Retrieve the amount of bytes that the buffer currently has
-size=receivemessage(socket);
-//If the amount of bytes is less than 0 exit, meaning that we don't have a new message
-if (size&lt;0)
-{
-    exit;
-}
-//If the amount of bytes is higher than 0 go and process the package, meaning that we have a new message
-else if (size&gt;0)
-{
-    //messageString = "Server : size = " + string(size);
-    //show_message(messageString);
-    event_user(0);
-}
-//If the amount of bytes equals 0 the client disconnected
-else if (size=0)
-{
-    disconnect();
+            <string>var new_socket;
+//Check if we have an incoming connection to our server
+new_socket=tcpaccept(global.socket);
+//If the value returned by tcpaccept is higher than 0 we have a new client connecting
+if (new_socket&gt;0){
+    with (instance_create(x,y,obj_guest)){
+        socket=new_socket;
+    }
 }
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="7" enumb="10">
+    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -98,53 +83,8 @@ else if (size=0)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Read Package Identifier
-messageID = readbyte();
-switch (messageID){
-    case 1:
-         username = readstring();
-         //uname = "Server : username = " + string(username);
-         //show_message(uname);
-         password = readstring();
-         //pass = "Server : password = " + string(password);
-         //show_message(pass);
-         loggedIn = CheckLoginDetails(username, password);
-         setnagle(socket, false);
-         if(loggedIn)
-         {
-            clearbuffer();
-            
-            writebyte(ACCOUNT_LOGIN_SUCCESS);
-            
-            writebyte(true); // Lannisters Availability
-            writebyte(true); // Starks Availability
-            writebyte(true); // Targaryans Availability  
-            writebyte(false); // Greyjoys Availability
-            writebyte(false); // Baratheons Availability
-            writebyte(false); // Arryns Availability
-            writebyte(false); // Tyrells Availability
-            writebyte(false); // Martells Availability
-         
-            sendmessage(socket);
-            //show_message("Server : Messege Sent To Socket : "+string(socket));
-            // Create Player Object
-            {
-                newPlayer = instance_create(x,y,obj_player);
-                newPlayer.socket = socket;
-                newPlayer.username = username;
-                newPlayer.password = password;
-                newPlayer.loggedIn = true;
-            }
-            instance_destroy();
-         }
-         else
-         {
-            clearbuffer();
-            writebyte(ACCOUNT_LOGIN_FAIL);
-            sendmessage(socket);
-         }
-        break;
-}
+            <string>draw_text(5,5,"Guests Online  : "+string(instance_number(obj_guest)));
+draw_text(5,35, "Players Online : "+string(instance_number(obj_player)));
 </string>
           </argument>
         </arguments>

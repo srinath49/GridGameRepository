@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -30,8 +30,6 @@ var username;
 var password;
 var messageID;
 var loggedIn;
-
-messageID = -1;
 </string>
           </argument>
         </arguments>
@@ -99,8 +97,16 @@ else if (size=0)
             <kind>1</kind>
             <string>///Read Package Identifier
 messageID = readbyte();
-switch (messageID){
-    case 1:
+mstr = "Server : messageId = " + string(messageID);
+show_message(mstr);
+switch (messageID)
+{
+    case GAME_MATCH_REQUEST:
+        newMatch = instance_create(x,y,obj_matchRequest);
+        newMatch.username = username;
+        newMatch.Team = readbyte();
+        ds_queue_enqueue(global.matchRequestList, newMatch);
+        //show_message("Match Request Created for user : "+username);
         break;
 }
 </string>

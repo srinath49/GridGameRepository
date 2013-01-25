@@ -114,6 +114,8 @@ if(messageID == ACCOUNT_LOGIN_SUCCESS)
     global.arryns        = readbyte();
     global.tyrells       = readbyte();
     global.martells      = readbyte();
+    
+    global.GameState = GAME_STATE_MAINMENU;
     room_goto(mrm_mainMenu);
 }
 else if(messageID == ACCOUNT_LOGIN_FAIL)

@@ -10,7 +10,10 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code></code>
+  <code>if(instance_number(obj_GameController) &lt;= 0)
+{
+    instance_create(0,0,obj_GameController);
+}</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <makerSettings>
