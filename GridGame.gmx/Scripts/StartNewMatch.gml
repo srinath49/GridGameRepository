@@ -7,7 +7,10 @@ for(i=0;i<ds_list_size(global.NewMatchList);i++)
     if(match.matchID == mid)
     {
         matchController.MyTurn = match.MyTurn;
-        matchController.MatchState = MATCH_STATE_NEWMATCH;
+        matchController.MatchState = MATCH_STATE_NEW;
+        matchController.Team = match.Team;
+        ds_list_delete(global.NewMatchList, i);
+        ds_list_add(global.MyMatchList, match);
         break;
     }
 }

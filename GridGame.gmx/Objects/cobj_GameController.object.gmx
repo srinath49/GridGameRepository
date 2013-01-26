@@ -28,8 +28,10 @@
             <string>globalvar GameState;
 globalvar NewMatchTeam;
 globalvar NewMatchList;
+globalvar MyMatchList;
 
 global.NewMatchList = ds_list_create();
+global.MyMatchList = ds_list_create();
 global.GameState = GAME_STATE_MAINMENU;
 
 //show_message("Client::Object::obj_GameController:: Object Created!");

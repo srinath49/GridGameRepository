@@ -19,3 +19,4 @@ MoveRangeUpDown = argument12;
 MoveRangeDiagonal = argument13;
 CreationDelay = 0;
 ActionDelay = 0;
+depth = -3;

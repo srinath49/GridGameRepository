@@ -31,11 +31,12 @@ var ActionsLeft;
 var MyTurn;
 var MatchState;
 var MatchID;
+var Team;
 
-InAction = false;
-MyTurn = false;
-ActionsLeft = 0;
-//MatchState = readbyte();
+global.InAction = false;
+id.MyTurn = false;
+id.ActionsLeft = 0;
+id.MatchState = MATCH_STATE_NONE;
 </string>
           </argument>
         </arguments>
@@ -58,8 +59,25 @@ ActionsLeft = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>switch(MatchState)
+            <string>//show_message(string(id.MatchState));
+switch(id.MatchState)
 {
+    case MATCH_STATE_NEW:
+        //show_message("New Match");
+        room_goto(lrm_level1);
+        id.MatchState = MATCH_STATE_POPULATE;
+        break;
+    case MATCH_STATE_POPULATE:
+        //show_message("Populate Match");
+        PopulateMatch(true, id);
+        if(MyTurn)
+        {
+            id.MatchState = MATCH_STATE_MYTURN;
+        }
+        else
+        {
+            id.MatchState = MATCH_STATE_WAITINGTURN;
+        }
     case MATCH_STATE_WAITINGTURN:
         // Waiting for Server
         CheckServerMessage(self);
@@ -68,7 +86,7 @@ ActionsLeft = 0;
         break;
     case MATCH_STATE_ENEMYACTION:
         //PerformEnemyAction();
-        MatchState = MATCH_STATE_INENEMYACTION;
+        id.MatchState = MATCH_STATE_INENEMYACTION;
         break;
     case MATCH_STATE_INENEMYACTION:
         break;

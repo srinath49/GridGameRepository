@@ -28,7 +28,7 @@
             <string>if(visible)
 {
     global.GameState = GAME_STATE_REQUESTMATCH;
-    show_message("Client::Object::bobj_confirmButton::GameState = "+string(global.GameState));
+    //show_message("Client::Object::bobj_confirmButton::GameState = "+string(global.GameState));
     room_goto(wrm_waitForMatch);
 }
 </string>

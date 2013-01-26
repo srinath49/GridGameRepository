@@ -306,6 +306,7 @@
       <script>scripts\RequestMatch.gml</script>
       <script>scripts\StartNewMatch.gml</script>
       <script>scripts\CreateNewMatch.gml</script>
+      <script>scripts\PopulateMatch.gml</script>
     </scripts>
     <script>scripts\PlayerSpawner.gml</script>
   </scripts>
@@ -316,12 +317,22 @@
       <object>objects\bobj_loadButton</object>
       <object>objects\bobj_match1Button</object>
       <object>objects\bobj_optionsButton</object>
-      <object>objects\bobj_playerUI</object>
       <object>objects\bobj_quitButton</object>
       <object>objects\bobj_tutorialButton</object>
       <object>objects\bobj_match</object>
       <object>objects\bobj_confirmButton</object>
       <object>objects\bobj_MenuButtonParent</object>
+    </objects>
+    <objects name="UI Buttons">
+      <object>objects\uiobj_UI</object>
+      <objects name="Stark UI">
+        <object>objects\uiobj_starkUI</object>
+        <object>objects\suiobj_swordsman</object>
+      </objects>
+      <objects name="Lannister UI">
+        <object>objects\uiobj_lannisterUI</object>
+        <object>objects\luiobj_swordsman</object>
+      </objects>
     </objects>
     <objects name="Choice Menu">
       <object>objects\cmobj_arrynBanner</object>
@@ -485,8 +496,11 @@
         <object>objects\uobj_rangedUnit</object>
         <object>objects\uobj_meleeUnit</object>
       </objects>
-      <objects name="Starks">
+      <objects name="Stark">
         <object>objects\uobj_Stark_Swordsman</object>
+      </objects>
+      <objects name="Lannister">
+        <object>objects\uobj_Lannister_Swordsman</object>
       </objects>
       <object>objects\obj_attackRight</object>
     </objects>
@@ -512,7 +526,7 @@
       <room>rooms\wrm_waitForMatch</room>
     </rooms>
   </rooms>
-  <constants number="36">
+  <constants number="38">
     <constant name="ACCOUNT_LOGIN_FAIL">1</constant>
     <constant name="ACCOUNT_LOGIN_SUCCESS">2</constant>
     <constant name="UNIT_STATE_CREATED">1</constant>
@@ -520,12 +534,14 @@
     <constant name="UNIT_STATE_IDLE">3</constant>
     <constant name="UNIT_STATE_MOVING">4</constant>
     <constant name="UNIT_STATE_ATTACKING">5</constant>
-    <constant name="MATCH_STATE_NEW">0</constant>
-    <constant name="MATCH_STATE_WAITINGTURN">1</constant>
-    <constant name="MATCH_STATE_MYTURN">2</constant>
-    <constant name="MATCH_STATE_ENEMYACTION">3</constant>
-    <constant name="MATCH_STATE_INENEMYACTION">4</constant>
-    <constant name="MATCH_STATE_ACTIONOVER">5</constant>
+    <constant name="MATCH_STATE_NONE">0</constant>
+    <constant name="MATCH_STATE_NEW">1</constant>
+    <constant name="MATCH_STATE_WAITINGTURN">2</constant>
+    <constant name="MATCH_STATE_MYTURN">3</constant>
+    <constant name="MATCH_STATE_ENEMYACTION">4</constant>
+    <constant name="MATCH_STATE_INENEMYACTION">5</constant>
+    <constant name="MATCH_STATE_ACTIONOVER">6</constant>
+    <constant name="MATCH_STATE_POPULATE">7</constant>
     <constant name="MATCH_MSG_MYTURN">1</constant>
     <constant name="MATCH_MSG_ENEMYACTION">2</constant>
     <constant name="MATCH_MSG_WON">3</constant>

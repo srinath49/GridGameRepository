@@ -118,7 +118,7 @@ switch (messageID){
             
             writebyte(true); // Lannisters Availability
             writebyte(true); // Starks Availability
-            writebyte(true); // Targaryans Availability  
+            writebyte(false); // Targaryans Availability  
             writebyte(false); // Greyjoys Availability
             writebyte(false); // Baratheons Availability
             writebyte(false); // Arryns Availability

@@ -1,1 +1,1 @@
-instance_create(248 , 200 , uobj_meleeUnit);
+instance_create(argument0 , argument1 , argument2);

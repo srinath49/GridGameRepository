@@ -26,13 +26,14 @@
           <argument>
             <kind>1</kind>
             <string>var matchID;
-
-var player1;
+var player1Username;
 var player1Team;
 var player1UnitList;
-var player2;
+var player1Socket;
+var player2Username;
 var player2Team;
 var player2UnitList;
+var player2Socket;
 </string>
           </argument>
         </arguments>

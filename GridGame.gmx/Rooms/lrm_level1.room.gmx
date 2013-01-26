@@ -75,7 +75,7 @@
     <instance objName="gaobj_scroll03" x="68" y="416" name="inst_57C7F48C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="gaobj_scroll04" x="68" y="544" name="inst_42102125" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="gaobj_scroll05" x="68" y="672" name="inst_D156383C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="gaobj_leftSlots" x="296" y="704" name="inst_AF34A311" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="gaobj_leftSlots" x="300" y="706" name="inst_AF34A311" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="gaobj_rightSlots" x="1068" y="704" name="inst_E67E53B2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="gaobj_magicSigil" x="496" y="704" name="inst_4442A898" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="gaobj_helmetSigil" x="880" y="704" name="inst_288E6B2F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -122,7 +122,8 @@
     <instance objName="pbobj_pathBlockE09" x="936" y="195" name="inst_E62A7C32" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pbobj_pathBlockE10" x="1020" y="195" name="inst_97B185DA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pbobj_pathBlockE11" x="1100" y="195" name="inst_8E2F44C5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="bobj_playerUI" x="200" y="720" name="inst_D0C0E5A2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="luiobj_swordsman" x="206" y="715" name="inst_D0647DE0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="suiobj_swordsman" x="206" y="714" name="inst_DCF536F7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

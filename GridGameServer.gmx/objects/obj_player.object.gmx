@@ -97,14 +97,18 @@ else if (size=0)
             <kind>1</kind>
             <string>///Read Package Identifier
 messageID = readbyte();
-mstr = "Server : messageId = " + string(messageID);
-show_message(mstr);
+//mstr = "Server : messageId = " + string(messageID);
+//show_message(mstr);
 switch (messageID)
 {
     case GAME_MATCH_REQUEST:
         newMatchRequest = instance_create(x,y,obj_matchRequest);
-        newMatchRequest.player = self;
-        newMatchRequest.Team = readbyte();
+        newMatchRequest.player = id;
+        newMatchRequest.username = id.username;
+        newMatchRequest.team = readbyte();
+        newMatchRequest.socket = id.socket;
+        newMatchRequest.requestId = ds_list_size(global.matchRequestList);
+        newMatchRequest.requestCreated = false;
         ds_list_add(global.matchRequestList, newMatchRequest);
         //show_message("Match Request Created for user : "+username);
         break;

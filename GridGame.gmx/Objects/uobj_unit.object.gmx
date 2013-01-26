@@ -25,7 +25,29 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>UnitCreated(0,0,0,0,0,0,0,0,0,0,0,2,2,1);
+            <string>IsSelected = false;
+UnitState = UNIT_STATE_CREATED;
+MoveLocationX = -100;
+MoveLocationY = -100;
+var MoveSpeed;
+var UnitHealth;
+var UnitScore;
+var UnitXP;
+var UnitRange;
+var UnitAttack;
+var UnitRangedAttack;
+var UnitMagicAttack;
+var UnitArmour;
+var UnitRangedArmour;
+var UnitMagicArmour;
+var UnitCreatureArmour;
+var MoveRangeFrontBack;
+var MoveRangeUpDown;
+var MoveRangeDiagonal;
+var CreationDelay;
+var ActionDelay;
+
+UnitCreated(0,0,0,0,0,0,0,0,0,0,0,2,2,1);
 </string>
           </argument>
         </arguments>
@@ -48,14 +70,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>switch(UnitState)
+            <string>switch(id.UnitState)
 {
     case UNIT_STATE_CREATED: 
         // Just After Creation
         CreationDelay = CreationDelay + 1;
         if(CreationDelay &gt;= 15)
         {
-            UnitState = UNIT_STATE_ACTIONOVER;
+            id.UnitState = UNIT_STATE_ACTIONOVER;
         }
         break;
     case UNIT_STATE_ACTIONOVER: 
@@ -63,7 +85,7 @@
         ActionDelay = ActionDelay + 1;
         if(ActionDelay &gt;= 5)
         {
-            UnitState = UNIT_STATE_IDLE;
+            id.UnitState = UNIT_STATE_IDLE;
             global.InAction = false;
             ActionDelay = 0;
         }
@@ -76,7 +98,7 @@
         global.InAction = true;
         if(mp_linear_step(MoveLocationX, MoveLocationY, MoveSpeed, false))
         {
-            UnitState = UNIT_STATE_ACTIONOVER;
+            id.UnitState = UNIT_STATE_ACTIONOVER;
         }
         break;
     case UNIT_STATE_ATTACKING: 
@@ -111,7 +133,7 @@
     {
         HighlightMoveRange(x,y,MoveRangeFrontBack,MoveRangeUpDown,MoveRangeDiagonal);
         IsSelected = true;
-        global.SelectedUnit = id;
+        global.SelectedUnit = instance_id;
     }
 }
 </string>
