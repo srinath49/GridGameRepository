@@ -64,7 +64,7 @@
     <instance objName="cmobj_martellBannerUnavailable" x="956" y="592" name="inst_52722CAA" locked="0" code="" scaleX="5.30000019073486" scaleY="2.20000004768372" colour="4294967295" rotation="0"/>
     <instance objName="cmobj_martellShieldUnavailable" x="1072" y="592" name="inst_0ADC867A" locked="0" code="" scaleX="2.20000004768372" scaleY="2.20000004768372" colour="4294967295" rotation="0"/>
     <instance objName="cmobj_tyrellShieldUnavailable" x="292" y="588" name="inst_D0043918" locked="0" code="" scaleX="2.20000004768372" scaleY="2.20000004768372" colour="4294967295" rotation="0"/>
-    <instance objName="cobj_toggleFullScreen" x="16" y="16" name="inst_4489C676" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_toggleFullScreen" x="16" y="16" name="inst_4489C676" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="cmobj_chooseYourBanner" x="672" y="184" name="inst_512E2641" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="cmobj_lannisterShield" x="296" y="304" name="inst_3E93E0EF" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
     <instance objName="cmobj_lannisterBanner" x="408" y="304" name="inst_FD14238B" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
