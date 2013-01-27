@@ -26,14 +26,16 @@
           <argument>
             <kind>1</kind>
             <string>var Team;
-var ClickedNow;
-var ButtonClicked;
+var Now;
+var Clicked;
 var UnitToCreate;
+var Name;
 
 visible = false;
-ClickedNow = false;
-ButtonClicked = false;
-depth = -3;
+Now = false;
+Clicked = false;
+Name = "Root";
+
 </string>
           </argument>
         </arguments>
@@ -58,19 +60,19 @@ depth = -3;
             <kind>1</kind>
             <string>if(visible)
 {
-    if(ClickedNow)
+    if(Now)
     {
-        ClickedNow = false;
+        Now = false;
     }
     else
     {
         if(instance_place(mouse_x,mouse_y,pbobj_pathBlock) = 0)
         {
-            if(ButtonClicked)
+            if(Clicked)
             {
-                if(!ClickedNow)
+                if(!Now)
                 {
-                    ButtonClicked = false;
+                    Clicked = false;
                 }
             }
         }
@@ -102,8 +104,8 @@ depth = -3;
 {
     if(!InAction)
     {
-        ButtonClicked = true;
-        ClickedNow = true;
+        Clicked = true;
+        Now = true;
     }
 }
 </string>

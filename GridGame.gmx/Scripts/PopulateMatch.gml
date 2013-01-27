@@ -1,44 +1,23 @@
 new = argument0;
 controller = argument1;
 
-switch(controller.Team)
+if(instance_number(uiobj_UI) > 0)
 {
-    case GAME_TEAM_STARKS:
-        with(uiobj_UI)
+    show_message(global.username+"::PopulateMatch::1");
+    with(uiobj_UI)
+    {
+        show_message(global.username+"::PopulateMatch::2");
+        show_message(global.username+"::PopulateMatch::Team::"+string(Team));
+        show_message(global.username+"::PopulateMatch::ControllerTeam::"+string(other.controller.Team));
+        if(Team == other.controller.Team)
         {
-            if(Team == GAME_TEAM_STARKS)
-            {
-                visible = true;
-            }
-            else
-            {
-                visible = false;
-            }
+            show_message(global.username+"::PopulateMatch::3");
+            visible = true;
         }
-        break;
-    case GAME_TEAM_LANNISTER:
-        with(uiobj_UI)
+        else
         {
-            if(Team == GAME_TEAM_LANNISTER)
-            {
-                visible = true;
-            }
-            else
-            {
-                visible = false;
-            }
+            show_message(global.username+"::PopulateMatch::4");
+            instance_destroy();
         }
-        break;
-    case GAME_TEAM_TARGARYEN:
-        break;
-    case GAME_TEAM_GREYJOY:
-        break;
-    case GAME_TEAM_BARATHEON:
-        break;
-    case GAME_TEAM_ARRYN:
-        break;
-    case GAME_TEAM_TYRELL:
-        break;
-    case GAME_TEAM_MARTELL:
-        break;
+    }
 }

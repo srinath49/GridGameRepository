@@ -55,7 +55,7 @@ IsOccupied = false;
 {
     if(!IsOccupied)
     {
-        //if(!ignoreBlock)
+        if(!ignoreBlock)
         {
             CurrentObject = instance_position(global.SelectedUnit.x,global.SelectedUnit.y,pbobj_pathBlock);
             MoveSelectedUnit(x,y,2);
@@ -64,7 +64,7 @@ IsOccupied = false;
             //show_message(CurrentObject.IsOccupied);
             IsOccupied = true;
         }
-        //pbobj_pathBlock.ignoreBlock = false;
+        pbobj_pathBlock.ignoreBlock = false;
     } 
     pbobj_pathBlock.visible = false;
 }
@@ -76,11 +76,11 @@ else
         {
             with(uiobj_UI)
             {
-                if(ButtonClicked)
+                if(Clicked)
                 {
                     PlayerSpawner(x, y, UnitToCreate);
+                    Clicked = false;
                     other.IsOccupied = true;
-                    ButtonClicked = false;
                 }
             }
         }

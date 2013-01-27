@@ -525,6 +525,7 @@
     <rooms name="Waiting Rooms">
       <room>rooms\wrm_waitForMatch</room>
     </rooms>
+    <room>rooms\test_room</room>
   </rooms>
   <constants number="38">
     <constant name="ACCOUNT_LOGIN_FAIL">1</constant>

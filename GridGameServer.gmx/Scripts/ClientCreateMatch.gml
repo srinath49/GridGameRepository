@@ -1,5 +1,8 @@
 match = argument0;
 
+show_message("Server::ClientCreateMatch::MatchTeam1::"+string(match.player1Team));
+show_message("Server::ClientCreateMatch::MatchTeam2::"+string(match.player2Team));
+
 setnagle(match.player1Socket, false);
 clearbuffer();
 writebyte(GAME_MATCH_START);

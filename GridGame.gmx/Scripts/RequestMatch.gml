@@ -1,4 +1,4 @@
-//show_message("Client::Script::RequestMatch");
+//show_message(global.username+"::RequestMatch::Team::"+string(global.NewMatchTeam));
 setnagle(global.socket, false);
 clearbuffer();
 writebyte(GAME_MATCH_REQUEST);

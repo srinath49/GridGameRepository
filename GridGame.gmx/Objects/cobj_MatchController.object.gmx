@@ -80,7 +80,7 @@ switch(id.MatchState)
         }
     case MATCH_STATE_WAITINGTURN:
         // Waiting for Server
-        CheckServerMessage(self);
+        CheckServerMessage(id);
         break;
     case MATCH_STATE_MYTURN:
         break;

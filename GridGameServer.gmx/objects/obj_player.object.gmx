@@ -102,10 +102,13 @@ messageID = readbyte();
 switch (messageID)
 {
     case GAME_MATCH_REQUEST:
+        TempTeam = readbyte();
+        show_message("Server::GAME_MATCH_REQUEST::TempTeam::"+string(TempTeam));
         newMatchRequest = instance_create(x,y,obj_matchRequest);
         newMatchRequest.player = id;
         newMatchRequest.username = id.username;
-        newMatchRequest.team = readbyte();
+        newMatchRequest.team = TempTeam;
+        show_message("Server::GAME_MATCH_REQUEST::NewMatchRequestTeam::"+string(newMatchRequest.team));
         newMatchRequest.socket = id.socket;
         newMatchRequest.requestId = ds_list_size(global.matchRequestList);
         newMatchRequest.requestCreated = false;

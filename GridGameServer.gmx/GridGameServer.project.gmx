@@ -161,7 +161,6 @@
   <objects name="objects">
     <objects name="Controllers">
       <object>objects\obj_server</object>
-      <object>objects\obj_matchMaker</object>
     </objects>
     <objects name="Client Objects">
       <object>objects\obj_guest</object>
@@ -170,6 +169,7 @@
     <objects name="Match Objects">
       <object>objects\obj_matchRequest</object>
       <object>objects\obj_match</object>
+      <object>objects\obj_matchMaker</object>
     </objects>
   </objects>
   <rooms name="rooms">
