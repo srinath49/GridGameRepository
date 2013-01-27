@@ -1,5 +1,10 @@
+var new, controller;
 new = argument0;
 controller = argument1;
+with(instance_create(0,0,cobj_MatchEngine))
+{
+    MatchController = other.controller;
+}
 
 if(instance_number(uiobj_UI) > 0)
 {

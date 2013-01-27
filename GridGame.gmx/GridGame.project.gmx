@@ -391,11 +391,18 @@
       <object>objects\obj_tree</object>
     </objects>
     <objects name="Controllers">
-      <object>objects\cobj_login</object>
-      <object>objects\cobj_MatchController</object>
-      <object>objects\cobj_ConnectionController</object>
-      <object>objects\cobj_toggleFullScreen</object>
-      <object>objects\cobj_GameController</object>
+      <objects name="Network Controllers">
+        <object>objects\cobj_login</object>
+        <object>objects\cobj_ConnectionController</object>
+      </objects>
+      <objects name="Game Controllers">
+        <object>objects\cobj_GameController</object>
+        <object>objects\cobj_toggleFullScreen</object>
+      </objects>
+      <objects name="Match Controllers">
+        <object>objects\cobj_MatchController</object>
+        <object>objects\cobj_MatchEngine</object>
+      </objects>
     </objects>
     <objects name="Game Area">
       <objects name="Path Blocks">

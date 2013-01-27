@@ -25,31 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/*
-var MoveSpeed;
-var UnitHealth;
-var UnitScore;
-var UnitXP;
-var UnitRange;
-var UnitAttack;
-var UnitRangedAttack;
-var UnitMagicAttack;
-var UnitArmour;
-var UnitRangedArmour;
-var UnitMagicArmour;
-var UnitCreatureArmour;
-var MoveRangeFrontBack;
-var MoveRangeUpDown;
-var MoveRangeDiagonal;
-var CreationDelay;
-var ActionDelay;
-var UnitState;
-var IsSelected;
-var MoveLocationX;
-var MoveLocationY;
-*/
-
-IsSelected = false;
+            <string>IsSelected = false;
 UnitState = UNIT_STATE_CREATED;
 MoveLocationX = -100;
 MoveLocationY = -100;

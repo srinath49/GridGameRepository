@@ -25,12 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>globalvar GameState;
-globalvar NewMatchTeam;
-globalvar NewMatchList;
-globalvar MyMatchList;
-
-global.NewMatchList = ds_list_create();
+            <string>global.NewMatchList = ds_list_create();
 global.MyMatchList = ds_list_create();
 global.NewMatchRequest = ds_list_create();
 global.RequestIdList = ds_list_create();
