@@ -388,14 +388,21 @@
       <object>objects\cmobj_gameOfThronesBanner</object>
       <object>objects\cmobj_choiceMenuBackground</object>
       <object>objects\cmobj_chooseYourBanner</object>
-      <object>objects\obj_tree</object>
+      <object>objects\cmobj_tree</object>
     </objects>
     <objects name="Controllers">
-      <object>objects\cobj_login</object>
-      <object>objects\cobj_MatchController</object>
-      <object>objects\cobj_ConnectionController</object>
-      <object>objects\cobj_toggleFullScreen</object>
-      <object>objects\cobj_GameController</object>
+      <objects name="Network Controllers">
+        <object>objects\cobj_ConnectionController</object>
+        <object>objects\cobj_login</object>
+      </objects>
+      <objects name="Game Controllers">
+        <object>objects\cobj_GameController</object>
+        <object>objects\cobj_toggleFullScreen</object>
+      </objects>
+      <objects name="Match Controllers">
+        <object>objects\cobj_MatchController</object>
+        <object>objects\cobj_MatchEngine</object>
+      </objects>
     </objects>
     <objects name="Game Area">
       <objects name="Path Blocks">
@@ -466,22 +473,24 @@
         </objects>
         <object>objects\pbobj_pathBlock</object>
       </objects>
-      <object>objects\gaobj_aegonsField</object>
-      <object>objects\gaobj_background</object>
-      <object>objects\gaobj_bluePlayerMeter</object>
-      <object>objects\gaobj_ground</object>
-      <object>objects\gaobj_helmetSigil</object>
-      <object>objects\gaobj_leftSlots</object>
-      <object>objects\gaobj_magicSigil</object>
-      <object>objects\gaobj_mainBoard</object>
-      <object>objects\gaobj_redPlayerMeter</object>
-      <object>objects\gaobj_rightSlots</object>
-      <object>objects\gaobj_scroll01</object>
-      <object>objects\gaobj_scroll02</object>
-      <object>objects\gaobj_scroll03</object>
-      <object>objects\gaobj_scroll04</object>
-      <object>objects\gaobj_scroll05</object>
-      <object>objects\gaobj_spears</object>
+      <objects name="Level1">
+        <object>objects\gaobj_aegonsField</object>
+        <object>objects\gaobj_background</object>
+        <object>objects\gaobj_bluePlayerMeter</object>
+        <object>objects\gaobj_ground</object>
+        <object>objects\gaobj_helmetSigil</object>
+        <object>objects\gaobj_leftSlots</object>
+        <object>objects\gaobj_magicSigil</object>
+        <object>objects\gaobj_mainBoard</object>
+        <object>objects\gaobj_redPlayerMeter</object>
+        <object>objects\gaobj_rightSlots</object>
+        <object>objects\gaobj_scroll01</object>
+        <object>objects\gaobj_scroll02</object>
+        <object>objects\gaobj_scroll03</object>
+        <object>objects\gaobj_scroll04</object>
+        <object>objects\gaobj_spears</object>
+        <object>objects\gaobj_scroll05</object>
+      </objects>
     </objects>
     <objects name="Main Menu">
       <object>objects\mmobj_aDPresentation</object>
