@@ -3,7 +3,7 @@
   <spriteName>spr_playerUI</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-10</depth>
+  <depth>-3</depth>
   <persistent>0</persistent>
   <parentName>uobj_meleeUnit</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -40,7 +40,6 @@
           <argument>
             <kind>1</kind>
             <string>//show_message("Stark Unit Created");
-
 </string>
           </argument>
         </arguments>

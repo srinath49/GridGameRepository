@@ -25,11 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var matchID;
-var Team;
-var MyTurn;
-var opponent;
-var opponentTeam;
+            <string>matchID = -1;
+Team = 0;
+MyTurn = false;
+opponent = "";
+opponentTeam = 0;
 </string>
           </argument>
         </arguments>

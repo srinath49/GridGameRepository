@@ -28,8 +28,7 @@
             <string>///Initialize the server
 initiate();
 instance_create(x,y,obj_matchMaker);
-globalvar matchRequestList;
-matchRequestList = ds_list_create();
+global.matchRequestList = ds_list_create();
 </string>
           </argument>
         </arguments>

@@ -25,11 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var socket;
-var username;
-var password;
-var messageID;
-var loggedIn;
+            <string>socket = -1;
+username = "";
+password = "";
+messageID = -1;
+loggedIn = false;
 </string>
           </argument>
         </arguments>
@@ -103,12 +103,14 @@ switch (messageID)
 {
     case GAME_MATCH_REQUEST:
         TempTeam = readbyte();
-        show_message("Server::GAME_MATCH_REQUEST::TempTeam::"+string(TempTeam));
+        TempId = readbyte();
+        //show_message("Server::GAME_MATCH_REQUEST::TempTeam::"+string(TempTeam));
         newMatchRequest = instance_create(x,y,obj_matchRequest);
         newMatchRequest.player = id;
         newMatchRequest.username = id.username;
         newMatchRequest.team = TempTeam;
-        show_message("Server::GAME_MATCH_REQUEST::NewMatchRequestTeam::"+string(newMatchRequest.team));
+        newMatchRequest.userRequestId = TempId;
+        //show_message("Server::GAME_MATCH_REQUEST::NewMatchRequestTeam::"+string(newMatchRequest.team));
         newMatchRequest.socket = id.socket;
         newMatchRequest.requestId = ds_list_size(global.matchRequestList);
         newMatchRequest.requestCreated = false;

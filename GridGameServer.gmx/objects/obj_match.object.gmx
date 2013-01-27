@@ -25,15 +25,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var matchID;
-var player1Username;
-var player1Team;
-var player1UnitList;
-var player1Socket;
-var player2Username;
-var player2Team;
-var player2UnitList;
-var player2Socket;
+            <string>matchID = -1;
+player1Username = "";
+player1Team = 0;
+player1UnitList = ds_list_create();
+player1Socket = -1;
+player1RequestId = -1;
+player2Username = "";
+player2Team = 0;
+player2UnitList = ds_list_create();
+player2Socket = -1;
+player2RequestId = -1;
 </string>
           </argument>
         </arguments>

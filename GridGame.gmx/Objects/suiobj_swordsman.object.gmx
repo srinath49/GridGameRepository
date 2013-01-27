@@ -41,8 +41,6 @@
             <kind>1</kind>
             <string>UnitToCreate = uobj_Stark_Swordsman;
 Name = "Stark Swordsman";
-Now = false;
-Clicked = false;
 </string>
           </argument>
         </arguments>

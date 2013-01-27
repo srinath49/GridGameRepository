@@ -3,7 +3,7 @@
   <spriteName>spr_playerUI</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-3</depth>
+  <depth>-10</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var MoveSpeed;
+            <string>/*
+var MoveSpeed;
 var UnitHealth;
 var UnitScore;
 var UnitXP;
@@ -46,12 +47,13 @@ var UnitState;
 var IsSelected;
 var MoveLocationX;
 var MoveLocationY;
+*/
 
 IsSelected = false;
 UnitState = UNIT_STATE_CREATED;
 MoveLocationX = -100;
 MoveLocationY = -100;
-
+depth = -100;
 //UnitCreated(0,0,0,0,0,0,0,0,0,0,0,2,2,1);
 </string>
           </argument>

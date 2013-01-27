@@ -25,13 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var Team;
-var Now;
-var Clicked;
-var UnitToCreate;
-var Name;
-
-visible = false;
+            <string>visible = false;
+Team = 0;
 Now = false;
 Clicked = false;
 Name = "Root";

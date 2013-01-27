@@ -40,7 +40,6 @@
           <argument>
             <kind>1</kind>
             <string>Team = GAME_TEAM_LANNISTER;
-visible = false;
 Now = false;
 Clicked = false;
 </string>

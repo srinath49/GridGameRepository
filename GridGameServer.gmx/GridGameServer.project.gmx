@@ -160,11 +160,13 @@
   </scripts>
   <objects name="objects">
     <objects name="Controllers">
-      <object>objects\obj_server</object>
-    </objects>
-    <objects name="Client Objects">
-      <object>objects\obj_guest</object>
-      <object>objects\obj_player</object>
+      <objects name="Server Objects">
+        <object>objects\obj_server</object>
+      </objects>
+      <objects name="Client Objects">
+        <object>objects\obj_guest</object>
+        <object>objects\obj_player</object>
+      </objects>
     </objects>
     <objects name="Match Objects">
       <object>objects\obj_matchRequest</object>

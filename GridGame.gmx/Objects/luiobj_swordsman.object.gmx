@@ -40,9 +40,8 @@
           <argument>
             <kind>1</kind>
             <string>UnitToCreate = uobj_Lannister_Swordsman;
-Name = "Stark Swordsman";
-Now = false;
-Clicked = false;
+Name = "Lannister Swordsman";
+
 </string>
           </argument>
         </arguments>

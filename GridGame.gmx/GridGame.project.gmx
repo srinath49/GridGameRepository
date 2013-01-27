@@ -307,6 +307,7 @@
       <script>scripts\StartNewMatch.gml</script>
       <script>scripts\CreateNewMatch.gml</script>
       <script>scripts\PopulateMatch.gml</script>
+      <script>scripts\GetRequestId.gml</script>
     </scripts>
     <script>scripts\PlayerSpawner.gml</script>
   </scripts>
@@ -506,6 +507,7 @@
     </objects>
     <objects name="Match Objects">
       <object>objects\mobj_newMatch</object>
+      <object>objects\mobj_matchRequest</object>
     </objects>
   </objects>
   <rooms name="rooms">
