@@ -24,7 +24,8 @@ if(++controller.CurrentAction <= MATCH_ACTIONS_PER_TURN)
             ds_list_add(actionList,argument3); //Defender
             break;
         case MATCH_ACTION_CREATEUNIT:
-            ds_list_add(actionList,argument2); //Create Unit at this Position
+            ds_list_add(actionList,argument2.row); //Create Unit at this Row
+            ds_list_add(actionList,argument2.column); //Create Unit at this Column
             ds_list_add(actionList,argument3); //Unit to Create
             ds_list_add(actionList,argument4); //Owner of this Unit
             break;

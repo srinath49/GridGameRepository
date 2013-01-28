@@ -104,7 +104,6 @@ if (size=0)
     case GAME_STATE_WAITMATCH:
     case GAME_STATE_STARTMATCH:
     case GAME_STATE_INMATCH:
-        exit;
         break;
     case GAME_STATE_REQUESTMATCH:
         //show_message("Client::Object::obj_GameController::RequestMatch");
@@ -141,6 +140,8 @@ switch(messageID)
         mid = CreateNewMatch();
         StartNewMatch(mid);
         break;
+    case MATCH_MSG_TURNSUBMIT:
+        ReadTurn();
 }
 </string>
           </argument>

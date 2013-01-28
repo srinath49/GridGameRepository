@@ -21,3 +21,7 @@ if(instance_number(uiobj_UI) > 0)
         }
     }
 }
+if(controller.MyTurn)
+{
+    controller.MatchState = MATCH_STATE_MYTURN;
+}

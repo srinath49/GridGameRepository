@@ -7,6 +7,11 @@ with(attacker)
     UnitState = UNIT_STATE_ATTACKING;
 }
 
+with(defender)
+{
+    UnitState = UNIT_STATE_TAKEHIT;
+}
+
 with(uobj_unit.UnitOwner != attacker.UnitOwner)
 {
     if(id != other.defender.id)
@@ -18,8 +23,4 @@ with(uobj_unit.UnitOwner != attacker.UnitOwner)
     }
 }
 
-with(defender)
-{
-    UnitState = UNIT_STATE_TAKEHIT;
-    PerformAttack(attacker, defender);
-}
+PerformAttack(attacker, defender);

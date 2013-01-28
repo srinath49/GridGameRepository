@@ -59,16 +59,14 @@ InAttackRange = false;
 {
     case UNIT_STATE_CREATED: 
         // Just After Creation
-        CreationDelay = CreationDelay + 1;
-        if(CreationDelay &gt;= 15)
+        if(++CreationDelay &gt;= 15)
         {
             UnitState = UNIT_STATE_ACTIONOVER;
         }
         break;
     case UNIT_STATE_ACTIONOVER: 
         // Action Over. Unit just finished performing an action.
-        ActionDelay = ActionDelay + 1;
-        if(ActionDelay &gt;= 5)
+        if(++ActionDelay &gt;= 5)
         {
             UnitState = UNIT_STATE_IDLE;
             global.InAction = false;
@@ -80,7 +78,6 @@ InAttackRange = false;
         break;
     case UNIT_STATE_MOVING: 
         // Movement Code
-        global.InAction = true;
         if(mp_linear_step(MoveLocationX, MoveLocationY, MoveSpeed, false))
         {
             UnitState = UNIT_STATE_ACTIONOVER;

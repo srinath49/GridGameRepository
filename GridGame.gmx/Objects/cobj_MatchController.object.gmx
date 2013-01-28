@@ -59,8 +59,7 @@ Opponent = "";
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//show_message(string(id.MatchState));
-switch(MatchState)
+            <string>switch(MatchState)
 {
     case MATCH_STATE_NEW:
         room_goto(MatchRoom);
@@ -89,20 +88,28 @@ switch(MatchState)
         break;
     case MATCH_STATE_ENDTURN:
         {
-            var submit;
-            submit = show_question("No More Actions In This Turn. Do you want to Submit Turn? Click Yes to submit turn and No To reset turn");
-            if(submit)
-            {
+            //var submit;
+            //submit = show_question("No More Actions In This Turn. Do you want to Submit Turn? Click Yes to submit turn and No To reset turn");
+            //if(submit)
+            //{
+                show_message("End Of Turn");
                 MyTurn = false;
-                SubmitTurn();
-            }
-            else
-            {
-                MyTurn = true;
-                ResetTurn();
-            }
+                SubmitTurn(id);
+            //}
+            //else
+            //{
+                //MyTurn = true;
+                //ResetTurn();
+            //}
             MatchState = MATCH_STATE_WAIT;
         }
+        break;
+    case MATCH_STATE_MYTURN:
+        with(uobj_unit)
+        {
+            // Save positions etc.
+        }
+        MatchState = MATCH_STATE_WAIT;
         break;
     case MATCH_STATE_WAIT:
         break;
