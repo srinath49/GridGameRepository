@@ -522,6 +522,7 @@
       <room>rooms\nwrm_serverConnectRoom</room>
       <room>rooms\nwrm_login</room>
     </rooms>
+    <room>rooms\test_room</room>
     <rooms name="Menu Rooms">
       <room>rooms\mrm_mainMenu</room>
       <room>rooms\mrm_choiceMenu</room>
@@ -534,7 +535,6 @@
     <rooms name="Waiting Rooms">
       <room>rooms\wrm_waitForMatch</room>
     </rooms>
-    <room>rooms\test_room</room>
   </rooms>
   <constants number="38">
     <constant name="ACCOUNT_LOGIN_FAIL">1</constant>

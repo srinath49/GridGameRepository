@@ -51,7 +51,8 @@ IsOccupied = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(visible)
+            <string>/*
+if(visible)
 {
     if(!IsOccupied)
     {
@@ -86,6 +87,7 @@ else
         }
     }
 }
+*/
 </string>
           </argument>
         </arguments>

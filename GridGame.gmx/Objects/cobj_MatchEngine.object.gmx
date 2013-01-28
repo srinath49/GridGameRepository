@@ -31,6 +31,128 @@
         </arguments>
       </action>
     </event>
+    <event eventtype="6" enumb="50">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//show_message("Hi");
+if(MatchController.MatchState == MATCH_STATE_MYTURN)
+{
+    if(!global.InAction)
+    {   
+        //Check UI First
+        with(instance_position(mouse_x,mouse_y,uiobj_UI))
+        {
+            with(uiobj_UI)
+            {
+                Clicked = false;
+                Now = false;
+                //show_message("Hi");
+            }
+            //show_message("Hi2");
+            Clicked = true;
+            Now = true;
+            //show_message("Hi3");
+            return true;
+        }
+        //============================================================//
+        
+        // Next Check Units
+        with(instance_position(mouse_x,mouse_y,uobj_unit))
+        {
+            if(UnitState == UNIT_STATE_IDLE)
+            {
+                HighlightMoveRange(x,y,MoveRangeFrontBack,MoveRangeUpDown,MoveRangeDiagonal);
+                IsSelected = true;
+                global.SelectedUnit = id;
+            }     
+            return true; 
+        }
+        //============================================================//
+        
+        // Now Check Pathblocks
+        with(instance_position(mouse_x,mouse_y,pbobj_pathBlock))
+        {
+            //show_message("Hi");
+            if(visible)
+            {
+                //show_message("Hi");
+                if(!IsOccupied)
+                {
+                    //show_message("Hi");
+                    //if(!ignoreBlock)
+                    //{
+                        CurrentObject = instance_position(global.SelectedUnit.x,global.SelectedUnit.y,pbobj_pathBlock);
+                        MoveSelectedUnit(x,y,2);
+                        //show_message(CurrentObject.IsOccupied);
+                        CurrentObject.IsOccupied = false;
+                        //show_message(CurrentObject.IsOccupied);
+                        IsOccupied = true;
+                    //}
+                    //pbobj_pathBlock.ignoreBlock = false;
+                } 
+                pbobj_pathBlock.visible = false;
+            }
+            else
+            {
+                //show_message("Hi2::"+string(IsOccupied));
+                if(!IsOccupied)
+                {
+                    if(instance_number(uiobj_UI) &gt; 0)
+                    {
+                        with(uiobj_UI)
+                        {
+                            //show_message("Hi3::"+string(Clicked));
+                            if(Clicked)
+                            {
+                                //show_message("Hi4");
+                                PlayerSpawner(other.x, other.y, UnitToCreate);
+                                Clicked = false;
+                                other.IsOccupied = true;
+                            }
+                        }
+                    }
+                }
+            }
+            return true;
+        }
+        //============================================================//
+        
+        // Reset the UI Buttons Clicked Values//
+        with(uiobj_UI)
+        {
+            Clicked = false;
+            Now = false;
+        }
+        //====================================//
+        //============================================================//
+        global.SelectedUnit = noone; // Reset Selected Unit to none
+        with(pbobj_pathBlock) // Reset Path Blocks to Invisible
+        {
+            visible = false;
+        }
+        //============================================================//
+        return false;
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
   </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>

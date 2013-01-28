@@ -55,23 +55,7 @@ Name = "Root";
             <kind>1</kind>
             <string>if(visible)
 {
-    if(Now)
-    {
-        Now = false;
-    }
-    else
-    {
-        if(instance_place(mouse_x,mouse_y,pbobj_pathBlock) = 0)
-        {
-            if(Clicked)
-            {
-                if(!Now)
-                {
-                    Clicked = false;
-                }
-            }
-        }
-    }
+    
 }
 </string>
           </argument>
@@ -95,15 +79,7 @@ Name = "Root";
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(visible)
-{
-    if(!InAction)
-    {
-        Clicked = true;
-        Now = true;
-    }
-}
-</string>
+            <string></string>
           </argument>
         </arguments>
       </action>

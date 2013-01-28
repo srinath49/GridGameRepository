@@ -21,8 +21,8 @@ if(instance_number(mobj_matchRequest) > 0)
             if(newMatch.Team != team)
             {
                 newMatch.Team = team;
-                show_message(global.username+"::CreateNewMatch::RequestTeam::"+string(team));
-                show_message(global.username+"::CreateNewMatch::Team::"+string(newMatch.Team));
+                //show_message(global.username+"::CreateNewMatch::RequestTeam::"+string(team));
+                //show_message(global.username+"::CreateNewMatch::Team::"+string(newMatch.Team));
             }
             deleteMe = true;
             ds_list_add(global.NewMatchList, newMatch);

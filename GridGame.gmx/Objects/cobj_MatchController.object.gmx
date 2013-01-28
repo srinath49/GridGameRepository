@@ -76,7 +76,7 @@ switch(MatchState)
         }
     case MATCH_STATE_WAITINGTURN:
         // Waiting for Server
-        CheckServerMessage(id);
+        //CheckServerMessage(id);
         break;
     case MATCH_STATE_MYTURN:
         break;

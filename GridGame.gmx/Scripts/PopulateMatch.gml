@@ -1,8 +1,9 @@
-var new, controller;
+//var new, controller;
 new = argument0;
 controller = argument1;
 with(instance_create(0,0,cobj_MatchEngine))
 {
+    //show_message("Match Engine Created");
     MatchController = other.controller;
 }
 
