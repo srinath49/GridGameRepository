@@ -27,12 +27,16 @@
             <kind>1</kind>
             <string>global.InAction = false;
 global.SelectedUnit = noone;
+Match = noone;
+MatchEngine = noone;
 MatchID = -1;
 Team = 0;
 MyTurn = false;
 ActionsLeft = 0;
-MatchState = MATCH_STATE_NONE;
+CurrentAction = 0;
+MatchState = MATCH_STATE_WAIT;
 MatchRoom = lrm_level1;
+Opponent = "";
 </string>
           </argument>
         </arguments>
@@ -59,34 +63,48 @@ MatchRoom = lrm_level1;
 switch(MatchState)
 {
     case MATCH_STATE_NEW:
-        //show_message("New Match");
         room_goto(MatchRoom);
         MatchState = MATCH_STATE_POPULATE;
         break;
     case MATCH_STATE_POPULATE:
-        //show_message("Populate Match");
         PopulateMatch(true, id);
-        if(MyTurn)
+        break;
+    case MATCH_STATE_INACTION:
+        if(!global.InAction)
         {
-            MatchState = MATCH_STATE_MYTURN;
+            --controller.ActionsLeft;
+            MatchState = MATCH_STATE_ACTIONOVER;
+        }
+        break;
+    case MATCH_STATE_ACTIONOVER:
+        if(controller.ActionsLeft &lt;= 0)
+        {
+            controller.ActionsLeft = 0;
+            MatchState = MATCH_STATE_ENDTURN;
         }
         else
         {
-            MatchState = MATCH_STATE_WAITINGTURN;
+            MatchState = MATCH_STATE_WAIT;
         }
-    case MATCH_STATE_WAITINGTURN:
-        // Waiting for Server
-        //CheckServerMessage(id);
         break;
-    case MATCH_STATE_MYTURN:
+    case MATCH_STATE_ENDTURN:
+        {
+            var submit;
+            submit = show_question("No More Actions In This Turn. Do you want to Submit Turn? Click Yes to submit turn and No To reset turn");
+            if(submit)
+            {
+                MyTurn = false;
+                SubmitTurn();
+            }
+            else
+            {
+                MyTurn = true;
+                ResetTurn();
+            }
+            MatchState = MATCH_STATE_WAIT;
+        }
         break;
-    case MATCH_STATE_ENEMYACTION:
-        //PerformEnemyAction();
-        MatchState = MATCH_STATE_INENEMYACTION;
-        break;
-    case MATCH_STATE_INENEMYACTION:
-        break;
-    case MATCH_STATE_ACTIONOVER:
+    case MATCH_STATE_WAIT:
         break;
 }
 </string>

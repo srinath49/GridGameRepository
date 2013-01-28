@@ -1,12 +1,12 @@
 CurrentObject = instance_place(argument0,argument1,pbobj_pathBlock);
 CurrentObject.visible = true;
 CurrentObject.ignoreBlock = true;
-MRFB = argument2;
-MRUD = argument3;
-MRD = argument4;
+MoveRangeFrontBack = argument2;
+MoveRangeUpDown = argument3;
+MoveRangeDiagonal = argument4;
 
 //Right Blocks
-for(i=0; i<MRFB; i+=1)
+for(i=0; i<MoveRangeFrontBack; i+=1)
 {
     NextObject = instance_place(CurrentObject.x+89, CurrentObject.y, pbobj_pathBlock);
     CurrentObject = NextObject;
@@ -15,7 +15,7 @@ for(i=0; i<MRFB; i+=1)
 
 //Left Blocks
 CurrentObject = instance_place(argument0,argument1,pbobj_pathBlock);
-for(i=0; i<MRFB; i+=1)
+for(i=0; i<MoveRangeFrontBack; i+=1)
 {
     PreviousObject = instance_place(CurrentObject.x-89, CurrentObject.y, pbobj_pathBlock);
     CurrentObject = PreviousObject;
@@ -24,7 +24,7 @@ for(i=0; i<MRFB; i+=1)
 
 //Top Blocks
 CurrentObject = instance_place(argument0,argument1,pbobj_pathBlock);
-for(i=0; i<MRUD; i+=1)
+for(i=0; i<MoveRangeUpDown; i+=1)
 {
     NextObject = instance_place(CurrentObject.x, CurrentObject.y-81, pbobj_pathBlock);
     CurrentObject = NextObject;
@@ -33,7 +33,7 @@ for(i=0; i<MRUD; i+=1)
 
 //Bottom Blocks
 CurrentObject = instance_place(argument0,argument1,pbobj_pathBlock);
-for(i=0; i<MRUD; i+=1)
+for(i=0; i<MoveRangeUpDown; i+=1)
 {
     PreviousObject = instance_place(CurrentObject.x, CurrentObject.y+81, pbobj_pathBlock);
     CurrentObject = PreviousObject;
@@ -42,28 +42,28 @@ for(i=0; i<MRUD; i+=1)
 
 //Diagonal Blocks
 CurrentObject = instance_place(argument0,argument1,pbobj_pathBlock);
-for(i=0; i<MRD; i+=1)
+for(i=0; i<MoveRangeDiagonal; i+=1)
 {
     NextObject = instance_place(CurrentObject.x+89, CurrentObject.y+81, pbobj_pathBlock);
     CurrentObject = NextObject;
     CurrentObject.visible = true;
 }
 CurrentObject = instance_place(argument0,argument1,pbobj_pathBlock);
-for(i=0; i<MRD; i+=1)
+for(i=0; i<MoveRangeDiagonal; i+=1)
 {
     NextObject = instance_place(CurrentObject.x+89, CurrentObject.y-81, pbobj_pathBlock);
     CurrentObject = NextObject;
     CurrentObject.visible = true;
 }
 CurrentObject = instance_place(argument0,argument1,pbobj_pathBlock);
-for(i=0; i<MRD; i+=1)
+for(i=0; i<MoveRangeDiagonal; i+=1)
 {
     NextObject = instance_place(CurrentObject.x-89, CurrentObject.y+81, pbobj_pathBlock);
     CurrentObject = NextObject;
     CurrentObject.visible = true;
 }
 CurrentObject = instance_place(argument0,argument1,pbobj_pathBlock);
-for(i=0; i<MRD; i+=1)
+for(i=0; i<MoveRangeDiagonal; i+=1)
 {
     NextObject = instance_place(CurrentObject.x-89, CurrentObject.y-81, pbobj_pathBlock);
     CurrentObject = NextObject;

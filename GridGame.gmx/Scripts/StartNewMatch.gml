@@ -9,10 +9,12 @@ for(i=0;i<ds_list_size(global.NewMatchList);i++)
         matchController.MyTurn = match.MyTurn;
         matchController.MatchState = MATCH_STATE_NEW;
         matchController.Team = match.Team;
+        matchController.Opponent = match.opponent;
         //show_message(global.username+"::StartNewMatch::Team::"+string(match.Team));
         //show_message(global.username+"::StartNewMatch::ControllerTeam::"+string(matchController.Team));
         ds_list_delete(global.NewMatchList, i);
         ds_list_add(global.MyMatchList, match);
+        matchController.Match = match;
         break;
     }
 }

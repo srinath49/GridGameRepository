@@ -17,12 +17,12 @@ if (size>0)
     switch(matchMessage)
     {
         case MATCH_MSG_MYTURN:
-            matchController.MatchState = MATCH_STATE_MYTURN;
+            matchController.MatchState = MATCH_STATE_WAIT;
             matchController.MyTurn = true;
             matchController.ActionsLeft = MATCH_ACTIONS_PER_TURN;
             break;
         case MATCH_MSG_ENEMYACTION:
-            matchController.MatchState = MATCH_STATE_ENEMYACTION;
+            matchController.MatchState = MATCH_STATE_WAIT;
             break;
         case MATCH_MSG_WON:
             break;

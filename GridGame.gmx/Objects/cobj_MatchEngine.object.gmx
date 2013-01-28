@@ -26,6 +26,15 @@
           <argument>
             <kind>1</kind>
             <string>MatchController = noone;
+ActionsList = ds_list_create();
+Action1List = ds_list_create();
+Action2List = ds_list_create();
+Action3List = ds_list_create();
+Action4List = ds_list_create();
+ds_list_add(ActionsList, Action1List);
+ds_list_add(ActionsList, Action2List);
+ds_list_add(ActionsList, Action3List);
+ds_list_add(ActionsList, Action4List);
 </string>
           </argument>
         </arguments>
@@ -49,7 +58,7 @@
           <argument>
             <kind>1</kind>
             <string>//show_message("Hi");
-if(MatchController.MatchState == MATCH_STATE_MYTURN)
+if(MatchController.MatchState == MATCH_STATE_WAIT)
 {
     if(!global.InAction)
     {   
@@ -73,12 +82,26 @@ if(MatchController.MatchState == MATCH_STATE_MYTURN)
         // Next Check Units
         with(instance_position(mouse_x,mouse_y,uobj_unit))
         {
-            if(UnitState == UNIT_STATE_IDLE)
+            if(UnitOwner = global.username)
             {
-                HighlightMoveRange(x,y,MoveRangeFrontBack,MoveRangeUpDown,MoveRangeDiagonal);
-                IsSelected = true;
-                global.SelectedUnit = id;
-            }     
+                if(UnitState == UNIT_STATE_IDLE)
+                {
+                    global.SelectedUnit = id;
+                    IsSelected = true;
+                    HighlightMoveRange(x,y,MoveRangeFrontBack,MoveRangeUpDown,MoveRangeDiagonal);
+                    //HighlightEnemiesInRange(AttackRangeRadius);
+                }
+            }
+            else if(UnitOwner = other.MatchController.Opponent)
+            {
+                if(InAttackRange)
+                {
+                    PerformAction(true, other.MatchController, MATCH_ACTION_ATTACKUNIT, global.SelectedUnit,id);
+                    //AttackEnemyUnit(id);
+                }
+                global.SelectedUnit.IsSelected = false;
+                global.SelectedUnit = noone;
+            } 
             return true; 
         }
         //============================================================//
@@ -95,12 +118,13 @@ if(MatchController.MatchState == MATCH_STATE_MYTURN)
                     //show_message("Hi");
                     //if(!ignoreBlock)
                     //{
-                        CurrentObject = instance_position(global.SelectedUnit.x,global.SelectedUnit.y,pbobj_pathBlock);
+                        PerformAction(true, other.MatchController, MATCH_ACTION_MOVEUNIT, global.SelectedUnit, id, UNIT_MOVEMENT_SPEED);
+                        /*CurrentObject = instance_position(global.SelectedUnit.x,global.SelectedUnit.y,pbobj_pathBlock);
                         MoveSelectedUnit(x,y,2);
                         //show_message(CurrentObject.IsOccupied);
                         CurrentObject.IsOccupied = false;
                         //show_message(CurrentObject.IsOccupied);
-                        IsOccupied = true;
+                        IsOccupied = true;*/
                     //}
                     //pbobj_pathBlock.ignoreBlock = false;
                 } 
@@ -119,7 +143,10 @@ if(MatchController.MatchState == MATCH_STATE_MYTURN)
                             if(Clicked)
                             {
                                 //show_message("Hi4");
-                                PlayerSpawner(other.x, other.y, UnitToCreate);
+                                var creationPoint;
+                                creationPoint = other.id;
+                                PerformAction(true, other.MatchController, MATCH_ACTION_CREATEUNIT, creationPoint, UnitToCreate, global.username);
+                                //UnitSpawner(other.x, other.y, UnitToCreate, global.username);
                                 Clicked = false;
                                 other.IsOccupied = true;
                             }

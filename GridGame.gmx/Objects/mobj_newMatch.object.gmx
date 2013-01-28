@@ -30,6 +30,8 @@ Team = 0;
 MyTurn = false;
 opponent = "";
 opponentTeam = 0;
+MyUnitIDs = ds_list_create();
+EnemyUnitIDs = ds_list_create();
 </string>
           </argument>
         </arguments>

@@ -204,112 +204,123 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
+    <scripts name="Action Scripts">
+      <script>scripts\ClearAllActions.gml</script>
+      <script>scripts\PerformAction.gml</script>
+      <script>scripts\RecordAction.gml</script>
+      <script>scripts\SubmitTurn.gml</script>
+      <script>scripts\ResetTurn.gml</script>
+    </scripts>
     <scripts name="ConnectionScripts">
-      <script>scripts\initiate.gml</script>
+      <script>scripts\ConnectToServer.gml</script>
       <script>scripts\die.gml</script>
       <script>scripts\disconnected.gml</script>
-      <script>scripts\ConnectToServer.gml</script>
-    </scripts>
-    <scripts name="Unit Scripts">
-      <script>scripts\HighlightMoveRange.gml</script>
-      <script>scripts\UnitCreated.gml</script>
-      <script>scripts\MoveSelectedUnit.gml</script>
-    </scripts>
-    <scripts name="Networking Scripts">
-      <script>scripts\dllinit.gml</script>
-      <script>scripts\dllfree.gml</script>
-      <script>scripts\tcpconnect.gml</script>
-      <script>scripts\tcplisten.gml</script>
-      <script>scripts\tcpaccept.gml</script>
-      <script>scripts\tcpip.gml</script>
-      <script>scripts\setnagle.gml</script>
-      <script>scripts\tcpconnected.gml</script>
-      <script>scripts\udpconnect.gml</script>
-      <script>scripts\sendmessage.gml</script>
-      <script>scripts\receivemessage.gml</script>
-      <script>scripts\peekmessage.gml</script>
-      <script>scripts\setformat.gml</script>
-      <script>scripts\lastinIP.gml</script>
-      <script>scripts\lastinPort.gml</script>
-      <script>scripts\setsync.gml</script>
-      <script>scripts\closesocket.gml</script>
-      <script>scripts\socklasterror.gml</script>
-      <script>scripts\myhost.gml</script>
-      <script>scripts\compareip.gml</script>
-      <script>scripts\sockexit.gml</script>
-      <script>scripts\sockstart.gml</script>
-      <script>scripts\hostip.gml</script>
-      <script>scripts\getsockid.gml</script>
-      <script>scripts\writebyte.gml</script>
-      <script>scripts\writeshort.gml</script>
-      <script>scripts\writeushort.gml</script>
-      <script>scripts\writeint.gml</script>
-      <script>scripts\writeuint.gml</script>
-      <script>scripts\writefloat.gml</script>
-      <script>scripts\writedouble.gml</script>
-      <script>scripts\writechars.gml</script>
-      <script>scripts\writestring.gml</script>
-      <script>scripts\copybuffer.gml</script>
-      <script>scripts\copybuffer2.gml</script>
-      <script>scripts\readbyte.gml</script>
-      <script>scripts\readshort.gml</script>
-      <script>scripts\readushort.gml</script>
-      <script>scripts\readint.gml</script>
-      <script>scripts\readuint.gml</script>
-      <script>scripts\readfloat.gml</script>
-      <script>scripts\readdouble.gml</script>
-      <script>scripts\readchars.gml</script>
-      <script>scripts\readstring.gml</script>
-      <script>scripts\readsep.gml</script>
-      <script>scripts\readbit.gml</script>
-      <script>scripts\buildbyte.gml</script>
-      <script>scripts\getpos.gml</script>
-      <script>scripts\clearbuffer.gml</script>
-      <script>scripts\buffsize.gml</script>
-      <script>scripts\setpos.gml</script>
-      <script>scripts\bytesleft.gml</script>
-      <script>scripts\createbuffer.gml</script>
-      <script>scripts\freebuffer.gml</script>
-      <script>scripts\bufferexists.gml</script>
-      <script>scripts\md5string.gml</script>
-      <script>scripts\md5buffer.gml</script>
-      <script>scripts\bufferencrypt.gml</script>
-      <script>scripts\bufferdecrypt.gml</script>
-      <script>scripts\fileopen.gml</script>
-      <script>scripts\fileclose.gml</script>
-      <script>scripts\filewrite.gml</script>
-      <script>scripts\fileread.gml</script>
-      <script>scripts\filepos.gml</script>
-      <script>scripts\filesetpos.gml</script>
-      <script>scripts\filesize.gml</script>
-      <script>scripts\adler32.gml</script>
-      <script>scripts\getmacaddress.gml</script>
-      <script>scripts\iptouint.gml</script>
-      <script>scripts\uinttoip.gml</script>
-      <script>scripts\netconnected.gml</script>
+      <script>scripts\initiate.gml</script>
     </scripts>
     <scripts name="Controller Scripts">
-      <script>scripts\ToggleFullScreen.gml</script>
       <script>scripts\Startup.gml</script>
-    </scripts>
-    <scripts name="Login Scripts">
-      <script>scripts\Login.gml</script>
-      <script>scripts\GetUsernamePassword.gml</script>
+      <script>scripts\ToggleFullScreen.gml</script>
     </scripts>
     <scripts name="Game Persistence Scripts">
-      <script>scripts\QuitGame.gml</script>
       <script>scripts\LoadGame.gml</script>
+      <script>scripts\QuitGame.gml</script>
       <script>scripts\SaveGame.gml</script>
+    </scripts>
+    <scripts name="Login Scripts">
+      <script>scripts\GetUsernamePassword.gml</script>
+      <script>scripts\Login.gml</script>
     </scripts>
     <scripts name="Match Scripts">
       <script>scripts\CheckServerMessage.gml</script>
+      <script>scripts\CreateNewMatch.gml</script>
+      <script>scripts\GetRequestId.gml</script>
+      <script>scripts\PopulateMatch.gml</script>
       <script>scripts\RequestMatch.gml</script>
       <script>scripts\StartNewMatch.gml</script>
-      <script>scripts\CreateNewMatch.gml</script>
-      <script>scripts\PopulateMatch.gml</script>
-      <script>scripts\GetRequestId.gml</script>
     </scripts>
-    <script>scripts\PlayerSpawner.gml</script>
+    <scripts name="Networking Scripts">
+      <script>scripts\adler32.gml</script>
+      <script>scripts\bufferdecrypt.gml</script>
+      <script>scripts\bufferencrypt.gml</script>
+      <script>scripts\bufferexists.gml</script>
+      <script>scripts\buffsize.gml</script>
+      <script>scripts\buildbyte.gml</script>
+      <script>scripts\bytesleft.gml</script>
+      <script>scripts\clearbuffer.gml</script>
+      <script>scripts\closesocket.gml</script>
+      <script>scripts\compareip.gml</script>
+      <script>scripts\copybuffer.gml</script>
+      <script>scripts\copybuffer2.gml</script>
+      <script>scripts\createbuffer.gml</script>
+      <script>scripts\dllfree.gml</script>
+      <script>scripts\dllinit.gml</script>
+      <script>scripts\fileclose.gml</script>
+      <script>scripts\fileopen.gml</script>
+      <script>scripts\filepos.gml</script>
+      <script>scripts\fileread.gml</script>
+      <script>scripts\filesetpos.gml</script>
+      <script>scripts\filesize.gml</script>
+      <script>scripts\filewrite.gml</script>
+      <script>scripts\freebuffer.gml</script>
+      <script>scripts\getmacaddress.gml</script>
+      <script>scripts\getpos.gml</script>
+      <script>scripts\getsockid.gml</script>
+      <script>scripts\hostip.gml</script>
+      <script>scripts\iptouint.gml</script>
+      <script>scripts\lastinIP.gml</script>
+      <script>scripts\lastinPort.gml</script>
+      <script>scripts\md5buffer.gml</script>
+      <script>scripts\md5string.gml</script>
+      <script>scripts\myhost.gml</script>
+      <script>scripts\netconnected.gml</script>
+      <script>scripts\peekmessage.gml</script>
+      <script>scripts\readbit.gml</script>
+      <script>scripts\readbyte.gml</script>
+      <script>scripts\readchars.gml</script>
+      <script>scripts\readdouble.gml</script>
+      <script>scripts\readfloat.gml</script>
+      <script>scripts\readint.gml</script>
+      <script>scripts\readsep.gml</script>
+      <script>scripts\readshort.gml</script>
+      <script>scripts\readstring.gml</script>
+      <script>scripts\readuint.gml</script>
+      <script>scripts\readushort.gml</script>
+      <script>scripts\receivemessage.gml</script>
+      <script>scripts\sendmessage.gml</script>
+      <script>scripts\setformat.gml</script>
+      <script>scripts\setnagle.gml</script>
+      <script>scripts\setpos.gml</script>
+      <script>scripts\setsync.gml</script>
+      <script>scripts\sockexit.gml</script>
+      <script>scripts\socklasterror.gml</script>
+      <script>scripts\sockstart.gml</script>
+      <script>scripts\tcpaccept.gml</script>
+      <script>scripts\tcpconnect.gml</script>
+      <script>scripts\tcpconnected.gml</script>
+      <script>scripts\tcpip.gml</script>
+      <script>scripts\tcplisten.gml</script>
+      <script>scripts\udpconnect.gml</script>
+      <script>scripts\uinttoip.gml</script>
+      <script>scripts\writebyte.gml</script>
+      <script>scripts\writechars.gml</script>
+      <script>scripts\writedouble.gml</script>
+      <script>scripts\writefloat.gml</script>
+      <script>scripts\writeint.gml</script>
+      <script>scripts\writeshort.gml</script>
+      <script>scripts\writestring.gml</script>
+      <script>scripts\writeuint.gml</script>
+      <script>scripts\writeushort.gml</script>
+    </scripts>
+    <scripts name="Unit Scripts">
+      <script>scripts\AttackEnemyUnit.gml</script>
+      <script>scripts\CreateUnitID.gml</script>
+      <script>scripts\HighlightEnemiesInRange.gml</script>
+      <script>scripts\HighlightMoveRange.gml</script>
+      <script>scripts\MoveUnit.gml</script>
+      <script>scripts\PerformAttack.gml</script>
+      <script>scripts\UnitCreated.gml</script>
+      <script>scripts\UnitSpawner.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <objects name="Buttons">
@@ -536,45 +547,69 @@
       <room>rooms\wrm_waitForMatch</room>
     </rooms>
   </rooms>
-  <constants number="38">
+  <constants number="62">
     <constant name="ACCOUNT_LOGIN_FAIL">1</constant>
     <constant name="ACCOUNT_LOGIN_SUCCESS">2</constant>
-    <constant name="UNIT_STATE_CREATED">1</constant>
-    <constant name="UNIT_STATE_ACTIONOVER">2</constant>
-    <constant name="UNIT_STATE_IDLE">3</constant>
-    <constant name="UNIT_STATE_MOVING">4</constant>
-    <constant name="UNIT_STATE_ATTACKING">5</constant>
-    <constant name="MATCH_STATE_NONE">0</constant>
-    <constant name="MATCH_STATE_NEW">1</constant>
-    <constant name="MATCH_STATE_WAITINGTURN">2</constant>
-    <constant name="MATCH_STATE_MYTURN">3</constant>
-    <constant name="MATCH_STATE_ENEMYACTION">4</constant>
-    <constant name="MATCH_STATE_INENEMYACTION">5</constant>
-    <constant name="MATCH_STATE_ACTIONOVER">6</constant>
-    <constant name="MATCH_STATE_POPULATE">7</constant>
-    <constant name="MATCH_MSG_MYTURN">1</constant>
-    <constant name="MATCH_MSG_ENEMYACTION">2</constant>
-    <constant name="MATCH_MSG_WON">3</constant>
-    <constant name="MATCH_MSG_LOST">4</constant>
-    <constant name="GAME_STATE_NONE">0</constant>
-    <constant name="GAME_STATE_MAINMENU">1</constant>
-    <constant name="GAME_STATE_HUBMENU">2</constant>
-    <constant name="GAME_STATE_TEAMSELECT">3</constant>
-    <constant name="GAME_STATE_REQUESTMATCH">4</constant>
-    <constant name="GAME_STATE_WAITMATCH">5</constant>
-    <constant name="GAME_STATE_STARTMATCH">6</constant>
-    <constant name="GAME_STATE_INMATCH">7</constant>
-    <constant name="GAME_TEAM_STARKS">1</constant>
-    <constant name="GAME_TEAM_LANNISTER">2</constant>
-    <constant name="GAME_TEAM_TARGARYEN">3</constant>
-    <constant name="GAME_TEAM_GREYJOY">4</constant>
-    <constant name="GAME_TEAM_BARATHEON">5</constant>
-    <constant name="GAME_TEAM_ARRYN">6</constant>
-    <constant name="GAME_TEAM_TYRELL">7</constant>
-    <constant name="GAME_TEAM_MARTELL">8</constant>
-    <constant name="GAME_MATCH_REQUEST">1</constant>
-    <constant name="GAME_MATCH_START">2</constant>
     <constant name="MATCH_ACTIONS_PER_TURN">4</constant>
+    <constant name="UNIT_STATE_CREATED">21</constant>
+    <constant name="UNIT_STATE_ACTIONOVER">22</constant>
+    <constant name="UNIT_STATE_IDLE">23</constant>
+    <constant name="UNIT_STATE_MOVING">24</constant>
+    <constant name="UNIT_STATE_ATTACKING">25</constant>
+    <constant name="UNIT_STATE_INATTACKRANGE">26</constant>
+    <constant name="UNIT_STATE_TAKEHIT">27</constant>
+    <constant name="UNIT_STATE_RESERVESTATE4">28</constant>
+    <constant name="UNIT_STATE_RESERVESTATE3">29</constant>
+    <constant name="UNIT_STATE_RESERVESTATE2">30</constant>
+    <constant name="UNIT_STATE_RESERVESTATE1">31</constant>
+    <constant name="MATCH_STATE_NEW">51</constant>
+    <constant name="MATCH_STATE_POPULATE">52</constant>
+    <constant name="MATCH_STATE_INACTION">53</constant>
+    <constant name="MATCH_STATE_ACTIONOVER">54</constant>
+    <constant name="MATCH_STATE_ENDTURN">55</constant>
+    <constant name="MATCH_STATE_WAIT">56</constant>
+    <constant name="MATCH_STATE_RESERVESTATE4">57</constant>
+    <constant name="MATCH_STATE_RESERVESTATE3">58</constant>
+    <constant name="MATCH_STATE_RESERVESTATE2">59</constant>
+    <constant name="MATCH_STATE_RESERVESTATE1">60</constant>
+    <constant name="MATCH_MSG_MYTURN">81</constant>
+    <constant name="MATCH_MSG_ENEMYACTION">82</constant>
+    <constant name="MATCH_MSG_WON">83</constant>
+    <constant name="MATCH_MSG_LOST">84</constant>
+    <constant name="MATCH_MSG_ENEMYTURNBEGIN">85</constant>
+    <constant name="MATCH_MSG_ENEMYTURNEND">86</constant>
+    <constant name="MATCH_MSG_RESERVEMSG2">87</constant>
+    <constant name="MATCH_MSG_RESERVEMSG1">88</constant>
+    <constant name="MATCH_ACTION_ACTIONSTART">101</constant>
+    <constant name="MATCH_ACTION_MOVEUNIT">102</constant>
+    <constant name="MATCH_ACTION_ATTACKUNIT">103</constant>
+    <constant name="MATCH_ACTION_CREATEUNIT">104</constant>
+    <constant name="MATCH_ACTION_ACTIONOVER">105</constant>
+    <constant name="MATCH_ACTION_RESERVEACTION1">106</constant>
+    <constant name="GAME_STATE_NONE">120</constant>
+    <constant name="GAME_STATE_MAINMENU">121</constant>
+    <constant name="GAME_STATE_HUBMENU">122</constant>
+    <constant name="GAME_STATE_TEAMSELECT">123</constant>
+    <constant name="GAME_STATE_REQUESTMATCH">124</constant>
+    <constant name="GAME_STATE_WAITMATCH">125</constant>
+    <constant name="GAME_STATE_STARTMATCH">126</constant>
+    <constant name="GAME_STATE_INMATCH">127</constant>
+    <constant name="GAME_STATE_RESERVESTATE4">128</constant>
+    <constant name="GAME_STATE_RESERVESTATE3">129</constant>
+    <constant name="GAME_STATE_RESERVESTATE2">130</constant>
+    <constant name="GAME_STATE_RESERVESTATE1">131</constant>
+    <constant name="GAME_TEAM_STARKS">151</constant>
+    <constant name="GAME_TEAM_LANNISTER">152</constant>
+    <constant name="GAME_TEAM_TARGARYEN">153</constant>
+    <constant name="GAME_TEAM_GREYJOY">154</constant>
+    <constant name="GAME_TEAM_BARATHEON">155</constant>
+    <constant name="GAME_TEAM_ARRYN">156</constant>
+    <constant name="GAME_TEAM_TYRELL">157</constant>
+    <constant name="GAME_TEAM_MARTELL">158</constant>
+    <constant name="GAME_TEAM_RESERVETEAM2">159</constant>
+    <constant name="GAME_TEAM_RESERVETEAM1">160</constant>
+    <constant name="GAME_MATCH_REQUEST">175</constant>
+    <constant name="GAME_MATCH_START">176</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
