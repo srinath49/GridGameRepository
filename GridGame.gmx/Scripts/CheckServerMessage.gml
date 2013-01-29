@@ -1,3 +1,4 @@
+/*
 ///Check if we have a new message and if the client is still connected
 var size;
 //Retrieve the amount of bytes that the buffer currently has
@@ -33,3 +34,4 @@ if (size>0)
 if (size=0)
 {
 }
+*/

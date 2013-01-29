@@ -95,6 +95,7 @@ Opponent = "";
                 show_message("End Of Turn");
                 MyTurn = false;
                 SubmitTurn(id);
+                CurrentAction = 0;
             //}
             //else
             //{
@@ -105,11 +106,30 @@ Opponent = "";
         }
         break;
     case MATCH_STATE_MYTURN:
-        with(uobj_unit)
+        /*with(uobj_unit)
         {
             // Save positions etc.
-        }
+        }*/
+        MyTurn = true;
+        global.InAction = false;
+        ActionsLeft = MATCH_ACTIONS_PER_TURN;
+        CurrentAction = 0;
+        ds_list_clear(MatchEngine.Action1List);
+        ds_list_clear(MatchEngine.Action2List);
+        ds_list_clear(MatchEngine.Action3List);
+        ds_list_clear(MatchEngine.Action4List);
+        show_message(global.username+"::Your Turn!");
         MatchState = MATCH_STATE_WAIT;
+        break;
+    case MATCH_STATE_INENEMYACTION:
+        if(!global.InAction)
+        {
+            MatchState = MATCH_STATE_ENEMYACTIONOVER;
+        }
+        break;
+    case MATCH_STATE_ENEMYACTIONOVER:
+        MatchState = MATCH_STATE_WAIT;
+        ProcessNextTurn(id);
         break;
     case MATCH_STATE_WAIT:
         break;

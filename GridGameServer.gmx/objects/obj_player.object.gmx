@@ -65,7 +65,7 @@ if (size&lt;0)
 else if (size&gt;0)
 {
     //messageString = "Server : size = " + string(size);
-    //show_message(messageString);
+    //show_message("Server : Receive Size = " + string(size));
     event_user(0);
 }
 //If the amount of bytes equals 0 the client disconnected
@@ -116,6 +116,10 @@ switch (messageID)
         newMatchRequest.requestCreated = false;
         ds_list_add(global.matchRequestList, newMatchRequest);
         //show_message("Match Request Created for user : "+username);
+        break;
+    case MATCH_MSG_TURNSUBMIT:
+        //show_message("Server::Recieved Message::Calling ProcessTurn()");
+        ProcessTurn();
         break;
 }
 </string>

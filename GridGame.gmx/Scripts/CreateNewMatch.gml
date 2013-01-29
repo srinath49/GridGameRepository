@@ -1,9 +1,11 @@
 requestId = readbyte();
-mID = readbyte();
+mID = readshort();
 Team = readbyte();
 MyTurn = readbyte();
 opponent = readstring();
 opponentTeam = readbyte();
+
+//show_message(global.username+"::MyTurn::"+string(MyTurn));
 
 if(instance_number(mobj_matchRequest) > 0)
 {
@@ -13,6 +15,7 @@ if(instance_number(mobj_matchRequest) > 0)
         {
             newMatch = instance_create(0,0,mobj_newMatch);
             newMatch.matchID = other.mID;
+            //show_message("CreateNewMatch::NewMatch::MatchID::"+string(newMatch.matchID));
             newMatch.Team = other.Team;
             newMatch.MyTurn = other.MyTurn;
             newMatch.opponent = other.opponent;
@@ -21,8 +24,6 @@ if(instance_number(mobj_matchRequest) > 0)
             if(newMatch.Team != team)
             {
                 newMatch.Team = team;
-                //show_message(global.username+"::CreateNewMatch::RequestTeam::"+string(team));
-                //show_message(global.username+"::CreateNewMatch::Team::"+string(newMatch.Team));
             }
             deleteMe = true;
             ds_list_add(global.NewMatchList, newMatch);

@@ -66,8 +66,7 @@ if (size&lt;0)
 //If the amount of bytes is higher than 0 go and process the package, meaning that we have a new message
 if (size&gt;0)
 {
-    //messageString = "Client : size = " + string(size); 
-    //show_message(messageString);
+    //show_message("Client::Received Size::"+string(size));
     event_user(0);
 }
 if (size=0)
@@ -141,7 +140,8 @@ switch(messageID)
         StartNewMatch(mid);
         break;
     case MATCH_MSG_TURNSUBMIT:
-        ReadTurn();
+        //show_message("ReceiveTurn::User::"+string(global.username));
+        ReceiveTurn();
 }
 </string>
           </argument>

@@ -1,72 +1,106 @@
-var myAction, action;
+var myAction, action, controller;
 myAction = argument0;
-action = argument1;
-controller = argument2;
+controller = argument1;
+action = argument2;
 
-if(MyAction)
+global.InAction = true;
+if(myAction)
 {
-    global.InAction = true;
+    if(controller.ActionsLeft <= 0)
+    {
+        controller.ActionsLeft = 0;
+        controller.MatchState = MATCH_STATE_WAIT;
+        return noone;
+    }
     controller.MatchState = MATCH_STATE_INACTION;
+}
+else
+{
+    controller.MatchState = MATCH_STATE_INENEMYACTION;
 }
 
 switch(action)
 {
     case MATCH_ACTION_MOVEUNIT:
         {   
-            //================================================================================================//
+            //=====================================================================================================//
             var CurrentObject;
-            var UnitToMove;
-            var Destination;
+            var UnitToMove, uid;
             var xx, yy, movspeed;
-            UnitToMove = argument3;
-            Destination = argument4;
-            xx = Destination.x;
-            yy = Destination.y;
-            movspeed = argument5;
-            CurrentObject = instance_position(UnitToMove.x,UnitToMove.y,pbobj_pathBlock);
-            MoveUnit(UnitToMove,xx,yy,movspeed);
-            //show_message(CurrentObject.IsOccupied);
-            CurrentObject.IsOccupied = false;
-            //show_message(CurrentObject.IsOccupied);
-            Destination.IsOccupied = true;
-            //================================================================================================//
-            if(myAction)
+            var match;
+            uid = argument3;
+            xx = argument4;
+            yy = argument5;
+            movspeed = argument6;
+            UnitToMove = noone;
+            CurrentObject = noone;
+            match = controller.Match;
+            for(i=0;i<ds_list_size(match.MyUnitIDs);i++)
             {
-                RecordAction(controller, action, UnitToMove, Destination, movspeed);
+                if(uid == ds_list_find_value(match.MyUnitIDs, i))
+                {
+                    with(uobj_unit)
+                    {
+                        //show_message("WithUnit::UID::"+string(uid));
+                        //show_message("WithUnit::UnitID::"+string(UnitID));
+                        if(real(UnitID) == real(uid))
+                        {
+                            //show_message("WithUnit::Hello");
+                            UnitToMove = id;
+                        }
+                    }
+                    break;
+                }
             }
-            //================================================================================================//
+            if(UnitToMove != noone)
+            {
+                CurrentObject = instance_position(UnitToMove.x,UnitToMove.y,pbobj_pathBlock);
+                MoveUnit(UnitToMove,xx,yy,movspeed);
+                CurrentObject.IsOccupied = false;
+                CurrentObject = instance_position(xx,yy,pbobj_pathBlock);
+                CurrentObject.IsOccupied = true;
+                //================================================================================================//
+                if(myAction)
+                {
+                    RecordAction(controller, action, uid, xx, yy, movspeed);
+                }
+                //================================================================================================//
+            }
+            //====================================================================================================//
         }
         break;
     case MATCH_ACTION_ATTACKUNIT:
         {
-            //================================================================================================//
+            //====================================================================================================//
             var attacker, defender;
             attacker = argument3;
             defender = argument4;
             AttackEnemyUnit(attacker, defender);
-            //================================================================================================//
+            //====================================================================================================//
             if(myAction)
             {
-                RecordAction(controller, action, attacker, defender);
+                RecordAction(controller, action, attacker.UnitID, defender.UnitID);
             }
-            //================================================================================================//
+            //====================================================================================================//
         }
         break;
     
     case MATCH_ACTION_CREATEUNIT:
         {
-            //================================================================================================//
-            var creationPoint, unitToCreate, unitOwner;
-            creationPoint = argument3;
-            unitToCreate = argument4;
-            unitOwner = argument5;
-            UnitSpawner(creationPoint.x, creationPoint.y, unitToCreate, unitOwner);
-            //================================================================================================//
+            //====================================================================================================//
+            var creationPoint, unitToCreate, unitOwner, unitID;
+            creationPointX = argument3;
+            creationPointY = argument4;
+            unitToCreate = argument5;
+            unitOwner = argument6;
+            unitID = argument7;
+            UnitSpawner(creationPointX, creationPointY, unitToCreate, unitOwner, unitID);
+            //====================================================================================================//
             if(myAction)
             {
-                RecordAction(controller, action, creationPoint, unitToCreate, unitOwner);
+                RecordAction(controller, action, creationPointX, creationPointY, unitToCreate, unitOwner, unitID);
             }
-            //================================================================================================//
+            //====================================================================================================//
         }
         break;
 }

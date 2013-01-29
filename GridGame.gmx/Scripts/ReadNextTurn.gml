@@ -1,40 +1,23 @@
 var controller, matchId;
-//show_message(global.username+"::ReadTurn::Hi");
-matchId = readshort();
-//show_message(global.username+"::MatchID::"+string(matchId));
-controller = noone;
-
-with(cobj_MatchController/*.MatchID == matchID*/)
-{
-    //show_message(global.username+"::ReadTurn::Controller::MatchID::"+string(MatchID));
-    if(MatchID == matchId)
-    {
-        controller = id;
-        //show_message(global.username+"::ReadTurn::ControllerFound::MatchID::"+string(controller.MatchID));
-    }
-}
-
-if(controller == noone)
-{
-    //show_message(global.username+"::ReadTurn::NoController");
-    return false;
-}
-
+controller = argument0;
+matchId = controller.Match;
+show_message("ReadNextTurn::Hello");
 with(controller)
 {
-    //show_message(global.username+"::ReadTurn::WithController::MatchID::"+string(MatchID));
     var action;
     do
     {
         action = real(readstring());
-        show_message("Client::ReadTurn::ActionNumber::"+string(action));
         switch(action)
         {
             case MATCH_ACTION_ACTIONSTART:
+                show_message("ReadNextTurn::ACTIONSTAR::"+string(++(global.actionCount)));
+                break;
             case MATCH_ACTION_ACTIONOVER:
+                show_message("ReadNextTurn::ACTIONOVER::"+string(global.actionCount));
                 break;
             case MATCH_ACTION_MOVEUNIT:
-                show_message("Client::ReadTurn::ActionName::MoveUnit");
+                //show_message("Client::ReadNextTurn::MoveUnit");
                 {
                     var UnitToMoveID, Destination, Speed;
                     UnitToMoveID = real(readstring());
@@ -45,7 +28,7 @@ with(controller)
                 }
                 break;
             case MATCH_ACTION_ATTACKUNIT:
-                show_message("Client::ReadTurn::ActionName::AttackUnit");
+                //show_message("Client::ReadNextTurn::AttackUnit");
                 {
                     var attacker, defender;
                     attacker = real(readstring());
@@ -54,7 +37,7 @@ with(controller)
                 }
                 break;
             case MATCH_ACTION_CREATEUNIT:
-                show_message("Client::ReadTurn::ActionName::CreateUnit");
+                //show_message("Client::ReadNextTurnCreateUnit");
                 {
                     var unitToCreate, unitOwner, createX, createY, match;
                     createX = real(readstring());
@@ -67,7 +50,10 @@ with(controller)
                 }
                 break;
         }
-    }until(action == MATCH_MSG_TURNEND);
-    MatchState = MATCH_STATE_MYTURN;
+    }until(action == MATCH_ACTION_ACTIONOVER) || (action == MATCH_MSG_TURNEND);
+    if(action == MATCH_MSG_TURNEND)
+    {
+        MatchState = MATCH_STATE_MYTURN;
+    }
 }
 

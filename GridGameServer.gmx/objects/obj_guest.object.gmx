@@ -131,6 +131,7 @@ switch (messageID){
                 newPlayer.username = username;
                 newPlayer.password = password;
                 newPlayer.loggedIn = true;
+                //show_message(newPlayer.username+"::Socket::"+string(newPlayer.socket));
             }
             instance_destroy();
          }

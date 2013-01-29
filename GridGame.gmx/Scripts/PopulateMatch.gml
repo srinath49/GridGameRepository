@@ -25,3 +25,7 @@ if(controller.MyTurn)
 {
     controller.MatchState = MATCH_STATE_MYTURN;
 }
+else
+{
+    controller.MatchState = MATCH_STATE_WAIT;
+}

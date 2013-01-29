@@ -31,6 +31,7 @@ MoveLocationX = -100;
 MoveLocationY = -100;
 depth = -100;
 UnitOwner = noone;
+UnitID = -1;
 InAttackRange = false;
 //UnitCreated(0,0,0,0,0,0,0,0,0,0,0,2,2,1);
 </string>
@@ -59,7 +60,7 @@ InAttackRange = false;
 {
     case UNIT_STATE_CREATED: 
         // Just After Creation
-        if(++CreationDelay &gt;= 15)
+        if(++CreationDelay &gt;= 5)
         {
             UnitState = UNIT_STATE_ACTIONOVER;
         }
@@ -109,7 +110,8 @@ InAttackRange = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.InAction == false)
+            <string>/*
+if(!global.InAction)
 {
     if(UnitState == UNIT_STATE_IDLE)
     {
@@ -118,6 +120,7 @@ InAttackRange = false;
         global.SelectedUnit = instance_id;
     }
 }
+*/
 </string>
           </argument>
         </arguments>

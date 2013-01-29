@@ -26,15 +26,15 @@
           <argument>
             <kind>1</kind>
             <string>MatchController = noone;
-ActionsList = ds_list_create();
+//ActionsList = ds_list_create();
 Action1List = ds_list_create();
 Action2List = ds_list_create();
 Action3List = ds_list_create();
 Action4List = ds_list_create();
-ds_list_add(ActionsList, Action1List);
-ds_list_add(ActionsList, Action2List);
-ds_list_add(ActionsList, Action3List);
-ds_list_add(ActionsList, Action4List);
+//ds_list_add(ActionsList, Action1List);
+//ds_list_add(ActionsList, Action2List);
+//ds_list_add(ActionsList, Action3List);
+//ds_list_add(ActionsList, Action4List);
 </string>
           </argument>
         </arguments>
@@ -57,8 +57,7 @@ ds_list_add(ActionsList, Action4List);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//show_message("Hi");
-if(MatchController.MatchState == MATCH_STATE_WAIT)
+            <string>if(MatchController.MatchState == MATCH_STATE_WAIT)// &amp;&amp; (MatchController.MyTurn)
 {
     if(!global.InAction)
     {   
@@ -69,12 +68,9 @@ if(MatchController.MatchState == MATCH_STATE_WAIT)
             {
                 Clicked = false;
                 Now = false;
-                //show_message("Hi");
             }
-            //show_message("Hi2");
             Clicked = true;
             Now = true;
-            //show_message("Hi3");
             return true;
         }
         //============================================================//
@@ -97,7 +93,6 @@ if(MatchController.MatchState == MATCH_STATE_WAIT)
                 if(InAttackRange)
                 {
                     PerformAction(true, other.MatchController, MATCH_ACTION_ATTACKUNIT, global.SelectedUnit,id);
-                    //AttackEnemyUnit(id);
                 }
                 global.SelectedUnit.IsSelected = false;
                 global.SelectedUnit = noone;
@@ -109,47 +104,43 @@ if(MatchController.MatchState == MATCH_STATE_WAIT)
         // Now Check Pathblocks
         with(instance_position(mouse_x,mouse_y,pbobj_pathBlock))
         {
-            //show_message("Hi");
             if(visible)
             {
-                //show_message("Hi");
                 if(!IsOccupied)
                 {
-                    //show_message("Hi");
-                    //if(!ignoreBlock)
-                    //{
-                        PerformAction(true, other.MatchController, MATCH_ACTION_MOVEUNIT, global.SelectedUnit, id, UNIT_MOVEMENT_SPEED);
-                        /*CurrentObject = instance_position(global.SelectedUnit.x,global.SelectedUnit.y,pbobj_pathBlock);
-                        MoveSelectedUnit(x,y,2);
-                        //show_message(CurrentObject.IsOccupied);
-                        CurrentObject.IsOccupied = false;
-                        //show_message(CurrentObject.IsOccupied);
-                        IsOccupied = true;*/
-                    //}
-                    //pbobj_pathBlock.ignoreBlock = false;
+                    if(!ignoreBlock)
+                    {
+                        PerformAction(true, other.MatchController, MATCH_ACTION_MOVEUNIT, global.SelectedUnit.UnitID, id.x, id.y, UNIT_MOVEMENT_SPEED);
+                    }
+                    pbobj_pathBlock.ignoreBlock = false;
                 } 
                 pbobj_pathBlock.visible = false;
             }
             else
             {
-                //show_message("Hi2::"+string(IsOccupied));
                 if(!IsOccupied)
                 {
                     if(instance_number(uiobj_UI) &gt; 0)
                     {
+                        var create;
+                        var creationPoint;
+                        var unit;
+                        unit = noone;
+                        creationPoint = id;
+                        create = false;
                         with(uiobj_UI)
                         {
-                            //show_message("Hi3::"+string(Clicked));
                             if(Clicked)
                             {
-                                //show_message("Hi4");
-                                var creationPoint;
-                                creationPoint = other.id;
-                                PerformAction(true, other.MatchController, MATCH_ACTION_CREATEUNIT, creationPoint, UnitToCreate, global.username);
-                                //UnitSpawner(other.x, other.y, UnitToCreate, global.username);
+                                create = true;
+                                unit = UnitToCreate;
                                 Clicked = false;
-                                other.IsOccupied = true;
                             }
+                        }
+                        if(create)
+                        {
+                            PerformAction(true, other.MatchController, MATCH_ACTION_CREATEUNIT, creationPoint.x, creationPoint.y, unit, global.username, CreateUnitID(other.MatchController));
+                            IsOccupied = true;
                         }
                     }
                 }
