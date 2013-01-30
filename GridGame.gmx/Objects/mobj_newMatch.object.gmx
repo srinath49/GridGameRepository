@@ -32,6 +32,7 @@ opponent = "";
 opponentTeam = 0;
 MyUnitIDs = ds_list_create();
 EnemyUnitIDs = ds_list_create();
+RightFacing = false;
 </string>
           </argument>
         </arguments>

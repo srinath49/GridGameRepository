@@ -37,6 +37,7 @@ CurrentAction = 0;
 MatchState = MATCH_STATE_WAIT;
 MatchRoom = lrm_level1;
 Opponent = "";
+RightFacing = false;
 </string>
           </argument>
         </arguments>

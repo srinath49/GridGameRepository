@@ -20,3 +20,15 @@ MoveRangeDiagonal = argument13;
 CreationDelay = 0;
 ActionDelay = 0;
 
+//===================Sprites=================//
+Created = RCreated;
+Still = RStill;
+Idle = RIdle;
+InRange = RInRange;
+ForwardMove = RForwardMove;
+BackMove = RBackMove;
+ForwardAttack = RForwardAttack;
+BackAttack = RBackAttack;
+TakeHit = RTakeHit;
+Die = RDie;
+//===================Sprites=================//

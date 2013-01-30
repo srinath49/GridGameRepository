@@ -88,13 +88,32 @@ switch(action)
     case MATCH_ACTION_CREATEUNIT:
         {
             //====================================================================================================//
-            var creationPoint, unitToCreate, unitOwner, unitID;
+            var creationPoint, unitToCreate, unitOwner, unitID, createdUnit;
             creationPointX = argument3;
             creationPointY = argument4;
             unitToCreate = argument5;
             unitOwner = argument6;
             unitID = argument7;
-            UnitSpawner(creationPointX, creationPointY, unitToCreate, unitOwner, unitID);
+            createdUnit = UnitSpawner(creationPointX, creationPointY, unitToCreate, unitOwner, unitID);
+            createdUnit.RightFacing = controller.RightFacing;
+            with(createdUnit)
+            {
+                if(!RightFacing)
+                {
+                    //===================Sprites=================//
+                    Created = LCreated;
+                    Still = LStill;
+                    Idle = LIdle;
+                    InRange = LInRange;
+                    ForwardMove = LForwardMove;
+                    BackMove = LBackMove;
+                    ForwardAttack = LForwardAttack;
+                    BackAttack = LBackAttack;
+                    TakeHit = LTakeHit;
+                    Die = LDie;
+                    //===================Sprites=================//
+                }
+            }
             //====================================================================================================//
             if(myAction)
             {

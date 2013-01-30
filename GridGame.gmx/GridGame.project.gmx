@@ -328,87 +328,83 @@
   <objects name="objects">
     <objects name="Buttons">
       <object>objects\bobj_backButton</object>
+      <object>objects\bobj_confirmButton</object>
       <object>objects\bobj_enterButton</object>
       <object>objects\bobj_loadButton</object>
+      <object>objects\bobj_match</object>
       <object>objects\bobj_match1Button</object>
+      <object>objects\bobj_MenuButtonParent</object>
       <object>objects\bobj_optionsButton</object>
       <object>objects\bobj_quitButton</object>
       <object>objects\bobj_tutorialButton</object>
-      <object>objects\bobj_match</object>
-      <object>objects\bobj_confirmButton</object>
-      <object>objects\bobj_MenuButtonParent</object>
     </objects>
     <objects name="UI Buttons">
-      <object>objects\uiobj_UI</object>
-      <objects name="Stark UI">
-        <object>objects\uiobj_starkUI</object>
-        <object>objects\suiobj_swordsman</object>
-      </objects>
       <objects name="Lannister UI">
         <object>objects\uiobj_lannisterUI</object>
         <object>objects\luiobj_swordsman</object>
       </objects>
+      <objects name="Stark UI">
+        <object>objects\uiobj_starkUI</object>
+        <object>objects\suiobj_swordsman</object>
+      </objects>
+      <object>objects\uiobj_UI</object>
     </objects>
     <objects name="Choice Menu">
       <object>objects\cmobj_arrynBanner</object>
       <object>objects\cmobj_arrynBannerUnavailable</object>
       <object>objects\cmobj_arrynShield</object>
-      <object>objects\cmobj_arrynShieldUnavailable</object>
       <object>objects\cmobj_arrynShieldTitle</object>
+      <object>objects\cmobj_arrynShieldUnavailable</object>
       <object>objects\cmobj_arrynTitle</object>
+      <object>objects\cmobj_bannerParent</object>
       <object>objects\cmobj_baratheonBanner</object>
       <object>objects\cmobj_baratheonBannerUnavailable</object>
       <object>objects\cmobj_baratheonShield</object>
-      <object>objects\cmobj_baratheonShieldUnavailable</object>
       <object>objects\cmobj_baratheonShieldTitle</object>
+      <object>objects\cmobj_baratheonShieldUnavailable</object>
       <object>objects\cmobj_baratheonTitle</object>
+      <object>objects\cmobj_choiceMenuBackground</object>
+      <object>objects\cmobj_chooseYourBanner</object>
+      <object>objects\cmobj_gameOfThronesBanner</object>
+      <object>objects\cmobj_grejoyShieldUnavailable</object>
       <object>objects\cmobj_greyjoyBanner</object>
       <object>objects\cmobj_greyjoyBannerUnavailable</object>
       <object>objects\cmobj_greyjoyShield</object>
-      <object>objects\cmobj_grejoyShieldUnavailable</object>
       <object>objects\cmobj_greyjoyShieldTitle</object>
       <object>objects\cmobj_greyjoyTitle</object>
       <object>objects\cmobj_lannisterBanner</object>
       <object>objects\cmobj_lannisterBannerUnavailable</object>
       <object>objects\cmobj_lannisterShield</object>
-      <object>objects\cmobj_lannisterShieldUnavailable</object>
       <object>objects\cmobj_lannisterShieldTitle</object>
+      <object>objects\cmobj_lannisterShieldUnavailable</object>
       <object>objects\cmobj_lannisterTitle</object>
       <object>objects\cmobj_martellBanner</object>
       <object>objects\cmobj_martellBannerUnavailable</object>
       <object>objects\cmobj_martellShield</object>
-      <object>objects\cmobj_martellShieldUnavailable</object>
       <object>objects\cmobj_martellShieldTitle</object>
+      <object>objects\cmobj_martellShieldUnavailable</object>
       <object>objects\cmobj_martellTitle</object>
       <object>objects\cmobj_starkBanner</object>
       <object>objects\cmobj_starkBannerUnavailable</object>
       <object>objects\cmobj_starkShield</object>
-      <object>objects\cmobj_starkShieldUnavailable</object>
       <object>objects\cmobj_starkShieldTitle</object>
+      <object>objects\cmobj_starkShieldUnavailable</object>
       <object>objects\cmobj_starkTitle</object>
       <object>objects\cmobj_targaryanBanner</object>
       <object>objects\cmobj_targaryanBannerUnavailable</object>
       <object>objects\cmobj_targaryanShield</object>
-      <object>objects\cmobj_targaryanShieldUnavailable</object>
       <object>objects\cmobj_targaryanShieldTitle</object>
+      <object>objects\cmobj_targaryanShieldUnavailable</object>
       <object>objects\cmobj_targaryanTitle</object>
       <object>objects\cmobj_tyrellBanner</object>
       <object>objects\cmobj_tyrellBannerUnavailable</object>
       <object>objects\cmobj_tyrellShield</object>
-      <object>objects\cmobj_tyrellShieldUnavailable</object>
       <object>objects\cmobj_tyrellShieldTitle</object>
+      <object>objects\cmobj_tyrellShieldUnavailable</object>
       <object>objects\cmobj_tyrellTitle</object>
-      <object>objects\cmobj_bannerParent</object>
-      <object>objects\cmobj_gameOfThronesBanner</object>
-      <object>objects\cmobj_choiceMenuBackground</object>
-      <object>objects\cmobj_chooseYourBanner</object>
       <object>objects\obj_tree</object>
     </objects>
     <objects name="Controllers">
-      <objects name="Network Controllers">
-        <object>objects\cobj_login</object>
-        <object>objects\cobj_ConnectionController</object>
-      </objects>
       <objects name="Game Controllers">
         <object>objects\cobj_GameController</object>
         <object>objects\cobj_toggleFullScreen</object>
@@ -417,8 +413,30 @@
         <object>objects\cobj_MatchController</object>
         <object>objects\cobj_MatchEngine</object>
       </objects>
+      <objects name="Network Controllers">
+        <object>objects\cobj_ConnectionController</object>
+        <object>objects\cobj_login</object>
+      </objects>
     </objects>
     <objects name="Game Area">
+      <objects name="Level 1">
+        <object>objects\gaobj_aegonsField</object>
+        <object>objects\gaobj_background</object>
+        <object>objects\gaobj_bluePlayerMeter</object>
+        <object>objects\gaobj_ground</object>
+        <object>objects\gaobj_helmetSigil</object>
+        <object>objects\gaobj_leftSlots</object>
+        <object>objects\gaobj_magicSigil</object>
+        <object>objects\gaobj_mainBoard</object>
+        <object>objects\gaobj_redPlayerMeter</object>
+        <object>objects\gaobj_rightSlots</object>
+        <object>objects\gaobj_scroll01</object>
+        <object>objects\gaobj_scroll02</object>
+        <object>objects\gaobj_scroll03</object>
+        <object>objects\gaobj_scroll04</object>
+        <object>objects\gaobj_scroll05</object>
+        <object>objects\gaobj_spears</object>
+      </objects>
       <objects name="Path Blocks">
         <objects name="A">
           <object>objects\pbaobj_pathBlockA01</object>
@@ -487,48 +505,32 @@
         </objects>
         <object>objects\pbobj_pathBlock</object>
       </objects>
-      <object>objects\gaobj_aegonsField</object>
-      <object>objects\gaobj_background</object>
-      <object>objects\gaobj_bluePlayerMeter</object>
-      <object>objects\gaobj_ground</object>
-      <object>objects\gaobj_helmetSigil</object>
-      <object>objects\gaobj_leftSlots</object>
-      <object>objects\gaobj_magicSigil</object>
-      <object>objects\gaobj_mainBoard</object>
-      <object>objects\gaobj_redPlayerMeter</object>
-      <object>objects\gaobj_rightSlots</object>
-      <object>objects\gaobj_scroll01</object>
-      <object>objects\gaobj_scroll02</object>
-      <object>objects\gaobj_scroll03</object>
-      <object>objects\gaobj_scroll04</object>
-      <object>objects\gaobj_scroll05</object>
-      <object>objects\gaobj_spears</object>
     </objects>
     <objects name="Main Menu">
       <object>objects\mmobj_aDPresentation</object>
+      <object>objects\mmobj_aegonsFieldTitle</object>
+      <object>objects\mmobj_chains</object>
+      <object>objects\mmobj_fireball</object>
       <object>objects\mmobj_gameOfThrones</object>
       <object>objects\mmobj_mainMenuBackground</object>
-      <object>objects\mmobj_chains</object>
-      <object>objects\mmobj_aegonsFieldTitle</object>
-      <object>objects\mmobj_fireball</object>
     </objects>
     <objects name="Unit Objects">
-      <objects name="Root Units">
-        <object>objects\uobj_unit</object>
-        <object>objects\uobj_rangedUnit</object>
-        <object>objects\uobj_meleeUnit</object>
-      </objects>
-      <objects name="Stark">
-        <object>objects\uobj_Stark_Swordsman</object>
-      </objects>
       <objects name="Lannister">
         <object>objects\uobj_Lannister_Swordsman</object>
       </objects>
       <object>objects\obj_attackRight</object>
+      <objects name="Root Units">
+        <object>objects\uobj_meleeUnit</object>
+        <object>objects\uobj_rangedUnit</object>
+        <object>objects\uobj_unit</object>
+      </objects>
+      <objects name="Stark">
+        <object>objects\uobj_Stark_Swordsman</object>
+      </objects>
     </objects>
     <objects name="Match Objects">
-      <object>objects\mobj_newMatch</object>
       <object>objects\mobj_matchRequest</object>
+      <object>objects\mobj_newMatch</object>
     </objects>
   </objects>
   <rooms name="rooms">
