@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>row = -1;
-coloumn = -1;
+column = -1;
 ignoreBlock = false;
 IsOccupied = false;
 </string>
@@ -56,7 +56,7 @@ unit = noone;
 with(instance_place(x,y,uobj_unit))
 {
     unit = id;
-    other.IsOccupied;
+    other.IsOccupied = true;
 }
 if(unit == noone)
 {

@@ -192,8 +192,8 @@
     <constant name="UNIT_STATE_ATTACKING">25</constant>
     <constant name="UNIT_STATE_INATTACKRANGE">26</constant>
     <constant name="UNIT_STATE_TAKEHIT">27</constant>
-    <constant name="UNIT_STATE_RESERVESTATE4">28</constant>
-    <constant name="UNIT_STATE_RESERVESTATE3">29</constant>
+    <constant name="UNIT_STATE_DIEING">28</constant>
+    <constant name="UNIT_STATE_DIE">29</constant>
     <constant name="UNIT_STATE_RESERVESTATE2">30</constant>
     <constant name="UNIT_STATE_RESERVESTATE1">31</constant>
     <constant name="MATCH_STATE_NEW">51</constant>

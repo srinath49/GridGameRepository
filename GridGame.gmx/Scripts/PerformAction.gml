@@ -101,16 +101,17 @@ switch(action)
                 if(!RightFacing)
                 {
                     //===================Sprites=================//
-                    Created = LCreated;
-                    Still = LStill;
-                    Idle = LIdle;
-                    InRange = LInRange;
-                    ForwardMove = LForwardMove;
-                    BackMove = LBackMove;
-                    ForwardAttack = LForwardAttack;
-                    BackAttack = LBackAttack;
-                    TakeHit = LTakeHit;
-                    Die = LDie;
+                    CreatedSprite = LCreated;
+                    StillSprite = LStill;
+                    IdleSprite = LIdle;
+                    InRangeSprite = LInRange;
+                    ForwardMoveSprite = LForwardMove
+                    BackMoveSprite = LBackMove
+                    ForwardAttackSprite = LForwardAttack;
+                    BackAttackSprite = LBackAttack;
+                    TakeHitSprite = LTakeHit;
+                    DieSprite = LDie;
+                    DeadSprite = LDead;
                     //===================Sprites=================//
                 }
             }

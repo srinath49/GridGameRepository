@@ -3,9 +3,9 @@
   <spriteName>spr_playerUI</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-3</depth>
+  <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>uobj_meleeUnit</parentName>
+  <parentName>uobj_rangedUnit</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">

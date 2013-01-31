@@ -85,7 +85,7 @@ Action4List = ds_list_create();
                     global.SelectedUnit = id;
                     IsSelected = true;
                     HighlightMoveRange(x,y,MoveRangeFrontBack,MoveRangeUpDown,MoveRangeDiagonal);
-                    //HighlightEnemiesInRange(AttackRangeRadius);
+                    HighlightEnemiesInRange(UnitRange);
                 }
             }
             else if(UnitOwner = other.MatchController.Opponent)

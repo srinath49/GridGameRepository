@@ -21,14 +21,15 @@ CreationDelay = 0;
 ActionDelay = 0;
 
 //===================Sprites=================//
-Created = RCreated;
-Still = RStill;
-Idle = RIdle;
-InRange = RInRange;
-ForwardMove = RForwardMove;
-BackMove = RBackMove;
-ForwardAttack = RForwardAttack;
-BackAttack = RBackAttack;
-TakeHit = RTakeHit;
-Die = RDie;
+CreatedSprite = RCreated;
+StillSprite = RStill;
+IdleSprite = RIdle;
+InRangeSprite = RInRange;
+ForwardMoveSprite = RForwardMove;
+BackMoveSprite = RBackMove;
+ForwardAttackSprite = RForwardAttack;
+BackAttackSprite = RBackAttack;
+TakeHitSprite = RTakeHit;
+DieSprite = RDie;
+DeadSprite = RDead;
 //===================Sprites=================//

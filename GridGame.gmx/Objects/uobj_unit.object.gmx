@@ -34,6 +34,9 @@ UnitOwner = noone;
 UnitID = -1;
 InAttackRange = false;
 RightFacing = true;
+KillMe = false;
+TargetX = -100;
+TargetY = -100;
 
 //===================Right Facing=================//
 RCreated = spr_playerUI;
@@ -46,6 +49,7 @@ RForwardAttack = spr_playerUI;
 RBackAttack = spr_playerUI;
 RTakeHit = spr_playerUI;
 RDie = spr_playerUI;
+RDead = spr_playerUI;
 //===================Right Facing=================//
 
 //===================Left Facing=================//
@@ -58,8 +62,35 @@ LBackMove = spr_playerUI;
 LForwardAttack = spr_playerUI;
 LBackAttack = spr_playerUI;
 LTakeHit = spr_playerUI;
-LCreated = spr_playerUI;
+LDie = spr_playerUI;
+LDead = spr_playerUI;
 //===================Left Facing=================//
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(KillMe)
+{
+    instance_destroy();
+}
 </string>
           </argument>
         </arguments>
@@ -86,19 +117,16 @@ LCreated = spr_playerUI;
 {
     case UNIT_STATE_CREATED: 
         // Just After Creation
-        if(sprite_index != Created)
+        if(sprite_index != CreatedSprite)
         {
-            sprite_index = Created;
+            sprite_index = CreatedSprite;
+            break;
         }
         if(image_index == (sprite_get_number(sprite_index) - 1))
         {
-            sprite_index = Still;
+            sprite_index = StillSprite;
             UnitState = UNIT_STATE_ACTIONOVER;
         }
-        /*if(++CreationDelay &gt;= 5)
-        {
-            UnitState = UNIT_STATE_ACTIONOVER;
-        }*/
         break;
     case UNIT_STATE_ACTIONOVER: 
         // Action Over. Unit just finished performing an action.
@@ -110,9 +138,9 @@ LCreated = spr_playerUI;
         }
         break;
     case UNIT_STATE_IDLE: 
-        if(sprite_index != Idle)
+        if(sprite_index != IdleSprite)
         {
-            sprite_index = Idle;
+            sprite_index = IdleSprite;
         }
         // Idle Code If required
         break;
@@ -121,46 +149,135 @@ LCreated = spr_playerUI;
         {
             if(x &gt; MoveLocationX)
             {
-                /*if(sprite_index != Created)
+                if(sprite_index != BackMoveSprite)
                 {
-                    sprite_index = Created;
-                }*/
+                    sprite_index = BackMoveSprite;
+                    break;
+                }
             }
-            else if(x &lt; MoveLocationY)
+            else if(x &lt; MoveLocationX)
             {
-                /*if(sprite_index != Created)
+                if(sprite_index != ForwardMoveSprite)
                 {
-                    sprite_index = Created;
-                }*/
+                    sprite_index = ForwardMoveSprite;
+                    break;
+                }
             }
         }
         else
         {
             if(x &gt; MoveLocationX)
             {
-                /*if(sprite_index != Created)
+                if(sprite_index != ForwardMoveSprite)
                 {
-                    sprite_index = Created;
-                }*/
+                    sprite_index = ForwardMoveSprite;
+                    break;
+                }
             }
-            else if(x &lt; MoveLocationY)
+            else if(x &lt; MoveLocationX)
             {
-                /*if(sprite_index != Created)
+                if(sprite_index != BackMoveSprite)
                 {
-                    sprite_index = Created;
-                }*/
+                    sprite_index = BackMoveSprite;
+                    break;
+                }
             }
         }
-         
         // Movement Code
         if(mp_linear_step(MoveLocationX, MoveLocationY, MoveSpeed, false))
         {
-            sprite_index = Still;
+            sprite_index = StillSprite;
             UnitState = UNIT_STATE_ACTIONOVER;
         }
         break;
     case UNIT_STATE_ATTACKING: 
-        // Attack Code
+        if(RightFacing)
+        {
+            if(x &gt; TargetX)
+            {
+                if(sprite_index != BackAttackSprite)
+                {
+                    sprite_index = BackAttackSprite;
+                    break;
+                }
+            }
+            else if(x &lt; TargetX)
+            {
+                if(sprite_index != ForwardAttackSprite)
+                {
+                    sprite_index = ForwardAttackSprite;
+                    break;
+                }
+            }
+        }
+        else
+        {
+            if(x &gt; TargetX)
+            {
+                if(sprite_index != ForwardAttackSprite)
+                {
+                    sprite_index = ForwardAttackSprite;
+                    break;
+                }
+            }
+            else if(x &lt; TargetX)
+            {
+                if(sprite_index != BackAttackSprite)
+                {
+                    sprite_index = BackAttackSprite;
+                    break;
+                }
+            }
+        }
+        if(image_index == (sprite_get_number(sprite_index) - 1))
+        {
+            sprite_index = StillSprite;
+            UnitState = UNIT_STATE_ACTIONOVER;
+        }
+        break;
+    case UNIT_STATE_INATTACKRANGE:
+        if(sprite_index != InRangeSprite)
+        {
+            sprite_index = InRangeSprite;
+        }
+        break;
+    case UNIT_STATE_TAKEHIT:
+        if(sprite_index != TakeHitSprite)
+        {
+            sprite_index = TakeHitSprite;
+            break;
+        }
+        if(image_index == (sprite_get_number(sprite_index) - 1))
+        {
+            if(UnitHealth &lt;= 0)
+            {
+                
+            }
+            else
+            {
+                sprite_index = StillSprite;
+                UnitState = UNIT_STATE_IDLE;
+            }
+        }
+        break;
+    case UNIT_STATE_DIEING:
+        if(sprite_index != DieSprite)
+        {
+            sprite_index = DieSprite;
+            break;
+        }
+        if(image_index == (sprite_get_number(sprite_index) - 1))
+        {
+            UnitState = UNIT_STATE_DIE;
+        }
+        break;
+    case UNIT_STATE_DIE:
+        if(sprite_index != DeadSprite)
+        {
+            sprite_index = DeadSprite;
+            break;
+        }
+        KillMe = true;
         break;
 }
 </string>

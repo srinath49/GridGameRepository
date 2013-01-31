@@ -196,6 +196,16 @@
       <sprite>sprites\spr_aegonsFieldTitle</sprite>
       <sprite>sprites\spr_fireball</sprite>
     </sprites>
+    <sprites name="Units">
+      <sprites name="Lannister">
+        <sprites name="Lannister Swordsman"/>
+        <sprites name="Lannister Archer"/>
+      </sprites>
+      <sprites name="Stark">
+        <sprites name="Stark Swordsman"/>
+        <sprites name="Stark Archer"/>
+      </sprites>
+    </sprites>
     <sprite>sprites\spr_playerWalkRight</sprite>
     <sprite>sprites\spr_playerUI</sprite>
     <sprite>sprites\spr_gameOfThronesBanner</sprite>
@@ -515,17 +525,18 @@
       <object>objects\mmobj_mainMenuBackground</object>
     </objects>
     <objects name="Unit Objects">
-      <objects name="Lannister">
-        <object>objects\uobj_Lannister_Swordsman</object>
-      </objects>
-      <object>objects\obj_attackRight</object>
       <objects name="Root Units">
         <object>objects\uobj_meleeUnit</object>
         <object>objects\uobj_rangedUnit</object>
         <object>objects\uobj_unit</object>
       </objects>
+      <objects name="Lannister">
+        <object>objects\uobj_Lannister_Swordsman</object>
+        <object>objects\uobj_Lannister_Archer</object>
+      </objects>
       <objects name="Stark">
         <object>objects\uobj_Stark_Swordsman</object>
+        <object>objects\uobj_Stark_Archer</object>
       </objects>
     </objects>
     <objects name="Match Objects">
@@ -564,8 +575,8 @@
     <constant name="UNIT_STATE_ATTACKING">25</constant>
     <constant name="UNIT_STATE_INATTACKRANGE">26</constant>
     <constant name="UNIT_STATE_TAKEHIT">27</constant>
-    <constant name="UNIT_STATE_RESERVESTATE4">28</constant>
-    <constant name="UNIT_STATE_RESERVESTATE3">29</constant>
+    <constant name="UNIT_STATE_DIEING">28</constant>
+    <constant name="UNIT_STATE_DIE">29</constant>
     <constant name="UNIT_STATE_RESERVESTATE2">30</constant>
     <constant name="UNIT_STATE_RESERVESTATE1">31</constant>
     <constant name="MATCH_STATE_NEW">51</constant>

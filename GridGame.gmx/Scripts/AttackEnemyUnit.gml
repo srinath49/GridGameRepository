@@ -12,11 +12,11 @@ with(defender)
     UnitState = UNIT_STATE_TAKEHIT;
 }
 
-with(uobj_unit.UnitOwner != attacker.UnitOwner)
+with(uobj_unit)
 {
-    if(id != other.defender.id)
+    if(id != other.defender.id) && (UnitOwner != attacker.UnitOwner)
     {
-        if(UnitState != UNIT_STATE_IDLE)
+        if(UnitState = UNIT_STATE_INATTACKRANGE)
         {
             UnitState = UNIT_STATE_IDLE;
         }
