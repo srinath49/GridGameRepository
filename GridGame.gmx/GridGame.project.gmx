@@ -314,12 +314,14 @@
         </sprites>
       </sprites>
     </sprites>
-    <sprite>sprites\spr_playerWalkRight</sprite>
-    <sprite>sprites\spr_playerUI</sprite>
-    <sprite>sprites\spr_gameOfThronesBanner</sprite>
     <sprite>sprites\spr_attackRight</sprite>
+    <sprite>sprites\spr_gameOfThronesBanner</sprite>
+    <sprite>sprites\spr_playerUI</sprite>
+    <sprite>sprites\spr_playerWalkRight</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bg_WaitForMatch</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="Action Scripts">
