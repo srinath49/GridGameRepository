@@ -39,31 +39,32 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//===================Right Facing=================//
-RCreated = spr_playerUI;
-RStill = spr_playerUI;
-RIdle = spr_playerUI;
-RInRange = spr_playerUI;
-RForwardMove = spr_playerUI;
-RBackMove = spr_playerUI;
-RForwardAttack = spr_playerUI;
-RBackAttack = spr_playerUI;
-RTakeHit = spr_playerUI;
-RDie = spr_playerUI;
+            <string>//===================Left Facing=================//
+LCreated = spr_S_Archer_LCreated;
+LStill = spr_S_Archer_LStill;
+LIdle = spr_S_Archer_LIdle;
+LInRange = spr_S_Archer_LInRange;
+LForwardMove = spr_S_Archer_LForwardMove;
+LBackMove = spr_S_Archer_LBackMove;
+LForwardAttack = spr_S_Archer_LForwardAttack;
+LBackAttack = spr_S_Archer_LBackAttack;
+LTakeHit = spr_S_Archer_LTakeHit;
+LCreated = spr_S_Archer_LCreated
+//===================Left Facing=================//
+
+//===================Right Facing=================//
+RCreated = spr_S_Archer_RCreated;
+RStill = spr_S_Archer_RStill;
+RIdle = spr_S_Archer_RIdle;
+RInRange = spr_S_Archer_RInRange;
+RForwardMove = spr_S_Archer_RForwardMove;
+RBackMove = spr_S_Archer_RBackMove;
+RForwardAttack = spr_S_Archer_RForwardAttack;
+RBackAttack = spr_S_Archer_RBackAttack;
+RTakeHit = spr_S_Archer_RTakeHit;
+RDie = spr_S_Archer_RDie;
 //===================Right Facing=================//
 
-//===================Left Facing=================//
-LCreated = spr_playerUI;
-LStill = spr_playerUI;
-LIdle = spr_playerUI;
-LInRange = spr_playerUI;
-LForwardMove = spr_playerUI;
-LBackMove = spr_playerUI;
-LForwardAttack = spr_playerUI;
-LBackAttack = spr_playerUI;
-LTakeHit = spr_playerUI;
-LCreated = spr_playerUI;
-//===================Left Facing=================//
 </string>
           </argument>
         </arguments>
