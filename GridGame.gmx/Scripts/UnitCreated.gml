@@ -19,17 +19,3 @@ MoveRangeUpDown = argument12;
 MoveRangeDiagonal = argument13;
 CreationDelay = 0;
 ActionDelay = 0;
-
-//===================Sprites=================//
-CreatedSprite = RCreated;
-StillSprite = RStill;
-IdleSprite = RIdle;
-InRangeSprite = RInRange;
-ForwardMoveSprite = RForwardMove;
-BackMoveSprite = RBackMove;
-ForwardAttackSprite = RForwardAttack;
-BackAttackSprite = RBackAttack;
-TakeHitSprite = RTakeHit;
-DieSprite = RDie;
-DeadSprite = RDead;
-//===================Sprites=================//

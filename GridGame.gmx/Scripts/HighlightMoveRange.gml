@@ -7,11 +7,11 @@ MoveRangeUpDown = argument3;
 MoveRangeDiagonal = argument4;
 
 //Right and Left Blocks
-for(i=1; i<=MoveRangeFrontBack; i++)
+//for(i=1; i<=MoveRangeFrontBack; i++)
 {
     with(pbobj_pathBlock)
     {
-        if(row == CurrentObject.row) && ((column == CurrentObject.column + i) || (column == CurrentObject.column - i))
+        if(row == CurrentObject.row) && ((column <= CurrentObject.column + MoveRangeFrontBack) || (column >= CurrentObject.column - MoveRangeFrontBack))
         {
             if(!IsOccupied)
             {
@@ -22,11 +22,11 @@ for(i=1; i<=MoveRangeFrontBack; i++)
 }
 
 //Top and Bottom Blocks
-for(i=1; i<=MoveRangeUpDown; i++)
+//for(i=1; i<=MoveRangeUpDown; i++)
 {
     with(pbobj_pathBlock)
     {
-        if(column == CurrentObject.column) && ((row == CurrentObject.row + i) || (row == CurrentObject.row - i))
+        if(column == CurrentObject.column) && ((row <= CurrentObject.row + MoveRangeUpDown) || (row >= CurrentObject.row - MoveRangeUpDown))
         {
             if(!IsOccupied)
             {
@@ -37,13 +37,13 @@ for(i=1; i<=MoveRangeUpDown; i++)
 }
 
 //Diagonal Blocks
-for(i=1; i<=MoveRangeDiagonal; i++)
+//for(i=1; i<=MoveRangeDiagonal; i++)
 {
     with(pbobj_pathBlock)
     {
-        if(column == CurrentObject.column + i) || (column == CurrentObject.column - i)
+        if(column <= CurrentObject.column + MoveRangeDiagonal) || (column >= CurrentObject.column - MoveRangeDiagonal)
         {
-            if(row == CurrentObject.row + i) || (row == CurrentObject.row - i)
+            if(row <= CurrentObject.row + MoveRangeDiagonal) || (row >= CurrentObject.row - MoveRangeDiagonal)
             {
                 if(!IsOccupied)
                 {

@@ -38,32 +38,33 @@ KillMe = false;
 TargetX = -100;
 TargetY = -100;
 
+
 //===================Left Facing=================//
-LCreated = spr_playerUI;
-LStill = spr_playerUI;
-LIdle = spr_playerUI;
-LInRange = spr_playerUI;
-LForwardMove = spr_playerUI;
-LBackMove = spr_playerUI;
-LForwardAttack = spr_playerUI;
-LBackAttack = spr_playerUI;
-LTakeHit = spr_playerUI;
-LDie = spr_playerUI;
-LDead = spr_playerUI;
+LCreated = noone;
+LStill = noone;
+LIdle = noone;
+LInRange = noone;
+LForwardMove = noone;
+LBackMove = noone;
+LForwardAttack = noone;
+LBackAttack = noone;
+LTakeHit = noone;
+LDie = noone;
+LDead = noone;
 //===================Left Facing=================//
 
 //===================Right Facing=================//
-RCreated = spr_playerUI;
-RStill = spr_playerUI;
-RIdle = spr_playerUI;
-RInRange = spr_playerUI;
-RForwardMove = spr_playerUI;
-RBackMove = spr_playerUI;
-RForwardAttack = spr_playerUI;
-RBackAttack = spr_playerUI;
-RTakeHit = spr_playerUI;
-RDie = spr_playerUI;
-RDead = spr_playerUI;
+RCreated = noone;
+RStill = noone;
+RIdle = noone;
+RInRange = noone;
+RForwardMove = noone;
+RBackMove = noone;
+RForwardAttack = noone;
+RBackAttack = noone;
+RTakeHit = noone;
+RDie = noone;
+RDead = noone;
 //===================Right Facing=================//
 
 </string>

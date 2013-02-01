@@ -95,25 +95,19 @@ switch(action)
             unitOwner = argument6;
             unitID = argument7;
             createdUnit = UnitSpawner(creationPointX, creationPointY, unitToCreate, unitOwner, unitID);
-            createdUnit.RightFacing = controller.RightFacing;
+            if(global.username == unitOwner)
+            {
+                createdUnit.RightFacing = controller.RightFacing;
+            }
+            else
+            {
+                createdUnit.RightFacing = !controller.RightFacing;
+            }
+            //show_message("controller.RightFacing::"+string(controller.RightFacing));
+            //show_message("createdUnit.RightFacing::"+string(createdUnit.RightFacing));
             with(createdUnit)
             {
-                if(!RightFacing)
-                {
-                    //===================Sprites=================//
-                    CreatedSprite = LCreated;
-                    StillSprite = LStill;
-                    IdleSprite = LIdle;
-                    InRangeSprite = LInRange;
-                    ForwardMoveSprite = LForwardMove
-                    BackMoveSprite = LBackMove
-                    ForwardAttackSprite = LForwardAttack;
-                    BackAttackSprite = LBackAttack;
-                    TakeHitSprite = LTakeHit;
-                    DieSprite = LDie;
-                    DeadSprite = LDead;
-                    //===================Sprites=================//
-                }
+                script_execute(AssignSprites);
             }
             //====================================================================================================//
             if(myAction)

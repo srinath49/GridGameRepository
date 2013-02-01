@@ -53,7 +53,7 @@ IsOccupied = false;
             <kind>1</kind>
             <string>var unit;
 unit = noone;
-with(instance_place(x,y,uobj_unit))
+with(instance_position(x,y,uobj_unit))
 {
     unit = id;
     other.IsOccupied = true;

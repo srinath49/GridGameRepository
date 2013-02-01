@@ -88,7 +88,7 @@ Action4List = ds_list_create();
                     HighlightEnemiesInRange(UnitRange);
                 }
             }
-            else if(UnitOwner = other.MatchController.Opponent)
+            else if(UnitOwner == other.MatchController.Opponent)
             {
                 if(InAttackRange)
                 {
@@ -163,6 +163,11 @@ Action4List = ds_list_create();
             visible = false;
         }
         //============================================================//
+        with(uobj_unit)
+        {
+            UnitState = UNIT_STATE_IDLE;
+            InAttackRange = false;
+        }
         return false;
     }
 }
