@@ -338,6 +338,7 @@
       <script>scripts\ResetTurn.gml</script>
       <script>scripts\ReceiveTurn.gml</script>
       <script>scripts\ProcessNextTurn.gml</script>
+      <script>scripts\PerformAttack.gml</script>
     </scripts>
     <scripts name="ConnectionScripts">
       <script>scripts\ConnectToServer.gml</script>
@@ -445,7 +446,6 @@
       <script>scripts\HighlightEnemiesInRange.gml</script>
       <script>scripts\HighlightMoveRange.gml</script>
       <script>scripts\MoveUnit.gml</script>
-      <script>scripts\PerformAttack.gml</script>
       <script>scripts\UnitCreated.gml</script>
       <script>scripts\UnitSpawner.gml</script>
       <script>scripts\AddUnitID.gml</script>
@@ -473,6 +473,7 @@
       <objects name="Stark UI">
         <object>objects\uiobj_starkUI</object>
         <object>objects\suiobj_swordsman</object>
+        <object>objects\suiobj_archer</object>
       </objects>
       <object>objects\uiobj_UI</object>
     </objects>

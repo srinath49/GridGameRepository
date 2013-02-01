@@ -49,9 +49,20 @@ with(controller)
                 case MATCH_ACTION_ATTACKUNIT:
                     //show_message("Client::ReadNextTurn::AttackUnit");
                     {
-                        var attacker, defender;
-                        attacker = real(ds_list_find_value(processList, index++));
-                        defender = real(ds_list_find_value(processList, index++));
+                        var attacker, defender, attackerID, defenderID;
+                        attackerID = real(ds_list_find_value(processList, index++));
+                        defenderID = real(ds_list_find_value(processList, index++));
+                        with(uobj_unit)
+                        {
+                            if(UnitID == attackerID)
+                            {
+                                attacker = id;
+                            }
+                            else if(UnitID == defenderID)
+                            {
+                                defender = id;
+                            }
+                        }
                         PerformAction(false, id, MATCH_ACTION_ATTACKUNIT, attacker,defender);
                     }
                     break;

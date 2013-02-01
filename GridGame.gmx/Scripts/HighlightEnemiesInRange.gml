@@ -4,7 +4,7 @@ range = argument0;
 
 with(pbobj_pathBlock)
 {
-    if(row <= object.row+range) || (row >= object.row-range) || (column <= object.column+range) || (column >= object.column-range)
+    if((row <= object.row+range)&&(row >= object.row-range)) && ((column <= object.column+range)&&(column >= object.column-range))
     {
         if(IsOccupied)
         {

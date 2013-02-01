@@ -96,6 +96,10 @@ Action4List = ds_list_create();
                 }
                 global.SelectedUnit.IsSelected = false;
                 global.SelectedUnit = noone;
+                with(pbobj_pathBlock)
+                {
+                    visible = false;
+                }
             } 
             return true; 
         }
