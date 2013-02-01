@@ -52,18 +52,18 @@
   <instances>
     <instance objName="obj_tree" x="656" y="416" name="inst_C8444A0F" locked="0" code="" scaleX="0.699999988079071" scaleY="0.699999988079071" colour="4294967295" rotation="0"/>
     <instance objName="cmobj_choiceMenuBackground" x="480" y="240" name="inst_E1E708E5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="cmobj_targaryanShieldUnavailable" x="292" y="400" name="inst_B406E3C0" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
+    <instance objName="cmobj_targaryanShieldUnavailable" x="296" y="400" name="inst_B406E3C0" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
     <instance objName="cmobj_targaryanBannerUnavailable" x="408" y="400" name="inst_C9ACE91D" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
     <instance objName="cmobj_baratheonShieldUnavailable" x="292" y="500" name="inst_181A36C5" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
-    <instance objName="cmobj_baratheonBannerUnavailable" x="412" y="500" name="inst_51401471" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
-    <instance objName="cmobj_tyrellBannerUnavailable" x="412" y="588" name="inst_C1768482" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
+    <instance objName="cmobj_baratheonBannerUnavailable" x="404" y="500" name="inst_51401471" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
+    <instance objName="cmobj_tyrellBannerUnavailable" x="404" y="588" name="inst_C1768482" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
     <instance objName="cmobj_greyjoyBannerUnavailable" x="956" y="400" name="inst_9F4D119D" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
     <instance objName="cmobj_grejoyShieldUnavailable" x="1072" y="400" name="inst_78776BCD" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
     <instance objName="cmobj_arrynBannerUnavailable" x="956" y="496" name="inst_4B748B2D" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
     <instance objName="cmobj_arrynShieldUnavailable" x="1072" y="496" name="inst_C3C641F3" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
     <instance objName="cmobj_martellBannerUnavailable" x="956" y="592" name="inst_52722CAA" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
     <instance objName="cmobj_martellShieldUnavailable" x="1072" y="592" name="inst_0ADC867A" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
-    <instance objName="cmobj_tyrellShieldUnavailable" x="292" y="588" name="inst_D0043918" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
+    <instance objName="cmobj_tyrellShieldUnavailable" x="292" y="592" name="inst_D0043918" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
     <instance objName="cobj_toggleFullScreen" x="16" y="16" name="inst_4489C676" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="cmobj_chooseYourBanner" x="672" y="184" name="inst_512E2641" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="cmobj_lannisterShield" x="296" y="304" name="inst_3E93E0EF" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
@@ -71,9 +71,9 @@
     <instance objName="cmobj_starkShield" x="1072" y="296" name="inst_1223B52C" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
     <instance objName="cmobj_starkBanner" x="960" y="296" name="inst_0A90EB6C" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
     <instance objName="cmobj_baratheonShield" x="292" y="500" name="inst_83F4B73C" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
-    <instance objName="cmobj_baratheonBanner" x="404" y="496" name="inst_16AA40EE" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
+    <instance objName="cmobj_baratheonBanner" x="404" y="500" name="inst_16AA40EE" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
     <instance objName="cmobj_tyrellShield" x="292" y="592" name="inst_EA3D6844" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
-    <instance objName="cmobj_tyrellBanner" x="404" y="592" name="inst_5E50B975" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
+    <instance objName="cmobj_tyrellBanner" x="404" y="588" name="inst_5E50B975" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
     <instance objName="cmobj_targaryanBanner" x="408" y="400" name="inst_4261A9BA" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
     <instance objName="cmobj_targaryanShield" x="296" y="400" name="inst_54E4FCF9" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
     <instance objName="cmobj_greyjoyBanner" x="960" y="400" name="inst_265B3C08" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>

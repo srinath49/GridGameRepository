@@ -655,23 +655,23 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <rooms name="Network Rooms">
-      <room>rooms\nwrm_serverConnectRoom</room>
-      <room>rooms\nwrm_login</room>
-    </rooms>
-    <room>rooms\test_room</room>
-    <rooms name="Menu Rooms">
-      <room>rooms\mrm_mainMenu</room>
-      <room>rooms\mrm_choiceMenu</room>
-    </rooms>
     <rooms name="Level Rooms">
       <room>rooms\lrm_level1</room>
       <room>rooms\lrm_level2</room>
       <room>rooms\lrm_level3</room>
     </rooms>
+    <rooms name="Menu Rooms">
+      <room>rooms\mrm_mainMenu</room>
+      <room>rooms\mrm_choiceMenu</room>
+    </rooms>
+    <rooms name="Network Rooms">
+      <room>rooms\nwrm_serverConnectRoom</room>
+      <room>rooms\nwrm_login</room>
+    </rooms>
     <rooms name="Waiting Rooms">
       <room>rooms\wrm_waitForMatch</room>
     </rooms>
+    <room>rooms\test_room</room>
   </rooms>
   <constants number="62">
     <constant name="UNIT_MOVEMENT_SPEED">2</constant>
