@@ -322,6 +322,7 @@
   <backgrounds name="background">
     <background>background\bg_WaitForMatch</background>
     <background>background\bg_choiceMenu</background>
+    <background>background\bg_gameArea</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -484,7 +485,6 @@
       <object>objects\cmobj_baratheonShieldTitle</object>
       <object>objects\cmobj_baratheonShieldUnavailable</object>
       <object>objects\cmobj_baratheonTitle</object>
-      <object>objects\cmobj_choiceMenuBackground</object>
       <object>objects\cmobj_chooseYourBanner</object>
       <object>objects\cmobj_gameOfThronesBanner</object>
       <object>objects\cmobj_grejoyShieldUnavailable</object>
@@ -542,7 +542,6 @@
     <objects name="Game Area">
       <objects name="Level 1">
         <object>objects\gaobj_aegonsField</object>
-        <object>objects\gaobj_background</object>
         <object>objects\gaobj_bluePlayerMeter</object>
         <object>objects\gaobj_ground</object>
         <object>objects\gaobj_helmetSigil</object>
