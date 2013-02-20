@@ -96,6 +96,7 @@ else if (size=0)
           <argument>
             <kind>1</kind>
             <string>///Read Package Identifier
+bufferdecrypt(global.KryptKey);
 messageID = readbyte();
 //mstr = "Server : messageId = " + string(messageID);
 //show_message(mstr);

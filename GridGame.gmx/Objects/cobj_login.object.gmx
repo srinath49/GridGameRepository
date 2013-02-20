@@ -34,8 +34,8 @@ clearbuffer();
 writebyte(1); // 1 = Login
 writestring(global.username);
 writestring(global.password);
-//send_msg(); Implement this later
-sendmessage(global.socket);
+SendMsg(global.socket);
+
 </string>
           </argument>
         </arguments>
@@ -100,6 +100,7 @@ if (size=0)
           <argument>
             <kind>1</kind>
             <string>//show_message(messageID);
+bufferdecrypt(global.KryptKey);
 messageID = readbyte();
 //messageString = "Client : messageID = " + string(messageID);
 //show_message(messageString);

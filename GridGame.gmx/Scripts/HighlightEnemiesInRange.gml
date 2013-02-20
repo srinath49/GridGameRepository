@@ -4,17 +4,26 @@ range = argument0;
 
 with(pbobj_pathBlock)
 {
-    if((row <= object.row+range)&&(row >= object.row-range)) && ((column <= object.column+range)&&(column >= object.column-range))
+    if(row <= object.row+range)
     {
-        if(IsOccupied)
+        if(row >= object.row-range)
         {
-            enemy = instance_position(x,y,uobj_unit);
-            with(enemy)
+            if(column <= object.column+range)
             {
-                if(UnitOwner != global.username)
+                if(column >= object.column-range)
                 {
-                    UnitState = UNIT_STATE_INATTACKRANGE;
-                    InAttackRange = true;
+                     if(IsOccupied)
+                    {
+                        enemy = instance_position(x,y,uobj_unit);
+                        with(enemy)
+                        {
+                            if(UnitOwner != global.username)
+                            {
+                                UnitState = UNIT_STATE_INATTACKRANGE;
+                                InAttackRange = true;
+                            }
+                        }
+                    }
                 }
             }
         }

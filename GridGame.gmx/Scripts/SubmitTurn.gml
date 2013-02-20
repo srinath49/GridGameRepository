@@ -51,10 +51,7 @@ for(j=0; j<ds_list_size(actionList); j++)
     writestring(string(ds_list_find_value(actionList, j)));
 }
 writestring(string(MATCH_MSG_TURNEND));
-sendmessage(global.socket);
-//show_message("Client::SubmitTurn::Sending Message");
-//show_message("SentSize::"+string(sendmessage(global.socket)));
-//show_message("Client::SubmitTurn::Sent Message");
+SendMsg(global.socket);
 //=========================================================================//
 ds_list_clear(controller.MatchEngine.Action1List);
 ds_list_clear(controller.MatchEngine.Action2List);

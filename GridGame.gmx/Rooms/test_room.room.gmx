@@ -51,7 +51,7 @@
   </views>
   <instances>
     <instance objName="cobj_toggleFullScreen" x="0" y="0" name="inst_2F1BB5CB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="cobj_MatchController" x="19" y="0" name="inst_0B00A666" locked="0" code="MatchState = MATCH_STATE_WAITINGTURN;&#xA;with(instance_create(x,y,cobj_MatchEngine))&#xA;{&#xA;    MatchController = other.id;&#xA;}" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="cobj_MatchController" x="19" y="0" name="inst_0B00A666" locked="0" code="global.username = &quot;Hi&quot;;&#xA;MatchState = MATCH_STATE_WAIT;&#xA;with(instance_create(x,y,cobj_MatchEngine))&#xA;{&#xA;    MatchController = other.id;&#xA;}" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="gaobj_mainBoard" x="680" y="396" name="inst_74D9F76D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="gaobj_spears" x="1360" y="416" name="inst_381C78CD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pbaobj_pathBlockA01" x="206" y="582" name="inst_A0CB7D53" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -121,8 +121,8 @@
     <instance objName="pbobj_pathBlockE09" x="936" y="195" name="inst_E62A7C32" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pbobj_pathBlockE10" x="1020" y="195" name="inst_97B185DA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pbobj_pathBlockE11" x="1100" y="195" name="inst_8E2F44C5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="suiobj_swordsman" x="202" y="723" name="inst_510F9A5C" locked="0" code="visible = true;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="luiobj_swordsman" x="302" y="723" name="inst_5813D5EB" locked="0" code="visible = true;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="uobj_Lannister_Swordsman" x="595" y="377" name="inst_78E88B11" locked="0" code="script_execute(AssignSprites);&#xA;UnitOwner = global.username;&#xA;UnitID = 10;" scaleX="0.651515007019043" scaleY="0.822221994400024" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

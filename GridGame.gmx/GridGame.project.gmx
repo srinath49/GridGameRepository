@@ -58,8 +58,14 @@
       <sprite>sprites\spr_match</sprite>
       <sprite>sprites\spr_confirmButton</sprite>
       <sprites name="UI Buttons">
-        <sprite>sprites\spr_UI_Stark_Swordsman</sprite>
-        <sprite>sprites\spr_UI_Stark_Archer</sprite>
+        <sprites name="Stark Units UI">
+          <sprite>sprites\spr_UI_Stark_Archer</sprite>
+          <sprite>sprites\spr_UI_Stark_Swordsman</sprite>
+        </sprites>
+        <sprites name="Lannister Units UI">
+          <sprite>sprites\spr_UI_Lannister_Archer</sprite>
+          <sprite>sprites\spr_UI_Lannister_Swordsman</sprite>
+        </sprites>
       </sprites>
     </sprites>
     <sprites name="Choice Menu">
@@ -340,12 +346,6 @@
       <script>scripts\ProcessNextTurn.gml</script>
       <script>scripts\PerformAttack.gml</script>
     </scripts>
-    <scripts name="ConnectionScripts">
-      <script>scripts\ConnectToServer.gml</script>
-      <script>scripts\die.gml</script>
-      <script>scripts\disconnected.gml</script>
-      <script>scripts\initiate.gml</script>
-    </scripts>
     <scripts name="Controller Scripts">
       <script>scripts\Startup.gml</script>
       <script>scripts\ToggleFullScreen.gml</script>
@@ -355,10 +355,6 @@
       <script>scripts\QuitGame.gml</script>
       <script>scripts\SaveGame.gml</script>
     </scripts>
-    <scripts name="Login Scripts">
-      <script>scripts\GetUsernamePassword.gml</script>
-      <script>scripts\Login.gml</script>
-    </scripts>
     <scripts name="Match Scripts">
       <script>scripts\CheckServerMessage.gml</script>
       <script>scripts\CreateNewMatch.gml</script>
@@ -367,7 +363,7 @@
       <script>scripts\RequestMatch.gml</script>
       <script>scripts\StartNewMatch.gml</script>
     </scripts>
-    <scripts name="Networking Scripts">
+    <scripts name="Network Base Scripts">
       <script>scripts\adler32.gml</script>
       <script>scripts\bufferdecrypt.gml</script>
       <script>scripts\bufferencrypt.gml</script>
@@ -440,6 +436,19 @@
       <script>scripts\writeuint.gml</script>
       <script>scripts\writeushort.gml</script>
     </scripts>
+    <scripts name="Network Communication Scripts">
+      <script>scripts\SendMsg.gml</script>
+    </scripts>
+    <scripts name="Network Connection Scripts">
+      <script>scripts\ConnectToServer.gml</script>
+      <script>scripts\die.gml</script>
+      <script>scripts\disconnected.gml</script>
+      <script>scripts\initiate.gml</script>
+    </scripts>
+    <scripts name="Network Login Scripts">
+      <script>scripts\GetUsernamePassword.gml</script>
+      <script>scripts\Login.gml</script>
+    </scripts>
     <scripts name="Unit Scripts">
       <script>scripts\AttackEnemyUnit.gml</script>
       <script>scripts\CreateUnitID.gml</script>
@@ -469,6 +478,7 @@
       <objects name="Lannister UI">
         <object>objects\uiobj_lannisterUI</object>
         <object>objects\luiobj_swordsman</object>
+        <object>objects\luiobj_archer</object>
       </objects>
       <objects name="Stark UI">
         <object>objects\uiobj_starkUI</object>
@@ -665,6 +675,7 @@
       <room>rooms\nwrm_serverConnectRoom</room>
       <room>rooms\nwrm_login</room>
     </rooms>
+    <room>rooms\test_room</room>
     <rooms name="Level Rooms">
       <room>rooms\lrm_level1</room>
       <room>rooms\lrm_level2</room>
@@ -677,7 +688,6 @@
     <rooms name="Waiting Rooms">
       <room>rooms\wrm_waitForMatch</room>
     </rooms>
-    <room>rooms\test_room</room>
   </rooms>
   <constants number="62">
     <constant name="UNIT_MOVEMENT_SPEED">2</constant>

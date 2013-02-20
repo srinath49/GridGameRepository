@@ -123,8 +123,7 @@ for(i=0;i<ds_list_size(global.matchesList);i++)
             ds_list_destroy(actionList);
         }
         writestring(string(MATCH_MSG_TURNEND));
-        //show_message("Server::SendSize::"+string(sendmessage(receiver)));
-        sendmessage(receiver);
+        SendMsg(receiver);
     }
 }
 ds_list_clear(Action1List);

@@ -132,7 +132,8 @@ if (size=0)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>messageID = readbyte();
+            <string>bufferdecrypt(global.KryptKey);
+messageID = readbyte();
 switch(messageID)
 {
     case GAME_MATCH_START:

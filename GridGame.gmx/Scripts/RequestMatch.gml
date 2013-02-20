@@ -9,4 +9,5 @@ clearbuffer();
 writebyte(GAME_MATCH_REQUEST);
 writebyte(request.team);
 writebyte(request.requestId);
-sendmessage(global.socket);
+SendMsg(global.socket);
+

@@ -1,44 +1,44 @@
-var CurrentObject, MoveRangeFrontBack, MoveRangeUpDown, MoveRangeDiagonal, i;
-CurrentObject = instance_place(argument0,argument1,pbobj_pathBlock);
-CurrentObject.visible = true;
-CurrentObject.ignoreBlock = true;
+var CurrentObject, MoveRangeFrontBack, MoveRangeUpDown, MoveRangeDiagonal, i, j;
+CurrentObject = instance_position(argument0,argument1,pbobj_pathBlock);
 MoveRangeFrontBack = argument2;
 MoveRangeUpDown = argument3;
 MoveRangeDiagonal = argument4;
+CurrentObject.visible = true;
+CurrentObject.ignoreBlock = true;
 
 /*
-//Right and Left Blocks
-//for(i=1; i<=MoveRangeFrontBack; i++)
+show_message((CurrentObject.column));
+show_message((MoveRangeFrontBack));
+show_message((CurrentObject.column - MoveRangeFrontBack));
+show_message((CurrentObject.column + MoveRangeFrontBack));
+*/
+
+for(i = CurrentObject.column - MoveRangeFrontBack; i <= CurrentObject.column + MoveRangeFrontBack;i++)
 {
     with(pbobj_pathBlock)
     {
         if(row == CurrentObject.row)
         {
-            if((column <= CurrentObject.column + MoveRangeFrontBack) && (column >= CurrentObject.column)) || ((column >= CurrentObject.column - MoveRangeFrontBack)) && (column <= CurrentObject.column)
+            if(column >= (CurrentObject.column - MoveRangeFrontBack))
             {
-                if(!IsOccupied)
+                if(column <= (CurrentObject.column + MoveRangeFrontBack))
                 {
                     visible = true;
                 }
             }
         }
-        
-        if((column <= CurrentObject.column + MoveRangeDiagonal) && (column >= CurrentObject.column)) || ((column >= CurrentObject.column - MoveRangeDiagonal) && (column <= CurrentObject.column))
-        {
-            if((row <= CurrentObject.row + MoveRangeDiagonal) && (row >= CurrentObject.row)) || ((row >= CurrentObject.row - MoveRangeDiagonal) && (row <= CurrentObject.row))
-            {
-                if(!IsOccupied)
-                {
-                    visible = true;
-                }
-            }
-        }
-        
+    }
+}
+
+for(i = CurrentObject.row - MoveRangeUpDown; i <= CurrentObject.row + MoveRangeUpDown;i++)
+{
+    with(pbobj_pathBlock)
+    {
         if(column == CurrentObject.column)
         {
-            if((row <= CurrentObject.row + MoveRangeUpDown) && (row >= CurrentObject.row)) || ((row >= CurrentObject.row - MoveRangeUpDown) && (row <= CurrentObject.row))
+            if(row >= (CurrentObject.row - MoveRangeUpDown))
             {
-                if(!IsOccupied)
+                if(row <= (CurrentObject.row + MoveRangeUpDown))
                 {
                     visible = true;
                 }
@@ -47,27 +47,32 @@ MoveRangeDiagonal = argument4;
     }
 }
 
-//Top and Bottom Blocks
-//for(i=1; i<=MoveRangeUpDown; i++)
+for(i = CurrentObject.column - MoveRangeDiagonal; i <= CurrentObject.column + MoveRangeDiagonal;i++)
 {
-    with(pbobj_pathBlock)
+    for(j = CurrentObject.row - MoveRangeDiagonal; j <= CurrentObject.row + MoveRangeDiagonal;j++)
     {
-        
+        with(pbobj_pathBlock)
+        {
+            if(column >= (CurrentObject.column - MoveRangeDiagonal))
+            {
+                if(column <= (CurrentObject.column + MoveRangeDiagonal))
+                {
+                    if(row >= (CurrentObject.row - MoveRangeDiagonal))
+                    {
+                        if(row <= (CurrentObject.row + MoveRangeDiagonal))
+                        {
+                            visible = true;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
-//Diagonal Blocks
-//for(i=1; i<=MoveRangeDiagonal; i++)
-{
-    with(pbobj_pathBlock)
-    {
-        
-    }
-}
-*/
-
+/*
 //Right Blocks
-for(i=1; i<=MoveRangeFrontBack; i++)
+for(i=0; i<MoveRangeFrontBack; i++)
 {
     NextObject = instance_place(CurrentObject.x+89, CurrentObject.y, pbobj_pathBlock);
     CurrentObject = NextObject;
@@ -130,4 +135,4 @@ for(i=0; i<MoveRangeDiagonal; i++)
     CurrentObject = NextObject;
     CurrentObject.visible = true;
 }
-
+*/
