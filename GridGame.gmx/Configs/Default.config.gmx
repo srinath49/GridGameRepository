@@ -63,6 +63,7 @@
   <option_fullscreen>False</option_fullscreen>
   <option_gameguid>{C8B10520-D007-4090-9442-30F1A930D65C}</option_gameguid>
   <option_gameid>295999344</option_gameid>
+  <option_haptic_effects>false</option_haptic_effects>
   <option_hasloadimage>false</option_hasloadimage>
   <option_helpkey>true</option_helpkey>
   <option_html5_CreationEventOrder>true</option_html5_CreationEventOrder>
@@ -129,6 +130,7 @@
   <option_lastchanged></option_lastchanged>
   <option_linux_display_name>GridGame</option_linux_display_name>
   <option_linux_fullscreen>false</option_linux_fullscreen>
+  <option_linux_icon>Configs\Default\linux\icon64.png</option_linux_icon>
   <option_linux_interpolate>true</option_linux_interpolate>
   <option_linux_scale>-1</option_linux_scale>
   <option_linux_screenkey>true</option_linux_screenkey>

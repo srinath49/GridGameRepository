@@ -333,6 +333,7 @@
     <background>background\bg_WaitForMatch</background>
     <background>background\bg_choiceMenu</background>
     <background>background\bg_gameArea</background>
+    <background>background\bg_gameArea_New</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
