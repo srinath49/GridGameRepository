@@ -69,6 +69,10 @@ Action4List = ds_list_create();
                 Clicked = false;
                 Now = false;
             }
+            with(pbobj_pathBlock)
+            {
+                visible = false;
+            }
             Clicked = true;
             Now = true;
             return true;
@@ -84,6 +88,10 @@ Action4List = ds_list_create();
                 {
                     global.SelectedUnit = id;
                     IsSelected = true;
+                    with(pbobj_pathBlock)
+                    {
+                        visible = false;
+                    }
                     HighlightMoveRange(x,y,MoveRangeFrontBack,MoveRangeUpDown,MoveRangeDiagonal);
                     HighlightEnemiesInRange(UnitRange);
                 }
@@ -117,8 +125,11 @@ Action4List = ds_list_create();
                         PerformAction(true, other.MatchController, MATCH_ACTION_MOVEUNIT, global.SelectedUnit.UnitID, id.x, id.y, UNIT_MOVEMENT_SPEED);
                     }
                     pbobj_pathBlock.ignoreBlock = false;
-                } 
-                pbobj_pathBlock.visible = false;
+                }
+                with(pbobj_pathBlock)
+                {
+                    visible = false;
+                }
             }
             else
             {
@@ -147,6 +158,10 @@ Action4List = ds_list_create();
                             IsOccupied = true;
                         }
                     }
+                }
+                with(pbobj_pathBlock)
+                {
+                    visible = false;
                 }
             }
             return true;
