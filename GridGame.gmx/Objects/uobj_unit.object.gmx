@@ -37,7 +37,7 @@ RightFacing = true;
 KillMe = false;
 TargetX = -100;
 TargetY = -100;
-
+AnimSpeed = 1;
 
 //===================Left Facing=================//
 LCreated = noone;
@@ -281,6 +281,14 @@ RDead = noone;
         }
         KillMe = true;
         break;
+}
+if(UnitState == UNIT_STATE_MOVING)
+{
+    image_speed = 2;
+}
+else
+{
+    image_speed = 1;
 }
 </string>
           </argument>
