@@ -11,5 +11,7 @@
   <VTile>-1</VTile>
   <TextureGroup>0</TextureGroup>
   <For3D>0</For3D>
+  <width>1366</width>
+  <height>768</height>
   <data>images\bg_choiceMenu.png</data>
 </background>

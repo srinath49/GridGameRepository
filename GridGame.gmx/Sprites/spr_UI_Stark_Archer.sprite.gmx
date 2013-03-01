@@ -14,6 +14,8 @@
   <VTile>0</VTile>
   <TextureGroup>0</TextureGroup>
   <For3D>0</For3D>
+  <width>120</width>
+  <height>120</height>
   <frames>
     <frame index="0">images\spr_UI_Stark_Archer_0.png</frame>
   </frames>

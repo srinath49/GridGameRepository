@@ -14,6 +14,8 @@
   <VTile>0</VTile>
   <TextureGroup>0</TextureGroup>
   <For3D>0</For3D>
+  <width>263</width>
+  <height>112</height>
   <frames>
     <frame index="0">images\spr_aegonsField_0.png</frame>
   </frames>
