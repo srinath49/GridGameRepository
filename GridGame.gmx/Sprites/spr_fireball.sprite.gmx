@@ -6,16 +6,16 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>1</bbox_left>
-  <bbox_right>512</bbox_right>
-  <bbox_top>0</bbox_top>
-  <bbox_bottom>511</bbox_bottom>
+  <bbox_left>34</bbox_left>
+  <bbox_right>492</bbox_right>
+  <bbox_top>26</bbox_top>
+  <bbox_bottom>486</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroup>0</TextureGroup>
   <For3D>0</For3D>
-  <width>514</width>
-  <height>513</height>
+  <width>512</width>
+  <height>512</height>
   <frames>
     <frame index="0">images\spr_fireball_0.png</frame>
     <frame index="1">images\spr_fireball_1.png</frame>
@@ -81,6 +81,5 @@
     <frame index="61">images\spr_fireball_61.png</frame>
     <frame index="62">images\spr_fireball_62.png</frame>
     <frame index="63">images\spr_fireball_63.png</frame>
-    <frame index="64">images\spr_fireball_64.png</frame>
   </frames>
 </sprite>
