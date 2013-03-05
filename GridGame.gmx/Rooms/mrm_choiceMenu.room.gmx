@@ -91,22 +91,8 @@
     <instance objName="cmobj_starkTitle" x="656" y="184" name="inst_6CBC8544" locked="0" code="visible = false" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="cmobj_targaryanTitle" x="664" y="184" name="inst_35B76AFD" locked="0" code="visible = false" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="cmobj_tyrellTitle" x="656" y="184" name="inst_692E7D37" locked="0" code="visible = false" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="cmobj_arrynShieldTitle" x="1000" y="184" name="inst_6A16C377" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
-    <instance objName="cmobj_arrynShieldTitle" x="336" y="184" name="inst_4996830A" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
-    <instance objName="cmobj_baratheonShieldTitle" x="336" y="184" name="inst_9410C308" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
-    <instance objName="cmobj_baratheonShieldTitle" x="1000" y="184" name="inst_4A5945D9" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
-    <instance objName="cmobj_greyjoyShieldTitle" x="336" y="184" name="inst_5213AB0A" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
-    <instance objName="cmobj_greyjoyShieldTitle" x="1000" y="184" name="inst_D0EB768F" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
-    <instance objName="cmobj_lannisterShieldTitle" x="336" y="184" name="inst_A72E2E5E" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
-    <instance objName="cmobj_lannisterShieldTitle" x="1000" y="184" name="inst_053E7E38" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
-    <instance objName="cmobj_martellShieldTitle" x="336" y="184" name="inst_9D059765" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
-    <instance objName="cmobj_martellShieldTitle" x="1000" y="184" name="inst_BB46B150" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
-    <instance objName="cmobj_starkShieldTitle" x="336" y="184" name="inst_BCF6900F" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
-    <instance objName="cmobj_starkShieldTitle" x="1000" y="184" name="inst_C6115334" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
-    <instance objName="cmobj_targaryanShieldTitle" x="336" y="184" name="inst_05BB36BD" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
-    <instance objName="cmobj_targaryanShieldTitle" x="1000" y="184" name="inst_5A6DB1A9" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
-    <instance objName="cmobj_tyrellShieldTitle" x="336" y="184" name="inst_43FF807F" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
-    <instance objName="cmobj_tyrellShieldTitle" x="1000" y="184" name="inst_6D0109D6" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
+    <instance objName="cmobj_bannerIcon" x="304" y="152" name="inst_2DEAD938" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
+    <instance objName="cmobj_bannerIcon" x="964" y="148" name="inst_985C0926" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
