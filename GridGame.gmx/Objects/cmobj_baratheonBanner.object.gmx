@@ -80,6 +80,8 @@ else
   cmobj_gameOfThronesBanner.visible = false
   cmobj_chooseYourBanner.visible = false
   
+  cmobj_bannerIcon.visible = false
+  
   global.NewMatchTeam = GAME_TEAM_BARATHEON;
 }
 </string>

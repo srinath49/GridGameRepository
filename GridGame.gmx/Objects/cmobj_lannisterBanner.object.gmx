@@ -79,6 +79,8 @@ else
   bobj_confirmButton.visible = true
   cmobj_gameOfThronesBanner.visible = false
   cmobj_chooseYourBanner.visible = false
+  
+  cmobj_bannerIcon.visible = false
 
   global.NewMatchTeam = GAME_TEAM_LANNISTER;
 }
