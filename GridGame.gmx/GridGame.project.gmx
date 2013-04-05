@@ -327,6 +327,10 @@
         </sprites>
       </sprites>
     </sprites>
+    <sprites name="Unit SelectionMenu">
+      <sprite>sprites\spr_SideBar</sprite>
+      <sprite>sprites\spr_selectedUnitTemp</sprite>
+    </sprites>
     <sprite>sprites\spr_attackRight</sprite>
     <sprite>sprites\spr_gameOfThronesBanner</sprite>
     <sprite>sprites\spr_playerUI</sprite>
@@ -687,12 +691,18 @@
       <object>objects\mobj_matchRequest</object>
       <object>objects\mobj_newMatch</object>
     </objects>
+    <objects name="Unit Selection Menu">
+      <object>objects\usmobj_sidebar</object>
+      <object>objects\usmobj_selectedUnitIcon</object>
+    </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\mrm_unitSelectionMenu</room>
     <rooms name="Network Rooms">
       <room>rooms\nwrm_serverConnectRoom</room>
       <room>rooms\nwrm_EntranceRoom</room>
       <room>rooms\nwrm_login</room>
+      <room>rooms\nwrm_RegistrationRoom</room>
     </rooms>
     <rooms name="Menu Rooms">
       <room>rooms\mrm_mainMenu</room>
