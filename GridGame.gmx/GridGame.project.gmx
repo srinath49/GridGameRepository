@@ -115,6 +115,7 @@
       <sprite>sprites\spr_bannerIcon</sprite>
       <sprite>sprites\spr_choiceMenuBackground</sprite>
       <sprite>sprites\spr_tree</sprite>
+      <sprite>sprites\spr_gameOfThronesBanner</sprite>
     </sprites>
     <sprites name="Game Area">
       <sprites name="Path Blocks">
@@ -200,6 +201,9 @@
       <sprite>sprites\spr_scroll04</sprite>
       <sprite>sprites\spr_scroll05</sprite>
       <sprite>sprites\spr_spears</sprite>
+      <sprites name="Level 1">
+        <sprite>sprites\spr_bushes</sprite>
+      </sprites>
     </sprites>
     <sprites name="Main Menu">
       <sprite>sprites\spr_aDPresentation</sprite>
@@ -331,17 +335,24 @@
       <sprite>sprites\spr_SideBar</sprite>
       <sprite>sprites\spr_selectedUnitTemp</sprite>
     </sprites>
-    <sprite>sprites\spr_attackRight</sprite>
-    <sprite>sprites\spr_gameOfThronesBanner</sprite>
-    <sprite>sprites\spr_playerUI</sprite>
-    <sprite>sprites\spr_playerWalkRight</sprite>
+    <sprites name="Old Stuff">
+      <sprite>sprites\spr_playerWalkRight</sprite>
+      <sprite>sprites\spr_playerUI</sprite>
+      <sprite>sprites\spr_attackRight</sprite>
+    </sprites>
+    <sprite>sprites\spr_gamebuff1</sprite>
+    <sprite>sprites\spr_gamebuff2</sprite>
+    <sprite>sprites\spr_gamebuff3</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_WaitForMatch</background>
     <background>background\bg_choiceMenu</background>
-    <background>background\bg_gameArea</background>
-    <background>background\bg_gameArea_New</background>
     <background>background\bg_splashScreen</background>
+    <background>background\bg_level1</background>
+    <backgrounds name="Old Stuff">
+      <background>background\bg_gameArea</background>
+      <background>background\bg_gameArea_New</background>
+    </backgrounds>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -506,6 +517,11 @@
         <object>objects\suiobj_swordsman</object>
         <object>objects\suiobj_archer</object>
       </objects>
+      <objects name="Buffs">
+        <object>objects\uiobj_buff1</object>
+        <object>objects\uiobj_buff2</object>
+        <object>objects\uiobj_buff3</object>
+      </objects>
       <object>objects\uiobj_UI</object>
     </objects>
     <objects name="Choice Menu">
@@ -594,6 +610,7 @@
         <object>objects\gaobj_scroll04</object>
         <object>objects\gaobj_scroll05</object>
         <object>objects\gaobj_spears</object>
+        <object>objects\gaobj_bushes</object>
       </objects>
       <objects name="Path Blocks">
         <objects name="A">
@@ -697,6 +714,7 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\lrm_Level_1</room>
     <room>rooms\mrm_unitSelectionMenu</room>
     <rooms name="Network Rooms">
       <room>rooms\nwrm_serverConnectRoom</room>
